@@ -1,0 +1,2039 @@
+!SESSION 2018-01-21 15:05:19.645 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-21 15:05:57.197
+!MESSAGE Indexed 'experiment3b_bsp' (78 sources, 116 headers) in 1.95 sec: 3,974 declarations; 5,301 references; 0 unresolved inclusions; 1 syntax errors; 14 unresolved names (0.15%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-21 15:05:57.482
+!MESSAGE Indexed 'experiment3b' (1 sources, 51 headers) in 0.28 sec: 1,267 declarations; 1,403 references; 6 unresolved inclusions; 0 syntax errors; 16 unresolved names (0.60%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-21 15:08:55.371
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-21 15:09:34.183
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-21 15:10:05.371
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-21 15:10:15.416
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-21 15:11:34.518
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-21 15:11:37.225
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:12:09.060
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:12:10.874
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:12:15.785
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:12:16.870
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:12:18.874
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:13:29.604
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:13:30.506
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:13:32.526
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:14:35.224
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:14:36.085
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:14:38.078
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:14:51.671
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:14:52.615
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:14:54.656
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:15:21.744
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:15:22.764
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:15:24.801
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:17:24.041
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:17:44.992
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:17:46.934
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:18:19.692
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:18:40.574
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:18:42.472
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:43:56.055
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:44:16.954
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:44:18.956
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:47:37.131
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:47:58.036
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:47:59.894
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:54:39.376
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:55:00.303
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 15:55:02.179
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 16:26:49.628
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 16:27:10.545
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 16:27:12.461
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:00:19.573
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:00:40.499
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:00:42.448
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:14:59.559
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:15:20.477
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:15:22.344
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:18:38.116
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:18:59.054
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:19:01.050
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:20:36.824
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:20:57.688
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:20:59.771
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:24:58.504
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:25:19.411
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:25:21.315
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:26:27.286
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:26:48.256
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:26:50.170
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:28:21.497
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:28:42.424
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:28:44.433
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:37:28.062
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:37:48.972
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:37:50.925
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:40:17.171
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:40:38.073
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:40:40.096
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:42:19.687
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:42:40.621
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:42:42.632
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:48:44.322
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:49:05.265
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:49:07.183
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:49:47.137
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:50:08.044
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:50:10.049
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:51:19.094
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:51:40.021
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:51:41.938
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:54:46.694
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:55:07.635
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:55:09.833
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:56:12.792
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:56:33.746
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:56:35.611
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:56:54.664
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:57:15.589
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 17:57:17.609
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:01:04.536
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:01:25.734
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:01:27.664
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:04:46.297
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:05:07.809
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:05:09.719
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:34:53.984
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:35:14.892
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:35:16.745
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:43:09.830
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:43:30.766
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:43:32.794
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:49:01.270
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:49:22.201
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:49:24.176
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:50:41.538
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:51:02.439
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:51:04.475
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:51:39.653
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:52:00.562
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 18:52:02.709
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:06:58.001
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:07:19.196
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:07:21.183
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:08:35.534
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:08:56.463
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:08:58.388
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:09:32.772
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:09:53.692
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:09:55.625
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:10:27.417
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:10:48.317
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:10:50.209
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:12:02.235
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:12:23.153
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:12:25.123
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:12:55.617
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:13:16.561
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:13:18.411
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:16:43.738
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:17:04.666
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:17:06.630
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:17:43.729
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:18:04.733
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:18:06.719
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:20:21.948
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:20:42.885
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:20:44.867
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:21:59.705
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:22:20.605
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:22:22.542
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:23:01.663
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:23:22.584
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:23:24.610
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:24:47.534
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:25:08.420
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:25:10.286
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:26:58.484
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:27:19.371
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:27:21.524
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:30:46.454
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:31:07.342
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:31:09.187
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:35:19.733
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 7-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:35:40.638
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-21 19:35:42.554
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 7-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+!SESSION 2018-01-22 18:40:49.969 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 4 567 2018-01-22 18:41:28.766
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2018-01-22 18:41:28.766
+!MESSAGE Could not read metadata for 'experiment3b'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'experiment3b' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:756)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:852)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:832)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:681)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1503)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2134)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:1883)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:406)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:370)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:284)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:417)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:265)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:106)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:453)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:393)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:466)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:116)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2018-01-22 18:41:28.769
+!MESSAGE The project description file (.project) for 'experiment3b' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2018-01-22 18:41:28.769
+!MESSAGE Could not read metadata for 'experiment3b_bsp'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'experiment3b_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:756)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:852)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:832)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:681)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1503)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2134)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:1883)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:406)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:370)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:284)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:417)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:265)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:106)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:453)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:393)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:466)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:116)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2018-01-22 18:41:28.770
+!MESSAGE The project description file (.project) for 'experiment3b_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.cdt.ui 4 4 2018-01-22 18:41:30.644
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Project: experiment3b is closed or inaccessible!
+	at org.eclipse.cdt.internal.core.settings.model.ExceptionFactory.createCoreException(ExceptionFactory.java:22)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionStorage(CProjectDescriptionManager.java:858)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:415)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.createProjectDescription(CProjectDescriptionManager.java:603)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.createProjDescriptionForDescriptor(CConfigBasedDescriptorManager.java:373)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.findDescriptor(CConfigBasedDescriptorManager.java:343)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(CConfigBasedDescriptorManager.java:238)
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:667)
+	at org.eclipse.cdt.internal.ui.text.doctools.ProjectMap.load(ProjectMap.java:117)
+	at org.eclipse.cdt.internal.ui.text.doctools.ProjectMap.<init>(ProjectMap.java:58)
+	at org.eclipse.cdt.internal.ui.text.doctools.DocCommentOwnerManager.getProjectMap(DocCommentOwnerManager.java:218)
+	at org.eclipse.cdt.internal.ui.text.doctools.DocCommentOwnerManager.getCommentOwner(DocCommentOwnerManager.java:135)
+	at org.eclipse.cdt.internal.ui.text.CTextTools.getDocumentationCommentOwner(CTextTools.java:157)
+	at org.eclipse.cdt.internal.ui.text.CTextTools.setupCDocument(CTextTools.java:118)
+	at org.eclipse.cdt.internal.ui.editor.CDocumentSetupParticipant.setup(CDocumentSetupParticipant.java:48)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBufferManager$1.run(ResourceTextFileBufferManager.java:151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBufferManager.createEmptyDocument(ResourceTextFileBufferManager.java:166)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.initializeFileBufferContent(ResourceTextFileBuffer.java:289)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:245)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:112)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:559)
+	at org.eclipse.cdt.internal.ui.editor.CDocumentProvider.createFileInfo(CDocumentProvider.java:856)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:478)
+	at org.eclipse.cdt.internal.ui.editor.CDocumentProvider.connect(CDocumentProvider.java:778)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4056)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:217)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1444)
+	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:169)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.internalDoSetInput(CEditor.java:1393)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.doSetInput(CEditor.java:1358)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3043)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2600)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3061)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3088)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:798)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:647)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1429)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$31.runWithException(Workbench.java:1567)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2548)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2018-01-22 18:41:30.644
+!MESSAGE Project: experiment3b is closed or inaccessible!
+
+!ENTRY org.eclipse.ui 4 0 2018-01-22 18:41:30.690
+!MESSAGE Unable to create editor ID org.eclipse.cdt.ui.editor.CEditor: Project: experiment3b is closed or inaccessible!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Project: experiment3b is closed or inaccessible!
+	at org.eclipse.cdt.internal.core.settings.model.ExceptionFactory.createCoreException(ExceptionFactory.java:22)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionStorage(CProjectDescriptionManager.java:858)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:415)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.createProjectDescription(CProjectDescriptionManager.java:603)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.createProjDescriptionForDescriptor(CConfigBasedDescriptorManager.java:373)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.findDescriptor(CConfigBasedDescriptorManager.java:343)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(CConfigBasedDescriptorManager.java:238)
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:667)
+	at org.eclipse.cdt.internal.core.language.LanguageMappingStore.getProjectDescription(LanguageMappingStore.java:110)
+	at org.eclipse.cdt.internal.core.language.LanguageMappingStore.decodeMappings(LanguageMappingStore.java:75)
+	at org.eclipse.cdt.core.model.LanguageManager.getLanguageConfiguration(LanguageManager.java:447)
+	at org.eclipse.cdt.internal.core.language.LanguageMappingResolver.computeLanguage(LanguageMappingResolver.java:57)
+	at org.eclipse.cdt.core.model.LanguageManager.getLanguageForFile(LanguageManager.java:587)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getLanguage(TranslationUnit.java:726)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.internalDoSetInput(CEditor.java:1405)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.doSetInput(CEditor.java:1358)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3043)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2600)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3061)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3088)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:798)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:647)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1429)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$31.runWithException(Workbench.java:1567)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2548)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2018-01-22 18:41:30.690
+!MESSAGE Project: experiment3b is closed or inaccessible!
+
+!ENTRY org.eclipse.ui 2 2 2018-01-22 18:41:30.712
+!MESSAGE Ignored attempt to add saveable that was already registered
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse.ui.internal.DefaultSaveable@746d23 from part: org.eclipse.ui.internal.ErrorEditorPart@746d23
+	at org.eclipse.ui.internal.SaveablesList.logWarning(SaveablesList.java:187)
+	at org.eclipse.ui.internal.SaveablesList.addModel(SaveablesList.java:117)
+	at org.eclipse.ui.internal.SaveablesList.addModels(SaveablesList.java:289)
+	at org.eclipse.ui.internal.SaveablesList.postOpen(SaveablesList.java:684)
+	at org.eclipse.ui.internal.PartList.partOpened(PartList.java:234)
+	at org.eclipse.ui.internal.PartList.access$0(PartList.java:210)
+	at org.eclipse.ui.internal.PartList$1.propertyChanged(PartList.java:40)
+	at org.eclipse.ui.internal.WorkbenchPartReference.fireInternalPropertyChange(WorkbenchPartReference.java:375)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:610)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1429)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$31.runWithException(Workbench.java:1567)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2548)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SESSION 2018-01-22 18:44:11.137 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-22 18:45:03.131
+!MESSAGE Indexed 'experiment3b' (1 sources, 51 headers) in 1.13 sec: 1,287 declarations; 1,451 references; 6 unresolved inclusions; 0 syntax errors; 33 unresolved names (1.19%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-22 18:45:14.026
+!MESSAGE Indexed 'experiment3b_bsp' (78 sources, 116 headers) in 1.21 sec: 3,974 declarations; 5,301 references; 0 unresolved inclusions; 1 syntax errors; 14 unresolved names (0.15%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:06:11.002
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:06:44.375
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:06:45.466
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:06:45.609
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:12:54.527
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:12:55.438
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-01-22 19:12:56.033
+!MESSAGE An internal error occurred during: "Launching experiment3b Nios II Hardware configuration".
+!STACK 0
+java.lang.NullPointerException
+	at com.altera.systemconsole.internal.plugin.jtag.JtagUartService.closeService(JtagUartService.java:67)
+	at com.altera.systemconsole.internal.core.ChannelService.close(ChannelService.java:82)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.closeByteStreamService(SystemConsoleConnectionModel.java:1185)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.testByteStreamServiceAvailable(SystemConsoleConnectionModel.java:1353)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.terminalAction(AbstractNios2CLaunchDelegate.java:335)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:138)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:853)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:702)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:923)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1126)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:12:56.545
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:12:58.219
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:12:58.250
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:12:59.310
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:13:00.227
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:13:00.258
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:13:01.292
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:13:01.314
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:13:01.972
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:13:02.375
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:13:03.031
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+!SESSION 2018-01-22 19:14:16.902 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3 -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:14:25.308
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:14:26.384
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:14:26.525
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:15:57.047
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:15:57.832
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:15:58.922
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:15:59.071
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:50:21.627
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:50:22.385
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:50:23.480
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:50:23.619
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:51:25.183
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:51:25.912
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:51:26.993
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:51:27.129
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:52:29.395
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:52:30.129
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:52:31.217
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:52:31.373
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_workingdirectory/exercise2/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:54:54.588
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:54:55.349
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 19:54:56.447
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 19:54:56.587
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:02:55.928
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:02:56.646
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 20:02:57.714
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:02:57.849
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:03:38.459
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:03:39.199
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 20:03:40.277
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:03:40.437
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:05:10.260
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:05:11.041
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 20:05:12.115
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:05:12.258
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:05:21.510
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:05:22.232
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 20:05:23.337
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:05:23.478
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:07:16.790
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:07:17.572
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 20:07:18.662
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:07:18.797
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:08:24.051
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:08:24.795
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 20:08:25.856
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:08:25.994
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:09:13.398
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:09:14.119
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 20:09:15.217
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:09:15.354
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:11:03.247
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:11:03.998
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 20:11:05.096
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 20:11:05.232
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+!SESSION 2018-01-22 21:00:46.379 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:01:47.494
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:01:48.581
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:01:48.743
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:02:23.363
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:02:24.107
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:02:25.223
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:02:25.366
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:03:37.031
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:03:37.783
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:03:38.847
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:03:38.984
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+!SESSION 2018-01-22 21:04:50.781 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:05:32.114
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:05:33.196
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:05:33.342
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:05:36.339
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:05:37.296
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:05:38.395
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:05:38.633
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:06:03.954
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:06:04.902
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:06:05.985
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:06:06.253
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:06:55.270
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:06:56.004
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:06:57.086
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:06:57.277
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:07:01.718
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:07:02.804
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:07:03.883
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:07:04.138
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:08:10.149
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:08:10.921
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:08:11.994
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:08:12.711
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:08:14.001
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf] return code: 2, no processors found
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:08:14.008
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:08:46.607
+!MESSAGE Cannot initialize the Nios II Console view for use. Byte stream service may still be open by another process like 'nios2-terminal'.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:09:30.588
+!MESSAGE Cannot initialize the Nios II Console view for use. Byte stream service may still be open by another process like 'nios2-terminal'.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:09:51.582
+!MESSAGE Cannot initialize the Nios II Console view for use. Byte stream service may still be open by another process like 'nios2-terminal'.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:09:58.687
+!MESSAGE Cannot initialize the Nios II Console view for use. Byte stream service may still be open by another process like 'nios2-terminal'.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:12:11.751
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:12:29.779
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:12:30.851
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:12:30.994
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:12:35.320
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:12:36.061
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:12:37.163
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:12:37.306
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:36:47.418
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:36:48.351
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:36:49.413
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:36:49.544
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:37:24.389
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:37:45.566
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:37:46.671
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:37:46.834
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:38:58.213
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:39:19.229
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:39:20.321
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:39:20.705
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:58:49.571
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:59:10.696
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 21:59:11.791
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 21:59:12.007
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:01:01.231
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:01:22.383
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:01:23.475
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:01:23.637
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:02:54.625
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:03:16.207
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:03:17.291
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:03:17.443
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:06:25.514
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:06:46.460
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:06:47.568
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:06:47.772
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:08:53.174
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:09:14.095
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:09:15.168
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:09:15.445
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:13:27.159
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:13:48.117
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:13:49.214
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:13:49.555
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:16:49.709
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:17:10.628
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:17:11.714
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:17:12.140
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:20:42.482
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:21:03.427
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:21:04.497
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:21:04.795
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:22:14.629
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:22:35.555
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:22:36.648
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:22:36.989
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:31:24.629
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:31:45.543
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:31:46.614
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:31:46.878
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:32:38.551
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:32:59.535
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:33:00.605
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:33:00.913
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:35:23.225
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:35:44.180
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:35:45.246
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:35:45.673
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:36:36.227
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:36:57.144
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:36:58.220
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:36:58.427
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:39:16.410
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:39:37.329
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:39:38.416
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:39:38.621
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:41:42.020
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:42:02.947
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:42:04.014
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:42:04.302
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:42:23.134
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:42:44.084
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:42:45.180
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:42:45.466
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:52:35.348
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:52:56.278
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:52:57.397
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:52:57.871
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:57:02.833
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:57:23.792
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 22:57:24.863
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 22:57:25.099
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:01:29.074
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:01:50.355
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:01:52.000
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:01:52.170
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:05:22.753
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:05:43.684
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:05:44.758
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:05:44.958
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:08:26.664
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:08:27.745
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:08:27.968
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:10:51.521
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:11:12.470
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:11:13.560
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:11:13.897
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:12:48.803
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:13:09.748
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:13:10.834
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:13:11.156
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:17:47.801
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:18:08.740
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:18:09.810
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:18:10.141
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:19:22.686
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:19:23.455
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:19:24.519
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:19:24.676
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:21:49.689
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:22:10.647
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:22:11.724
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:22:11.948
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:25:47.550
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:26:08.487
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:26:09.564
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:26:09.902
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:27:38.639
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:27:59.590
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:28:00.660
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:28:00.945
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:29:08.143
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:29:09.228
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:29:09.410
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:29:43.338
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:29:44.419
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:29:44.710
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:32:02.620
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:32:23.577
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:32:24.673
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:32:24.935
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:32:59.498
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:33:20.433
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:33:21.507
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:33:21.801
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:36:48.878
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:37:09.818
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:37:10.898
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:37:11.101
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:37:55.546
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:38:16.471
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:38:17.546
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:38:17.890
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:40:11.436
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:40:32.545
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:40:33.641
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:40:33.814
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:40:58.503
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:41:19.468
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:41:20.554
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:41:20.741
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:42:25.460
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:42:46.401
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:42:47.482
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:42:48.031
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:55:07.561
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:55:28.519
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:55:29.581
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:55:29.794
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:56:45.071
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:57:06.015
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-22 23:57:07.087
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-22 23:57:07.405
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:00:06.681
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:00:27.600
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-23 00:00:28.679
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:00:28.929
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:01:41.579
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:02:02.549
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-23 00:02:03.645
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:02:03.891
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:03:19.257
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-3]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:03:40.203
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-01-23 00:03:41.293
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-3]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-23 00:03:41.541
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-3]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab2_2018_exercise3.zip_FILES/coe4ds4_lab2_2018_exercise3/exercise3/software/experiment3b/experiment3b.elf]
+!SESSION 2018-01-23 16:48:55.137 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 4 567 2018-01-23 16:49:10.044
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2018-01-23 16:49:10.044
+!MESSAGE Could not read metadata for 'experiment3b'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'experiment3b' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:756)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:852)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:832)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:681)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1503)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2134)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:1883)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:406)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:370)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:284)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:417)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:265)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:106)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:453)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:393)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:466)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:116)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2018-01-23 16:49:10.045
+!MESSAGE The project description file (.project) for 'experiment3b' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2018-01-23 16:49:10.045
+!MESSAGE Could not read metadata for 'experiment3b_bsp'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'experiment3b_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:756)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:852)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:832)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:681)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1503)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2134)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:1883)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:406)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:370)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:284)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:417)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:265)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:106)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:453)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:393)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:466)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:116)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2018-01-23 16:49:10.045
+!MESSAGE The project description file (.project) for 'experiment3b_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.cdt.ui 4 4 2018-01-23 16:49:12.010
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Project: experiment3b is closed or inaccessible!
+	at org.eclipse.cdt.internal.core.settings.model.ExceptionFactory.createCoreException(ExceptionFactory.java:22)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionStorage(CProjectDescriptionManager.java:858)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:415)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.createProjectDescription(CProjectDescriptionManager.java:603)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.createProjDescriptionForDescriptor(CConfigBasedDescriptorManager.java:373)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.findDescriptor(CConfigBasedDescriptorManager.java:343)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(CConfigBasedDescriptorManager.java:238)
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:667)
+	at org.eclipse.cdt.internal.ui.text.doctools.ProjectMap.load(ProjectMap.java:117)
+	at org.eclipse.cdt.internal.ui.text.doctools.ProjectMap.<init>(ProjectMap.java:58)
+	at org.eclipse.cdt.internal.ui.text.doctools.DocCommentOwnerManager.getProjectMap(DocCommentOwnerManager.java:218)
+	at org.eclipse.cdt.internal.ui.text.doctools.DocCommentOwnerManager.getCommentOwner(DocCommentOwnerManager.java:135)
+	at org.eclipse.cdt.internal.ui.text.CTextTools.getDocumentationCommentOwner(CTextTools.java:157)
+	at org.eclipse.cdt.internal.ui.text.CTextTools.setupCDocument(CTextTools.java:118)
+	at org.eclipse.cdt.internal.ui.editor.CDocumentSetupParticipant.setup(CDocumentSetupParticipant.java:48)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBufferManager$1.run(ResourceTextFileBufferManager.java:151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBufferManager.createEmptyDocument(ResourceTextFileBufferManager.java:166)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.initializeFileBufferContent(ResourceTextFileBuffer.java:289)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:245)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:112)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:559)
+	at org.eclipse.cdt.internal.ui.editor.CDocumentProvider.createFileInfo(CDocumentProvider.java:856)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:478)
+	at org.eclipse.cdt.internal.ui.editor.CDocumentProvider.connect(CDocumentProvider.java:778)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4056)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:217)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1444)
+	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:169)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.internalDoSetInput(CEditor.java:1393)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.doSetInput(CEditor.java:1358)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3043)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2600)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3061)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3088)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:798)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:647)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1429)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$31.runWithException(Workbench.java:1567)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2548)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2018-01-23 16:49:12.011
+!MESSAGE Project: experiment3b is closed or inaccessible!
+
+!ENTRY org.eclipse.ui 4 0 2018-01-23 16:49:12.057
+!MESSAGE Unable to create editor ID org.eclipse.cdt.ui.editor.CEditor: Project: experiment3b is closed or inaccessible!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Project: experiment3b is closed or inaccessible!
+	at org.eclipse.cdt.internal.core.settings.model.ExceptionFactory.createCoreException(ExceptionFactory.java:22)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionStorage(CProjectDescriptionManager.java:858)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:415)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.createProjectDescription(CProjectDescriptionManager.java:603)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.createProjDescriptionForDescriptor(CConfigBasedDescriptorManager.java:373)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.findDescriptor(CConfigBasedDescriptorManager.java:343)
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(CConfigBasedDescriptorManager.java:238)
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:667)
+	at org.eclipse.cdt.internal.core.language.LanguageMappingStore.getProjectDescription(LanguageMappingStore.java:110)
+	at org.eclipse.cdt.internal.core.language.LanguageMappingStore.decodeMappings(LanguageMappingStore.java:75)
+	at org.eclipse.cdt.core.model.LanguageManager.getLanguageConfiguration(LanguageManager.java:447)
+	at org.eclipse.cdt.internal.core.language.LanguageMappingResolver.computeLanguage(LanguageMappingResolver.java:57)
+	at org.eclipse.cdt.core.model.LanguageManager.getLanguageForFile(LanguageManager.java:587)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getLanguage(TranslationUnit.java:726)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.internalDoSetInput(CEditor.java:1405)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.doSetInput(CEditor.java:1358)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3043)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2600)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3061)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3088)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:798)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:647)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1429)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$31.runWithException(Workbench.java:1567)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2548)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 1 org.eclipse.cdt.core 4 0 2018-01-23 16:49:12.058
+!MESSAGE Project: experiment3b is closed or inaccessible!
+
+!ENTRY org.eclipse.ui 2 2 2018-01-23 16:49:12.071
+!MESSAGE Ignored attempt to add saveable that was already registered
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse.ui.internal.DefaultSaveable@1955c3 from part: org.eclipse.ui.internal.ErrorEditorPart@1955c3
+	at org.eclipse.ui.internal.SaveablesList.logWarning(SaveablesList.java:187)
+	at org.eclipse.ui.internal.SaveablesList.addModel(SaveablesList.java:117)
+	at org.eclipse.ui.internal.SaveablesList.addModels(SaveablesList.java:289)
+	at org.eclipse.ui.internal.SaveablesList.postOpen(SaveablesList.java:684)
+	at org.eclipse.ui.internal.PartList.partOpened(PartList.java:234)
+	at org.eclipse.ui.internal.PartList.access$0(PartList.java:210)
+	at org.eclipse.ui.internal.PartList$1.propertyChanged(PartList.java:40)
+	at org.eclipse.ui.internal.WorkbenchPartReference.fireInternalPropertyChange(WorkbenchPartReference.java:375)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:610)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1429)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$31.runWithException(Workbench.java:1567)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3515)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3164)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2548)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+
+!ENTRY org.eclipse.core.resources 4 567 2018-01-23 16:49:17.640
+!MESSAGE The project description file (.project) for 'experiment3b' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.

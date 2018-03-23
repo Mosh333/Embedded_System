@@ -1,0 +1,444 @@
+// Copyright by Adam Kinsman, Henry Ko and Nicola Nicolici
+// Developed for the Embedded Systems course (COE4DS4)
+// Department of Electrical and Computer Engineering
+// McMaster University
+// Ontario, Canada
+
+#include "io.h"
+#include "system.h"
+#include "alt_types.h"
+#include "sys/alt_stdio.h"
+
+alt_u16 disp_seven_seg(alt_u8 val) {
+	switch (val) {
+	case 0:
+		return 0x40;
+	case 1:
+		return 0x79;
+	case 2:
+		return 0x24;
+	case 3:
+		return 0x30;
+	case 4:
+		return 0x19;
+	case 5:
+		return 0x12;
+	case 6:
+		return 0x02;
+	case 7:
+		return 0x78;
+	case 8:
+		return 0x00;
+	case 9:
+		return 0x18;
+	case 10:
+		return 0x08;
+	case 11:
+		return 0x03;
+	case 12:
+		return 0x46;
+	case 13:
+		return 0x21;
+	case 14:
+		return 0x06;
+	case 15:
+		return 0x0e;
+	default:
+		return 0x7f;
+	}
+}
+
+int main() {
+	alt_8 mode;
+	alt_8 i;
+	alt_8 k = 0;
+	alt_u32 switch_val;
+	alt_u32 led_val;
+	alt_u32 countSec = 0;
+	alt_u32 countThreeSec = 0;
+	alt_u8 GLED_0, GLED_1, GLED_2, GLED_3, GLED_4, GLED_5, GLED_6, GLED_7;
+
+	alt_u32 freq_0 = 0;
+	alt_u32 freq_1 = 0;
+	alt_u32 freq_2 = 0;
+	alt_u32 freq_3 = 0;
+	alt_u32 freq_4 = 0;
+	alt_u32 freq_5 = 0;
+	alt_u32 freq_6 = 0;
+	alt_u32 freq_7 = 0;
+
+	alt_u32 counter_0 = 0;
+	alt_u32 counter_1 = 0;
+	alt_u32 counter_2 = 0;
+	alt_u32 counter_3 = 0;
+	alt_u32 counter_4 = 0;
+	alt_u32 counter_5 = 0;
+	alt_u32 counter_6 = 0;
+	alt_u32 counter_7 = 0;
+
+	alt_u32 case2_hotCode = 0x0;
+	alt_8 freq;
+
+	_Bool switch17_buf;
+
+	alt_putstr("Experiment 2!\n");
+	alt_putstr("Testing!\n");
+	/* Event loop never exits. */
+	while (1) {
+		//Check values of switches that are on and assign a 32 bit value???
+		switch_val = IORD(SWITCH_I_BASE, 0);
+		IOWR(LED_RED_O_BASE, 0, switch_val); //turn on the RED LED based on the switch_val
+
+
+		if (((switch_val >> 17) & 0x1)) {
+			mode = 0;
+		} else if (!((switch_val >> 17) & 0x1) && ((switch_val >> 16) & 0x1)) {
+			mode = 1;
+		} else if (!((switch_val >> 17) & 0x1) && !((switch_val >> 16) & 0x1)) {
+			mode = 2;
+		}
+
+		switch (mode) {
+
+		case 0:
+			if (!(countSec & 0x1)) { //even seconds
+				IOWR(LED_GREEN_O_BASE, 0, 0x1FF);
+
+			} else { //odd seconds
+				IOWR(LED_GREEN_O_BASE, 0, 0x0);
+			}
+			counter_0 = 0;
+			counter_1 = 0;
+			counter_2 = 0;
+			counter_3 = 0;
+			counter_4 = 0;
+			counter_5 = 0;
+			counter_6 = 0;
+			counter_7 = 0;
+
+			break;
+
+		case 1:
+			IOWR(LED_GREEN_O_BASE, 0, 0x0); //make sure to turn 9th bit off
+			led_val = 0x0;
+			for (i = 0; i <= 7; i) {
+
+				//led_val|=(0x1<<i);
+
+				led_val = led_val | (0x1 << i);
+				if (i != 0) {
+					led_val = led_val & (~(0x1 << (i - 1)));
+				}
+
+				IOWR(LED_GREEN_O_BASE, 0, led_val);
+				usleep(1000000);
+				if (i == 7) {
+					i = 0;
+					led_val = led_val & (~(0x1 << (7)));
+				} else {
+					i++;
+				}// changed from regular loop to avoid i skip
+
+
+			}
+
+			counter_0 = 0;
+			counter_1 = 0;
+			counter_2 = 0;
+			counter_3 = 0;
+			counter_4 = 0;
+			counter_5 = 0;
+			counter_6 = 0;
+			counter_7 = 0;
+
+			break;
+
+		case 2:
+			//Gled 8 on permanently
+
+			led_val = 0x0;
+			IOWR(LED_GREEN_O_BASE, 0, 0x100);
+
+			//put in 2 bit format
+
+			//((switch_val >> 0)&(0x1));
+
+
+			GLED_0 = ((switch_val >> 0)&(0x3));
+			//alt_printf("GLED_0 is %x\n",GLED_0);
+			//GLED_0 = ((switch_val >> 0)&(0x3))
+			GLED_1 = ((switch_val >> 2)&(0x3));
+			//alt_printf("GLED_1 is %x\n",GLED_1);
+			//GLED_1 = ((switch_val >> 2)&(0x3))
+			GLED_2 = ((switch_val >> 4)&(0x3));
+			//alt_printf("GLED_2 is %x\n",GLED_2);
+			GLED_3 = ((switch_val >> 6)&(0x3));
+			//alt_printf("GLED_3 is %x\n",GLED_3);
+			GLED_4 = ((switch_val >> 8)&(0x3));
+			GLED_5 = ((switch_val >> 10)&(0x3));
+			GLED_6 = ((switch_val >> 12)&(0x3));
+			GLED_7 = ((switch_val >> 14)&(0x3));
+
+			///((switch_val >> 1)&(0x1)) & ((switch_val >> 0)&(0x1))
+			if (GLED_0 == 0x0) {
+				freq_0 = 0;
+			} else if (GLED_0 == 0x1) {
+				freq_0 = 1;
+			} else if (GLED_0 == 0x2) {
+				freq_0 = 2;
+			} else {
+				freq_0 = 3;
+			}
+			alt_printf("freq 0 is %x\n",freq_0);
+			///////////////
+			if (GLED_1 == 0x0) {
+				freq_1 = 0;
+			} else if (GLED_1 == 0x1) {
+				freq_1 = 1;
+			} else if (GLED_1 == 0x2) {
+				freq_1 = 2;
+			} else {
+				freq_1 = 3;
+			}
+			///////////////
+			if (GLED_2 == 0x0) {
+				freq_2 = 0;
+			} else if (GLED_2 == 0x1) {
+				freq_2 = 1;
+			} else if (GLED_2 == 0x2) {
+				freq_2 = 2;
+			} else {
+				freq_2 = 3;
+			}
+			///////////////
+			if (GLED_3 == 0x0) {
+				freq_3 = 0;
+			} else if (GLED_3 == 0x1) {
+				freq_3 = 1;
+			} else if (GLED_3 == 0x2) {
+				freq_3 = 2;
+			} else {
+				freq_3 = 3;
+			}
+			///////////////
+			if (GLED_4 == 0x0) {
+				freq_4 = 0;
+			} else if (GLED_4 == 0x1) {
+				freq_4 = 1;
+			} else if (GLED_4 == 0x2) {
+				freq_4 = 2;
+			} else {
+				freq_4 = 3;
+			}
+
+			///////////////
+			if (GLED_5 == 0x0) {
+				freq_5 = 0;
+			} else if (GLED_5 == 0x1) {
+				freq_5 = 1;
+			} else if (GLED_5 == 0x2) {
+				freq_5 = 2;
+			} else {
+				freq_5 = 3;
+			}
+			///////////////
+			if (GLED_6 == 0x0) {
+				freq_6 = 0;
+			} else if (GLED_6 == 0x0) {
+				freq_6 = 1;
+			} else if (GLED_6 == 0x1) {
+				freq_6 = 2;
+			} else {
+				freq_6 = 3;
+			}
+			///////////////
+			if (GLED_7 == 0x0) {
+				freq_7 = 0;
+			} else if (GLED_7 == 0x1) {
+				freq_7 = 1;
+			} else if (GLED_7 == 0x3) {
+				freq_7 = 2;
+			} else {
+				freq_7 = 3;
+			}
+			////////////////////////////////////////////////////////////////////////////////////////////////
+
+			if (freq_0 == 1) {
+				//we want to flip bits every one second
+				//resetting bit K is not enough
+				//
+				alt_printf("led_val is %x\n",led_val);
+				led_val = led_val^((~((led_val>>0)&(0x1)))>>0); //flip Kth bit, reshift it, and append back on to led_val
+				alt_printf("led_val after is %x\n",led_val);
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+			}
+			if (freq_1 == 1) {
+				led_val = led_val & (~(0x1 << (1)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+			}
+			if (freq_2 == 1) {
+				led_val = led_val & (~(0x1 << (2)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+			}
+			if (freq_3 == 1) {
+				led_val = led_val & (~(0x1 << (3)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+			}
+			if (freq_4 == 1) {
+				led_val = led_val & (~(0x1 << (4)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+			}
+			if (freq_5 == 1) {
+				led_val = led_val & (~(0x1 << (5)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+			}
+			if (freq_6 == 1) {
+				led_val = led_val & (~(0x1 << (6)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+			}
+			if (freq_7 == 1) {
+				led_val = led_val & (~(0x1 << (7)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+			}
+
+			//finesse
+			//usleep(1000000); //supposedly poll every 1 second
+
+			///////////////////////////////////////////////////////////////////////////////////////////////
+
+			if (freq_0 == 2 && counter_0 ==2) {
+					led_val = led_val & (~(0x1 << (0)));
+					IOWR(LED_GREEN_O_BASE, 0,led_val);
+					counter_0 =0;
+			}
+			if (freq_1 == 2 && counter_1 ==2) {
+					led_val = led_val & (~(0x1 << (1)));
+					IOWR(LED_GREEN_O_BASE, 0,led_val);
+					counter_1 =0;
+			}
+			if (freq_2 == 2 && counter_2 ==2) {
+					led_val = led_val & (~(0x1 << (2)));
+					IOWR(LED_GREEN_O_BASE, 0,led_val);
+					counter_2 =0;
+			}
+			if (freq_3 == 2 && counter_3 ==2) {
+					led_val = led_val & (~(0x1 << (3)));
+					IOWR(LED_GREEN_O_BASE, 0,led_val);
+					counter_3 =0;
+			}
+			if (freq_4 == 2 && counter_4 ==2) {
+					led_val = led_val & (~(0x1 << (4)));
+					IOWR(LED_GREEN_O_BASE, 0,led_val);
+					counter_4 =0;
+			}
+			if (freq_5 == 2 && counter_5 ==2) {
+					led_val = led_val & (~(0x1 << (5)));
+					IOWR(LED_GREEN_O_BASE, 0,led_val);
+					counter_5=0;
+			}
+			if (freq_6 == 2 && counter_6 ==2) {
+					led_val = led_val & (~(0x1 << (6)));
+					IOWR(LED_GREEN_O_BASE, 0,led_val);
+					counter_6 =0;
+			}
+			if (freq_7 == 2 && counter_7 ==2) {
+					led_val = led_val & (~(0x1 << (7)));
+					IOWR(LED_GREEN_O_BASE, 0,led_val);
+					counter_7 =0;
+			}
+
+			////////////////////////////////////////////////////////////////////////////////////////////////
+
+			if (freq_0 == 3 && counter_0 == 3) {
+
+				led_val = led_val & (~(0x1 << (0)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+				counter_0 = 0;
+			}
+			if (freq_1 == 3 && counter_1 == 3) {
+				led_val = led_val & (~(0x1 << (1)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+				counter_1 = 0;
+			}
+			if (freq_2 == 3 && counter_2 == 3) {
+				led_val = led_val & (~(0x1 << (2)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+				counter_2 = 0;
+			}
+			if (freq_3 == 3 && counter_3 == 3) {
+				led_val = led_val & (~(0x1 << (3)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+				counter_3 = 0;
+			}
+			if (freq_4 == 3 && counter_4 == 3) {
+				led_val = led_val & (~(0x1 << (4)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+				counter_4 = 0;
+			}
+			if (freq_5 == 3 && counter_5 == 3) {
+				led_val = led_val & (~(0x1 << (5)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+				counter_5 = 0;
+			}
+			if (freq_6 == 3 && counter_6 == 3) {
+				led_val = led_val & (~(0x1 << (6)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+				counter_6 = 0;
+			}
+			if (freq_7 == 3 && counter_7 == 3) {
+				led_val = led_val & (~(0x1 << (7)));
+				IOWR(LED_GREEN_O_BASE, 0,led_val);
+				counter_7 = 0;
+			}
+
+			counter_0++;
+			counter_1++;
+			counter_2++;
+			counter_3++;
+			counter_4++;
+			counter_5++;
+			counter_6++;
+			counter_7++;
+
+			break;//END OF CASE MAN
+
+			// IOWR(LED_GREEN_O_BASE, 0 ,((switch_val >> 17)& 0x1) && (switch_val >> 16) & 0x1);
+			// IOWR(LED_GREEN_O_BASE, 0 ,((switch_val >> 1) & 0x1) || (switch_val >> 0) & 0x1);
+			//(switch_val >> 1)& 0x1)||(switch_val >> 0)& 0x1);
+			//(switch_val >> 17)& 0x1)&(switch_val >> 18)& 0x1);
+
+			/*if ((((switch_val >> 17)& 0x1) && ((switch_val >> 16) & 0x1)) && ((((switch_val >> 1) & 0x1) || (switch_val >> 0) & 0x1))){
+			 IOWR(LED_GREEN_O_BASE, 0 ,0x3);
+			 } else if (!(((switch_val >> 17)& 0x1) && ((switch_val >> 16) & 0x1)) && ((((switch_val >> 1) & 0x1) || (switch_val >> 0) & 0x1))){
+			 IOWR(LED_GREEN_O_BASE, 0 ,0x1);
+			 }else if ((((switch_val >> 17)& 0x1) && ((switch_val >> 16) & 0x1)) && !((((switch_val >> 1) & 0x1) || (switch_val >> 0) & 0x1))){
+			 IOWR(LED_GREEN_O_BASE, 0 ,0x2);
+			 }else IOWR(LED_GREEN_O_BASE, 0 ,0x0);*/
+
+			//display LSB on 7 Seg Disp
+			if (switch_val == 0) {
+				IOWR(SEVEN_SEGMENT_N_O_1_BASE, 0,
+						disp_seven_seg(16));
+				IOWR(SEVEN_SEGMENT_N_O_0_BASE, 0,
+						disp_seven_seg(16));
+			} else {
+				for (i = 0; i <= 17; i++) {
+					if (((switch_val >> i) & 0x1) != 0) {
+						IOWR(SEVEN_SEGMENT_N_O_1_BASE, 0,
+								disp_seven_seg((i >> 4) & 0xF)); //     valueToBeCheckedFor >> k bit && 4'b1111
+						IOWR(SEVEN_SEGMENT_N_O_0_BASE, 0,
+								disp_seven_seg(i & 0xF));
+						i = 17;
+					}
+
+				}
+			}
+
+			usleep(1000000); //supposedly poll every 1 second
+			countSec = countSec + 1;
+			//countThreeSec = countThreeSec + 1;
+		}
+
+		return 0;
+	}
+}
