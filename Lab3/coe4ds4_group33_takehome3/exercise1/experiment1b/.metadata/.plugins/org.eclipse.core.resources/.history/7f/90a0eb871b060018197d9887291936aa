@@ -1,0 +1,118 @@
+/*
+ * elevator_sim.c
+ *
+ *  Created on: Jan 29, 2018
+ *      Author: ECE\ganesr3
+ */
+
+#include "define.h"
+
+void service_floor(elevator_struct *elevator) {
+	int i=0;
+	int rleds;
+
+	reset_counter_0();
+
+
+	elevator->motion = 1;//start moving
+
+
+	while(~elevator->door_close_ready|| elevator->keep_door_open){}
+
+	elevator->request_queue[elevator->current_floor]=0;
+
+	for(i=0;i<=11;i++){
+		if(elevator->request_queue[i]==1){rleds=rleds|(0x1<<i);}
+	}
+	IOWR(LED_RED_O_BASE, 0, rleds);
+
+}
+
+
+void travel_to_next_requested_floor() {
+
+	reset_counter_1();
+
+}
+
+
+void elevator_sim() {
+
+	elevator_struct elevator;
+	int i = 0;
+	elevator.motion = 0;//1 for in motion, 0 for still --( we need both direction and motion because we may be moving up while temp stoppping
+	elevator.direction = 0;
+	elevator.current_floor = 0;
+	elevator.next_floor = 0;
+	//elevator.request_queue=[0,0,0,0,0,0,0,0,0,0,0,0];
+	elevator.door_close_ready = 0;
+
+	for (i = 0; i <= 11; i++) {
+		elevator.request_queue[i] = 0;
+	}
+
+	elevator.keep_door_open = 0;
+
+	elevator.door_open_time = 0;
+	elevator.floor_travel_time = 0;
+
+	while (1) {
+
+		//Notes:
+		//we need to
+
+
+		if (elevator.motion == 0) {//we are stopped at a floor
+
+			//check if we need to open doors this floor
+			if (elevator.request_queue[elevator.current_floor] == 1) {//this means that the floor that we are stopped at has not been serviced
+				//we need to service it
+				service_floor(&elevator);
+			}
+
+			//time to find floors that need to be serviced
+			if (elevator.direction == 1) {
+				for (i = elevator.current_floor + 1; i <= 11; i++) {
+					if (elevator.request_queue[i] == 1) {
+						elevator.next_floor = i;
+						elevator.motion = 1;
+						break;
+						//break at next higher requested floor
+					}
+					if (i == 12) {
+						elevator.direction = -1;
+					}//if no floors requested above, change direction
+				}
+			}
+				if (elevator.direction = -1) {
+					for (i = elevator.current_floor - 1; i >= 0; i--) {
+						if (elevator.request_queue[i] == 1) {
+							elevator.next_floor = i;
+							elevator.motion = 1;
+							break;
+						}
+
+					}
+					if (i == -1) {
+						elevator.direction = 1;//change directions if we check the lowest floor and dont have any requested lower floors
+					}
+				}
+
+			}
+		}else{//if elevator motion==1 means we are in motion
+
+
+
+
+
+		}
+
+
+
+
+	}
+
+
+
+
+

@@ -1,0 +1,302 @@
+// Copyright by Adam Kinsman, Henry Ko and Nicola Nicolici
+// Developed for the Embedded Systems course (COE4DS4)
+// Department of Electrical and Computer Engineering
+// McMaster University
+// Ontario, Canada
+
+#include "define.h"
+
+
+void check_flag(PS2_buffer_struct *PS2_buffer_data, int PS2_code){
+
+}
+
+void translate_PS2_code(PS2_buffer_struct *PS2_buffer_data, int PS2_code) {
+
+	if (PS2_buffer_data->cur_buf_length >= MAX_STRING_LENGTH - 2) {
+		printf("buffer overflow\n");
+	} else {
+
+		if (PS2_buffer_data-> capital_Flag == 0) {
+			switch (PS2_code) {
+
+									case 0x0E: if(PS2_buffer_data->flag_array[0]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '`'; break;
+									case 0x16: if(PS2_buffer_data->flag_array[1]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '1'; break;
+									case 0x1E: if(PS2_buffer_data->flag_array[2]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '2'; break;
+									case 0x26: if(PS2_buffer_data->flag_array[3]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '3'; break;
+									case 0x25: if(PS2_buffer_data->flag_array[4]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '4'; break;
+									case 0x2E: if(PS2_buffer_data->flag_array[5]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '5'; break;
+									case 0x36: if(PS2_buffer_data->flag_array[6]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '6'; break;
+									case 0x3D: if(PS2_buffer_data->flag_array[7]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '7'; break;
+									case 0x3E: if(PS2_buffer_data->flag_array[8]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '8'; break;
+									case 0x46: if(PS2_buffer_data->flag_array[9]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '9'; break;
+									case 0x45: if(PS2_buffer_data->flag_array[10]==1){PS2_buffer_data->buffer_flush = 0;return;} PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '0'; break;
+									case 0x4E: if(PS2_buffer_data->flag_array[11]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '-'; break;
+									case 0x55: if(PS2_buffer_data->flag_array[12]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '='; break;
+
+									case 0x5D: if(PS2_buffer_data->flag_array[13]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '\\'; break;
+									case 0x15: if(PS2_buffer_data->flag_array[14]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'q'; break;
+									case 0x1D: if(PS2_buffer_data->flag_array[15]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'w'; break;
+									case 0x24: if(PS2_buffer_data->flag_array[16]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'e'; break;
+									case 0x2D: if(PS2_buffer_data->flag_array[17]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'r'; break;
+									case 0x2C: if(PS2_buffer_data->flag_array[18]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 't'; break;
+									case 0x35: if(PS2_buffer_data->flag_array[19]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'y'; break;
+									case 0x3C: if(PS2_buffer_data->flag_array[20]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'u'; break;
+									case 0x43: if(PS2_buffer_data->flag_array[21]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'i'; break;
+									case 0x44: if(PS2_buffer_data->flag_array[22]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'o'; break;
+									case 0x4D: if(PS2_buffer_data->flag_array[23]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'p'; break;
+									case 0x54: if(PS2_buffer_data->flag_array[24]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '['; break;
+									case 0x5B: if(PS2_buffer_data->flag_array[25]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = ']'; break;
+
+									case 0x1C: if(PS2_buffer_data->flag_array[26]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'a'; break;
+									case 0x1B: if(PS2_buffer_data->flag_array[27]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 's'; break;
+									case 0x23: if(PS2_buffer_data->flag_array[28]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'd'; break;
+									case 0x2B: if(PS2_buffer_data->flag_array[29]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'f'; break;
+									case 0x34: if(PS2_buffer_data->flag_array[30]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'g'; break;
+									case 0x33: if(PS2_buffer_data->flag_array[31]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'h'; break;
+									case 0x3B: if(PS2_buffer_data->flag_array[32]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'j'; break;
+									case 0x42: if(PS2_buffer_data->flag_array[33]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'k'; break;
+									case 0x4B: if(PS2_buffer_data->flag_array[34]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'l'; break;
+									case 0x4C: if(PS2_buffer_data->flag_array[35]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = ';'; break;
+									case 0x52: if(PS2_buffer_data->flag_array[36]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '\''; break;
+									case 0x1A: if(PS2_buffer_data->flag_array[37]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'z'; break;
+									case 0x22: if(PS2_buffer_data->flag_array[38]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'x'; break;
+
+									case 0x21: if(PS2_buffer_data->flag_array[39]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'c'; break;
+									case 0x2A: if(PS2_buffer_data->flag_array[40]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'v'; break;
+									case 0x32: if(PS2_buffer_data->flag_array[41]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'b'; break;
+									case 0x31: if(PS2_buffer_data->flag_array[42]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'n'; break;
+									case 0x3A: if(PS2_buffer_data->flag_array[43]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'm'; break;
+									case 0x41: if(PS2_buffer_data->flag_array[44]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = ','; break;
+									case 0x49: if(PS2_buffer_data->flag_array[45]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '.'; break;
+									case 0x4A: if(PS2_buffer_data->flag_array[46]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '/'; break;
+									case 0x29: if(PS2_buffer_data->flag_array[47]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = ' '; break;
+									case 0x5A: if(PS2_buffer_data->flag_array[48]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '\n'; break;
+					}
+
+			PS2_buffer_data->cur_buf_length++;
+			PS2_buffer_data->buffer_flush = 1;
+			PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length]= '\0';
+		} else if(PS2_buffer_data-> capital_Flag == 1)
+		{
+			switch (PS2_code) {
+												case 0x0E: if(PS2_buffer_data->flag_array[0]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '`'; break;
+												case 0x16: if(PS2_buffer_data->flag_array[1]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '1'; break;
+												case 0x1E: if(PS2_buffer_data->flag_array[2]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '2'; break;
+												case 0x26: if(PS2_buffer_data->flag_array[3]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '3'; break;
+												case 0x25: if(PS2_buffer_data->flag_array[4]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '4'; break;
+												case 0x2E: if(PS2_buffer_data->flag_array[5]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '5'; break;
+												case 0x36: if(PS2_buffer_data->flag_array[6]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '6'; break;
+												case 0x3D: if(PS2_buffer_data->flag_array[7]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '7'; break;
+												case 0x3E: if(PS2_buffer_data->flag_array[8]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '8'; break;
+												case 0x46: if(PS2_buffer_data->flag_array[9]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '9'; break;
+												case 0x45: if(PS2_buffer_data->flag_array[10]==1){PS2_buffer_data->buffer_flush = 0;return;} PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '0'; break;
+												case 0x4E: if(PS2_buffer_data->flag_array[11]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '-'; break;
+												case 0x55: if(PS2_buffer_data->flag_array[12]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '='; break;
+
+												case 0x5D: if(PS2_buffer_data->flag_array[13]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '\\'; break;
+												case 0x15: if(PS2_buffer_data->flag_array[14]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'Q'; break;
+												case 0x1D: if(PS2_buffer_data->flag_array[15]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'W'; break;
+												case 0x24: if(PS2_buffer_data->flag_array[16]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'E'; break;
+												case 0x2D: if(PS2_buffer_data->flag_array[17]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'R'; break;
+												case 0x2C: if(PS2_buffer_data->flag_array[18]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'T'; break;
+												case 0x35: if(PS2_buffer_data->flag_array[19]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'Y'; break;
+												case 0x3C: if(PS2_buffer_data->flag_array[20]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'U'; break;
+												case 0x43: if(PS2_buffer_data->flag_array[21]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'I'; break;
+												case 0x44: if(PS2_buffer_data->flag_array[22]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'O'; break;
+												case 0x4D: if(PS2_buffer_data->flag_array[23]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'P'; break;
+												case 0x54: if(PS2_buffer_data->flag_array[24]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '['; break;
+												case 0x5B: if(PS2_buffer_data->flag_array[25]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = ']'; break;
+
+												case 0x1C: if(PS2_buffer_data->flag_array[26]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'A'; break;
+												case 0x1B: if(PS2_buffer_data->flag_array[27]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'S'; break;
+												case 0x23: if(PS2_buffer_data->flag_array[28]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'D'; break;
+												case 0x2B: if(PS2_buffer_data->flag_array[29]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'F'; break;
+												case 0x34: if(PS2_buffer_data->flag_array[30]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'G'; break;
+												case 0x33: if(PS2_buffer_data->flag_array[31]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'H'; break;
+												case 0x3B: if(PS2_buffer_data->flag_array[32]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'J'; break;
+												case 0x42: if(PS2_buffer_data->flag_array[33]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'K'; break;
+												case 0x4B: if(PS2_buffer_data->flag_array[34]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'L'; break;
+												case 0x4C: if(PS2_buffer_data->flag_array[35]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = ';'; break;
+												case 0x52: if(PS2_buffer_data->flag_array[36]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '\''; break;
+												case 0x1A: if(PS2_buffer_data->flag_array[37]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'Z'; break;
+												case 0x22: if(PS2_buffer_data->flag_array[38]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'X'; break;
+
+												case 0x21: if(PS2_buffer_data->flag_array[39]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'C'; break;
+												case 0x2A: if(PS2_buffer_data->flag_array[40]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'V'; break;
+												case 0x32: if(PS2_buffer_data->flag_array[41]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'B'; break;
+												case 0x31: if(PS2_buffer_data->flag_array[42]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'N'; break;
+												case 0x3A: if(PS2_buffer_data->flag_array[43]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = 'M'; break;
+												case 0x41: if(PS2_buffer_data->flag_array[44]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = ','; break;
+												case 0x49: if(PS2_buffer_data->flag_array[45]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '.'; break;
+												case 0x4A: if(PS2_buffer_data->flag_array[46]==1){PS2_bprintf("the case is now CAPITAL");uffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '/'; break;
+												case 0x29: if(PS2_buffer_data->flag_array[47]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = ' '; break;
+												case 0x5A: if(PS2_buffer_data->flag_array[48]==1){PS2_buffer_data->buffer_flush = 0;return;}PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length] = '\n'; break;
+								}
+					PS2_buffer_data->cur_buf_length++;
+					PS2_buffer_data->buffer_flush = 1;
+					PS2_buffer_data->string_buffer[PS2_buffer_data->cur_buf_length]= '\0';
+
+}
+}
+}
+
+void read_PS2_data(int *make_code_flag, int *PS2_code) {
+	int data;
+
+	data = IORD(PS2_CONTROLLER_COMPONENT_0_BASE, 0);
+	*make_code_flag = (data >> 8) & 0x1;
+	*PS2_code = data & 0xFF;
+}
+
+// ISR when the a PS2 code is acquired
+void handle_PS2_interrupts(PS2_buffer_struct *PS2_buffer_data) {
+	int make_code_flag, PS2_code;
+
+	read_PS2_data(&make_code_flag, &PS2_code);
+	//if were just starting to hold the key, deassert the flag
+	if(make_code_flag && PS2_buffer_data->fresh_Press_Flag)PS2_buffer_data->fresh_Press_Flag=0;
+
+	if(!make_code_flag && !PS2_buffer_data->fresh_Press_Flag)PS2_buffer_data->fresh_Press_Flag=1;
+
+		if (PS2_code == 0x58 && PS2_buffer_data->capital_Flag == 0 && PS2_buffer_data->fresh_Press_Flag) {PS2_buffer_data->capital_Flag = 1;}
+		else if (PS2_code == 0x58 && PS2_buffer_data->capital_Flag == 1 && PS2_buffer_data->fresh_Press_Flag) {PS2_buffer_data->capital_Flag = 0;}
+
+		if (make_code_flag == 0) {
+
+				//check which buttton was let go here and deassert flag
+				switch (PS2_code) {
+						case 0x0E: {PS2_buffer_data->flag_array[0]=0;}
+						case 0x16: {PS2_buffer_data->flag_array[1]=0;}
+						case 0x1E: {PS2_buffer_data->flag_array[2]=0;}
+						case 0x26:  {PS2_buffer_data->flag_array[3]=0;}
+						case 0x25:  {PS2_buffer_data->flag_array[4]=0;}
+						case 0x2E:  {PS2_buffer_data->flag_array[5]=0;}
+						case 0x36:  {PS2_buffer_data->flag_array[6]=0;}
+						case 0x3D:  {PS2_buffer_data->flag_array[7]=0;}
+						case 0x3E:  {PS2_buffer_data->flag_array[8]=0;}
+						case 0x46: {PS2_buffer_data->flag_array[9]=0;}
+						case 0x45:  {PS2_buffer_data->flag_array[10]=0;}
+						case 0x4E:  {PS2_buffer_data->flag_array[11]=0;}
+						case 0x55:  {PS2_buffer_data->flag_array[12]=0;}
+
+						case 0x5D:  {PS2_buffer_data->flag_array[13]=0;}
+						case 0x15:  {PS2_buffer_data->flag_array[14]=0;}
+						case 0x1D:  {PS2_buffer_data->flag_array[15]=0;}
+						case 0x24:  {PS2_buffer_data->flag_array[16]=0;}
+						case 0x2D:  {PS2_buffer_data->flag_array[17]=0;}
+						case 0x2C:  {PS2_buffer_data->flag_array[18]=0;}
+						case 0x35:  {PS2_buffer_data->flag_array[19]=0;}
+						case 0x3C:  {PS2_buffer_data->flag_array[20]=0;}
+						case 0x43:  {PS2_buffer_data->flag_array[21]=0;}
+						case 0x44:  {PS2_buffer_data->flag_array[22]=0;}
+						case 0x4D:  {PS2_buffer_data->flag_array[23]=0;}
+						case 0x54:  {PS2_buffer_data->flag_array[24]=0;}
+						case 0x5B:  {PS2_buffer_data->flag_array[25]=0;}
+
+						case 0x1C:  {PS2_buffer_data->flag_array[26]=0;}
+						case 0x1B:  PS2_buffer_data->flag_array[27]=0;
+						case 0x23:  {PS2_buffer_data->flag_array[28]=0;}
+						case 0x2B:  {PS2_buffer_data->flag_array[29]=0;}
+						case 0x34:  {PS2_buffer_data->flag_array[30]=0;}
+						case 0x33:  {PS2_buffer_data->flag_array[31]=0;}
+						case 0x3B:  {PS2_buffer_data->flag_array[32]=0;}
+						case 0x42:  {PS2_buffer_data->flag_array[33]=0;}
+						case 0x4B:  {PS2_buffer_data->flag_array[34]=0;}
+						case 0x4C:  {PS2_buffer_data->flag_array[35]=0;}
+						case 0x52: {PS2_buffer_data->flag_array[36]=0;}
+						case 0x1A:  {PS2_buffer_data->flag_array[37]=0;}
+						case 0x22:  {PS2_buffer_data->flag_array[38]=0;}
+
+						case 0x21: {PS2_buffer_data->flag_array[39]=0;}
+						case 0x2A:  {PS2_buffer_data->flag_array[40]=0;}
+						case 0x32:  {PS2_buffer_data->flag_array[41]=0;}
+						case 0x31:  {PS2_buffer_data->flag_array[42]=0;}
+						case 0x3A:  {PS2_buffer_data->flag_array[43]=0;}
+						case 0x41: {PS2_buffer_data->flag_array[44]=0;}
+						case 0x49:  {PS2_buffer_data->flag_array[45]=0;}
+						case 0x4A:  {PS2_buffer_data->flag_array[46]=0;}
+						case 0x29:  {PS2_buffer_data->flag_array[47]=0;}
+						case 0x5A:  {PS2_buffer_data->flag_array[48]=0;}
+					}
+				}
+
+
+
+
+	//if we let go of keys and were previously holding, reset the flag and say we are ready for new key press
+	if (make_code_flag == 1) {
+		if(PS2_code != 0x58){translate_PS2_code(PS2_buffer_data, PS2_code);}
+			//check which buttton was let go here and deassert flag
+			switch (PS2_code) {
+					case 0x0E: {PS2_buffer_data->flag_array[0]=1;}
+					case 0x16: {PS2_buffer_data->flag_array[1]=1;}
+					case 0x1E: {PS2_buffer_data->flag_array[2]=1;}
+					case 0x26:  {PS2_buffer_data->flag_array[3]=1;}
+					case 0x25:  {PS2_buffer_data->flag_array[4]=1;}
+					case 0x2E:  {PS2_buffer_data->flag_array[5]=1;}
+					case 0x36:  {PS2_buffer_data->flag_array[6]=1;}
+					case 0x3D:  {PS2_buffer_data->flag_array[7]=1;}
+					case 0x3E:  {PS2_buffer_data->flag_array[8]=1;}
+					case 0x46: {PS2_buffer_data->flag_array[9]=1;}
+					case 0x45:  {PS2_buffer_data->flag_array[10]=1;}
+					case 0x4E:  {PS2_buffer_data->flag_array[11]=1;}
+					case 0x55:  {PS2_buffer_data->flag_array[12]=1;}
+
+					case 0x5D:  {PS2_buffer_data->flag_array[13]=1;}
+					case 0x15:  {PS2_buffer_data->flag_array[14]=1;}
+					case 0x1D:  {PS2_buffer_data->flag_array[15]=1;}
+					case 0x24:  {PS2_buffer_data->flag_array[16]=1;}
+					case 0x2D:  {PS2_buffer_data->flag_array[17]=1;}
+					case 0x2C:  {PS2_buffer_data->flag_array[18]=1;}
+					case 0x35:  {PS2_buffer_data->flag_array[19]=1;}
+					case 0x3C:  {PS2_buffer_data->flag_array[20]=1;}
+					case 0x43:  {PS2_buffer_data->flag_array[21]=1;}
+					case 0x44:  {PS2_buffer_data->flag_array[22]=1;}
+					case 0x4D:  {PS2_buffer_data->flag_array[23]=1;}
+					case 0x54:  {PS2_buffer_data->flag_array[24]=1;}
+					case 0x5B:  {PS2_buffer_data->flag_array[25]=1;}
+
+					case 0x1C:  {PS2_buffer_data->flag_array[26]=1;}
+					case 0x1B:  PS2_buffer_data->flag_array[27]=1;
+					case 0x23:  {PS2_buffer_data->flag_array[28]=1;}
+					case 0x2B:  {PS2_buffer_data->flag_array[29]=1;}
+					case 0x34:  {PS2_buffer_data->flag_array[30]=1;}
+					case 0x33:  {PS2_buffer_data->flag_array[31]=1;}
+					case 0x3B:  {PS2_buffer_data->flag_array[32]=1;}
+					case 0x42:  {PS2_buffer_data->flag_array[33]=1;}
+					case 0x4B:  {PS2_buffer_data->flag_array[34]=1;}
+					case 0x4C:  {PS2_buffer_data->flag_array[35]=1;}
+					case 0x52: {PS2_buffer_data->flag_array[36]=1;}
+					case 0x1A:  {PS2_buffer_data->flag_array[37]=1;}
+					case 0x22:  {PS2_buffer_data->flag_array[38]=1;}
+
+					case 0x21: {PS2_buffer_data->flag_array[39]=1;}
+					case 0x2A:  {PS2_buffer_data->flag_array[40]=1;}
+					case 0x32:  {PS2_buffer_data->flag_array[41]=1;}
+					case 0x31:  {PS2_buffer_data->flag_array[42]=1;}
+					case 0x3A:  {PS2_buffer_data->flag_array[43]=1;}
+					case 0x41: {PS2_buffer_data->flag_array[44]=1;}
+					case 0x49:  {PS2_buffer_data->flag_array[45]=1;}
+					case 0x4A:  {PS2_buffer_data->flag_array[46]=1;}
+					case 0x29:  {PS2_buffer_data->flag_array[47]=1;}
+					case 0x5A:  {PS2_buffer_data->flag_array[48]=1;}
+				}
+			}
+
+
+
+		//PS2_buffer_data->fresh_Press_Flag = 1; //ready for a "fresh press"!!
+
+
+	IOWR(PS2_CONTROLLER_COMPONENT_0_BASE, 0, 0);
+}
+
+// Function for initializing the ISR of the PS2_controller
+void init_PS2_irq(PS2_buffer_struct *PS2_buffer_data) {
+	IOWR(PS2_CONTROLLER_COMPONENT_0_BASE, 0, 0);
+
+	alt_irq_register(PS2_CONTROLLER_COMPONENT_0_IRQ, (void *) PS2_buffer_data,
+			(void*) handle_PS2_interrupts);
+}
+

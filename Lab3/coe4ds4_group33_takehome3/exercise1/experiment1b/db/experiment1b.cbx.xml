@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="experiment1b">
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_ic_data_module:experiment1b_cpu_0_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_qed1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_ic_tag_module:experiment1b_cpu_0_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_afh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_mult_cell:the_experiment1b_cpu_0_mult_cell|altmult_add:the_altmult_add_part_2" CBX_FILE_NAME="mult_add_6cr2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_register_bank_b_module:experiment1b_cpu_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_sgg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|lpm_add_sub:Add17" CBX_FILE_NAME="add_sub_8ri.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_bht_module:experiment1b_cpu_0_bht|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_r2h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_dc_data_module:experiment1b_cpu_0_dc_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_29f1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_dc_tag_module:experiment1b_cpu_0_dc_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_dng1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_dc_victim_module:experiment1b_cpu_0_dc_victim|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_9vc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_nios2_oci:the_experiment1b_cpu_0_nios2_oci|experiment1b_cpu_0_nios2_oci_im:the_experiment1b_cpu_0_nios2_oci_im|experiment1b_cpu_0_traceram_lpm_dram_bdp_component_module:experiment1b_cpu_0_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e502.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_nios2_oci:the_experiment1b_cpu_0_nios2_oci|experiment1b_cpu_0_nios2_ocimem:the_experiment1b_cpu_0_nios2_ocimem|experiment1b_cpu_0_ociram_lpm_dram_bdp_component_module:experiment1b_cpu_0_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_ve82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_register_bank_a_module:experiment1b_cpu_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_rgg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_jtag_uart_0:jtag_uart_0|experiment1b_jtag_uart_0_scfifo_w:the_experiment1b_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_cpu_0:cpu_0|experiment1b_cpu_0_mult_cell:the_experiment1b_cpu_0_mult_cell|altmult_add:the_altmult_add_part_1" CBX_FILE_NAME="mult_add_4cr2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|experiment1b|experiment1b_jtag_uart_0:jtag_uart_0|experiment1b_jtag_uart_0_scfifo_r:the_experiment1b_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

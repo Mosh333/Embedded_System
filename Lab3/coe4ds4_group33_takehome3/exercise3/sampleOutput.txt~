@@ -1,0 +1,379 @@
+
+a)
+
+Starting exercise3a...
+The 4 digits input is: 03l7
+MD5 Digest is: 21cc4297d896cbd031cff12525598621
+----------------
+The 4 digits input is: 1m8k
+MD5 Digest is: 216c10aed697f173d4153be87a0f4e21
+----------------
+The 4 digits input is: 26o7
+MD5 Digest is: 21e4e31fb906035046930cf56fdfca21
+----------------
+The 4 digits input is: 2h8h
+MD5 Digest is: 213f7d125003db84deb5b6b924b17721
+----------------
+The 4 digits input is: 4s72
+MD5 Digest is: 219fffff0c266a78255344f63dcc3021
+----------------
+The 4 digits input is: 5dus
+MD5 Digest is: 213b67b17de598264db0956055dd4c21
+----------------
+The 4 digits input is: 6xxu
+MD5 Digest is: 2120bf6fcfe4d4c6e94d515880980521
+----------------
+The 4 digits input is: 77lx
+MD5 Digest is: 217d61bc8e384e78902d5e5a34f91221
+----------------
+The 4 digits input is: 855l
+MD5 Digest is: 2171427465546aef69a54c8ad63b6c21
+----------------
+The 4 digits input is: artj
+MD5 Digest is: 2136bfff57aa1c1cbc6fcc2354b0fe21
+----------------
+The 4 digits input is: fgqx
+MD5 Digest is: 213cc382e0849852e00ccf33e3d3ef21
+----------------
+The 4 digits input is: g27f
+MD5 Digest is: 21e31e34d4aa5378ba852bc503091821
+----------------
+The 4 digits input is: i3pw
+MD5 Digest is: 218827ef09cdc414dc1d70a0e51a4b21
+----------------
+The 4 digits input is: i7i3
+MD5 Digest is: 21d2938d5d3af004fe275e15c3c24021
+----------------
+The 4 digits input is: kgx2
+MD5 Digest is: 21a7c78780beed0567d49aae2ea34821
+----------------
+The 4 digits input is: kzdl
+MD5 Digest is: 2147d098cbfd38344bafbd48c3989421
+----------------
+The 4 digits input is: lnrl
+MD5 Digest is: 21beca883862ea72ac67eb440b271321
+----------------
+The 4 digits input is: lpnc
+MD5 Digest is: 21e48fca697c1500ea5d96b479ea2721
+----------------
+The 4 digits input is: nq59
+MD5 Digest is: 2198770159ed77a9796e511067bc2021
+----------------
+The 4 digits input is: q4z3
+MD5 Digest is: 21bf24fca07be4fcc6bdbb6221679b21
+----------------
+The 4 digits input is: qj1c
+MD5 Digest is: 210024ba571c4ac8e18ef1ad01ba6c21
+----------------
+The 4 digits input is: qqrr
+MD5 Digest is: 21e9929857e81074c0fbf742254ff321
+----------------
+The 4 digits input is: rgzc
+MD5 Digest is: 21f56e08b4f94333bba8ca96fb4bc821
+----------------
+The 4 digits input is: rzg5
+MD5 Digest is: 21297ab06d5d07d18dfa256b437d4421
+----------------
+The 4 digits input is: so9r
+MD5 Digest is: 213df1adc31e4d6146ac6eee0364eb21
+----------------
+The 4 digits input is: touz
+MD5 Digest is: 219ddda8f3b4b9f84bedbea806f35421
+----------------
+The 4 digits input is: touz
+MD5 Digest is: 219ddda8f3b4b9f84bedbea806f35421
+----------------
+The 4 digits input is: tpr5
+MD5 Digest is: 215ab7d0d08c24d25efb073eacdfcf21
+----------------
+The 4 digits input is: v2f4
+MD5 Digest is: 21a341295a42e66cfe0cb92e5d14ce21
+----------------
+The 4 digits input is: velp
+MD5 Digest is: 216debbcc4c9eb1cc6dd1a359e322321
+----------------
+The 4 digits input is: xw7t
+MD5 Digest is: 213738a14f5fe0b64508e74baa2f9521
+----------------
+HitCounter is 31
+Done!
+Test 1 input is:  ,
+output is: d41d8cd98f00b204e9800998ecf8427e
+output in decimal is: Test 2 input is: a, 
+output is:  0cc175b9c0f1b6a831c399e269772661
+Test 3 input is: abc, 
+output is:  900150983cd24fb0d6963f7d28e17f72
+Test 4 input is: message digest, 
+output is:  f96b697d7cb7938d525a2f31aaf161d0
+Test 5 input is: abcdefghijklmnopqrstuvwxyz, 
+output is:  c3fcd3d76192e4007dfb496cca67e13b
+Test 6 input is: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789, 
+output is:  d174ab98d277d9f5a5611c2c9f419d9f
+Test 7 input is: 12345678901234567890123456789012345678901234567890123456789012345678901234567890, 
+output is:  57edf4a22be3c955ac49da2e2107b67a
+
+Test 1 Performance Measure: 12481389
+Test 2 Performance Measure: 111603
+Test 3 Performance Measure: 111300
+Test 4 Performance Measure: 115838
+Test 5 Performance Measure: 117543
+Test 6 Performance Measure: 637214
+Test 7 Performance Measure: 139181
+Test 8, 
+Input is ksxdvba
+: output is:  21392bc81d4f00531e5946c861da0721
+Finished computing MD5...
+
+
+
+
+b) 
+Starting exercise3b...
+The 4 digits input is: 03l7
+MD5 Digest is: 21cc4297d896cbd031cff12525598621
+----------------
+The 4 digits input is: 1m8k
+MD5 Digest is: 216c10aed697f173d4153be87a0f4e21
+----------------
+The 4 digits input is: 26o7
+MD5 Digest is: 21e4e31fb906035046930cf56fdfca21
+----------------
+The 4 digits input is: 2h8h
+MD5 Digest is: 213f7d125003db84deb5b6b924b17721
+----------------
+The 4 digits input is: 4s72
+MD5 Digest is: 219fffff0c266a78255344f63dcc3021
+----------------
+The 4 digits input is: 5dus
+MD5 Digest is: 213b67b17de598264db0956055dd4c21
+----------------
+The 4 digits input is: 6xxu
+MD5 Digest is: 2120bf6fcfe4d4c6e94d515880980521
+----------------
+The 4 digits input is: 77lx
+MD5 Digest is: 217d61bc8e384e78902d5e5a34f91221
+----------------
+The 4 digits input is: 855l
+MD5 Digest is: 2171427465546aef69a54c8ad63b6c21
+----------------
+The 4 digits input is: artj
+MD5 Digest is: 2136bfff57aa1c1cbc6fcc2354b0fe21
+----------------
+The 4 digits input is: fgqx
+MD5 Digest is: 213cc382e0849852e00ccf33e3d3ef21
+----------------
+The 4 digits input is: g27f
+MD5 Digest is: 21e31e34d4aa5378ba852bc503091821
+----------------
+The 4 digits input is: i3pw
+MD5 Digest is: 218827ef09cdc414dc1d70a0e51a4b21
+----------------
+The 4 digits input is: i7i3
+MD5 Digest is: 21d2938d5d3af004fe275e15c3c24021
+----------------
+The 4 digits input is: kgx2
+MD5 Digest is: 21a7c78780beed0567d49aae2ea34821
+----------------
+The 4 digits input is: kzdl
+MD5 Digest is: 2147d098cbfd38344bafbd48c3989421
+----------------
+The 4 digits input is: lnrl
+MD5 Digest is: 21beca883862ea72ac67eb440b271321
+----------------
+The 4 digits input is: lpnc
+MD5 Digest is: 21e48fca697c1500ea5d96b479ea2721
+----------------
+The 4 digits input is: nq59
+MD5 Digest is: 2198770159ed77a9796e511067bc2021
+----------------
+The 4 digits input is: q4z3
+MD5 Digest is: 21bf24fca07be4fcc6bdbb6221679b21
+----------------
+The 4 digits input is: qj1c
+MD5 Digest is: 210024ba571c4ac8e18ef1ad01ba6c21
+----------------
+The 4 digits input is: qqrr
+MD5 Digest is: 21e9929857e81074c0fbf742254ff321
+----------------
+The 4 digits input is: rgzc
+MD5 Digest is: 21f56e08b4f94333bba8ca96fb4bc821
+----------------
+The 4 digits input is: rzg5
+MD5 Digest is: 21297ab06d5d07d18dfa256b437d4421
+----------------
+The 4 digits input is: so9r
+MD5 Digest is: 213df1adc31e4d6146ac6eee0364eb21
+----------------
+The 4 digits input is: touz
+MD5 Digest is: 219ddda8f3b4b9f84bedbea806f35421
+----------------
+The 4 digits input is: touz
+MD5 Digest is: 219ddda8f3b4b9f84bedbea806f35421
+----------------
+The 4 digits input is: tpr5
+MD5 Digest is: 215ab7d0d08c24d25efb073eacdfcf21
+----------------
+The 4 digits input is: v2f4
+MD5 Digest is: 21a341295a42e66cfe0cb92e5d14ce21
+----------------
+The 4 digits input is: velp
+MD5 Digest is: 216debbcc4c9eb1cc6dd1a359e322321
+----------------
+The 4 digits input is: xw7t
+MD5 Digest is: 213738a14f5fe0b64508e74baa2f9521
+----------------
+HitCounter is 31
+Done!
+Test 1 input is:  ,
+output is: d41d8cd98f00b204e9800998ecf8427e
+output in decimal is: Test 2 input is: a, 
+output is:  0cc175b9c0f1b6a831c399e269772661
+Test 3 input is: abc, 
+output is:  900150983cd24fb0d6963f7d28e17f72
+Test 4 input is: message digest, 
+output is:  f96b697d7cb7938d525a2f31aaf161d0
+Test 5 input is: abcdefghijklmnopqrstuvwxyz, 
+output is:  c3fcd3d76192e4007dfb496cca67e13b
+Test 6 input is: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789, 
+output is:  d174ab98d277d9f5a5611c2c9f419d9f
+Test 7 input is: 12345678901234567890123456789012345678901234567890123456789012345678901234567890, 
+output is:  57edf4a22be3c955ac49da2e2107b67a
+
+Test 1 Performance Measure: 6816412
+Test 2 Performance Measure: 30509
+Test 3 Performance Measure: 30401
+Test 4 Performance Measure: 31573
+Test 5 Performance Measure: 32085
+Test 6 Performance Measure: 37721
+Test 7 Performance Measure: 40290
+Test 8, 
+Input is ksxdvba
+: output is:  21392bc81d4f00531e5946c861da0721
+Finished computing MD5...
+
+
+
+c)
+
+Starting exercise3c...
+The 4 digits input is: 03l7
+MD5 Digest is: 21cc4297d896cbd031cff12525598621
+----------------
+The 4 digits input is: 1m8k
+MD5 Digest is: 216c10aed697f173d4153be87a0f4e21
+----------------
+The 4 digits input is: 26o7
+MD5 Digest is: 21e4e31fb906035046930cf56fdfca21
+----------------
+The 4 digits input is: 2h8h
+MD5 Digest is: 213f7d125003db84deb5b6b924b17721
+----------------
+The 4 digits input is: 4s72
+MD5 Digest is: 219fffff0c266a78255344f63dcc3021
+----------------
+The 4 digits input is: 5dus
+MD5 Digest is: 213b67b17de598264db0956055dd4c21
+----------------
+The 4 digits input is: 6xxu
+MD5 Digest is: 2120bf6fcfe4d4c6e94d515880980521
+----------------
+The 4 digits input is: 77lx
+MD5 Digest is: 217d61bc8e384e78902d5e5a34f91221
+----------------
+The 4 digits input is: 855l
+MD5 Digest is: 2171427465546aef69a54c8ad63b6c21
+----------------
+The 4 digits input is: artj
+MD5 Digest is: 2136bfff57aa1c1cbc6fcc2354b0fe21
+----------------
+The 4 digits input is: fgqx
+MD5 Digest is: 213cc382e0849852e00ccf33e3d3ef21
+----------------
+The 4 digits input is: g27f
+MD5 Digest is: 21e31e34d4aa5378ba852bc503091821
+----------------
+The 4 digits input is: i3pw
+MD5 Digest is: 218827ef09cdc414dc1d70a0e51a4b21
+----------------
+The 4 digits input is: i7i3
+MD5 Digest is: 21d2938d5d3af004fe275e15c3c24021
+----------------
+The 4 digits input is: kgx2
+MD5 Digest is: 21a7c78780beed0567d49aae2ea34821
+----------------
+The 4 digits input is: kzdl
+MD5 Digest is: 2147d098cbfd38344bafbd48c3989421
+----------------
+The 4 digits input is: lnrl
+MD5 Digest is: 21beca883862ea72ac67eb440b271321
+----------------
+The 4 digits input is: lpnc
+MD5 Digest is: 21e48fca697c1500ea5d96b479ea2721
+----------------
+The 4 digits input is: nq59
+MD5 Digest is: 2198770159ed77a9796e511067bc2021
+----------------
+The 4 digits input is: q4z3
+MD5 Digest is: 21bf24fca07be4fcc6bdbb6221679b21
+----------------
+The 4 digits input is: qj1c
+MD5 Digest is: 210024ba571c4ac8e18ef1ad01ba6c21
+----------------
+The 4 digits input is: qqrr
+MD5 Digest is: 21e9929857e81074c0fbf742254ff321
+----------------
+The 4 digits input is: rgzc
+MD5 Digest is: 21f56e08b4f94333bba8ca96fb4bc821
+----------------
+The 4 digits input is: rzg5
+MD5 Digest is: 21297ab06d5d07d18dfa256b437d4421
+----------------
+The 4 digits input is: so9r
+MD5 Digest is: 213df1adc31e4d6146ac6eee0364eb21
+----------------
+The 4 digits input is: touz
+MD5 Digest is: 219ddda8f3b4b9f84bedbea806f35421
+----------------
+The 4 digits input is: touz
+MD5 Digest is: 219ddda8f3b4b9f84bedbea806f35421
+----------------
+The 4 digits input is: tpr5
+MD5 Digest is: 215ab7d0d08c24d25efb073eacdfcf21
+----------------
+The 4 digits input is: v2f4
+MD5 Digest is: 21a341295a42e66cfe0cb92e5d14ce21
+----------------
+The 4 digits input is: velp
+MD5 Digest is: 216debbcc4c9eb1cc6dd1a359e322321
+----------------
+The 4 digits input is: xw7t
+MD5 Digest is: 213738a14f5fe0b64508e74baa2f9521
+----------------
+HitCounter is 31
+Done!
+Test 1 input is:  ,
+output is: d41d8cd98f00b204e9800998ecf8427e
+output in decimal is: Test 2 input is: a, 
+output is:  0cc175b9c0f1b6a831c399e269772661
+Test 3 input is: abc, 
+output is:  900150983cd24fb0d6963f7d28e17f72
+Test 4 input is: message digest, 
+output is:  f96b697d7cb7938d525a2f31aaf161d0
+Test 5 input is: abcdefghijklmnopqrstuvwxyz, 
+output is:  c3fcd3d76192e4007dfb496cca67e13b
+Test 6 input is: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789, 
+output is:  d174ab98d277d9f5a5611c2c9f419d9f
+Test 7 input is: 12345678901234567890123456789012345678901234567890123456789012345678901234567890, 
+output is:  57edf4a22be3c955ac49da2e2107b67a
+
+Test 1 Performance Measure: 6731495
+Test 2 Performance Measure: 30747
+Test 3 Performance Measure: 30637
+Test 4 Performance Measure: 31795
+Test 5 Performance Measure: 32300
+Test 6 Performance Measure: 37002
+Test 7 Performance Measure: 40282
+Test 8, 
+Input is ksxdvba
+: output is:  21392bc81d4f00531e5946c861da0721
+Finished computing MD5...

@@ -1,0 +1,15 @@
+/*
+ * switches.h
+ *
+ *  Created on: Jan 29, 2018
+ *      Author: ECE\ganesr3
+ */
+
+#ifndef SWITCHES_H_
+#define SWITCHES_H_
+
+void switch_interrupt();
+void init_switches_irq(elevator_struct *elevator);
+
+
+#endif /* SWITCHES_H_ */

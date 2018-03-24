@@ -1,0 +1,9 @@
+
+#ifndef SWITCHES_H_
+#define SWITCHES_H_
+
+void switch_interrupt(elevator_struct *elevator);
+void init_switches_irq(elevator_struct *elevator);
+
+
+#endif /* SWITCHES_H_ */

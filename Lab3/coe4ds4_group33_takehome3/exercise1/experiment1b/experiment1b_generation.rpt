@@ -1,0 +1,170 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/ --output-directory=/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b/ --report-file=bsf:/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b.qsys
+Progress: Loading experiment1b/experiment1b.qsys
+Progress: Reading input file
+Progress: Adding CLOCK_50_I [clock_source 12.0]
+Progress: Parameterizing module CLOCK_50_I
+Progress: Adding cpu_0 [altera_nios2_qsys 12.0]
+Progress: Parameterizing module cpu_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 12.0]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding SWITCH_I [altera_avalon_pio 12.0]
+Progress: Parameterizing module SWITCH_I
+Progress: Adding PUSH_BUTTON_I [altera_avalon_pio 12.0]
+Progress: Parameterizing module PUSH_BUTTON_I
+Progress: Adding LED_RED_O [altera_avalon_pio 12.0]
+Progress: Parameterizing module LED_RED_O
+Progress: Adding LED_GREEN_O [altera_avalon_pio 12.0]
+Progress: Parameterizing module LED_GREEN_O
+Progress: Adding custom_counter_component_0 [custom_counter_component 1.0]
+Progress: Parameterizing module custom_counter_component_0
+Progress: Adding sram_0 [altera_up_avalon_sram 11.0]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: experiment1b.SWITCH_I: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: experiment1b.PUSH_BUTTON_I: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/ --output-directory=/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b.sopcinfo --report-file=html:/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b.html --report-file=qip:/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b/synthesis/experiment1b.qip --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=/home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b.qsys
+Progress: Loading experiment1b/experiment1b.qsys
+Progress: Reading input file
+Progress: Adding CLOCK_50_I [clock_source 12.0]
+Progress: Parameterizing module CLOCK_50_I
+Progress: Adding cpu_0 [altera_nios2_qsys 12.0]
+Progress: Parameterizing module cpu_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 12.0]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding SWITCH_I [altera_avalon_pio 12.0]
+Progress: Parameterizing module SWITCH_I
+Progress: Adding PUSH_BUTTON_I [altera_avalon_pio 12.0]
+Progress: Parameterizing module PUSH_BUTTON_I
+Progress: Adding LED_RED_O [altera_avalon_pio 12.0]
+Progress: Parameterizing module LED_RED_O
+Progress: Adding LED_GREEN_O [altera_avalon_pio 12.0]
+Progress: Parameterizing module LED_GREEN_O
+Progress: Adding custom_counter_component_0 [custom_counter_component 1.0]
+Progress: Parameterizing module custom_counter_component_0
+Progress: Adding sram_0 [altera_up_avalon_sram 11.0]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: experiment1b.SWITCH_I: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: experiment1b.PUSH_BUTTON_I: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: experiment1b: Generating experiment1b "experiment1b" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 9 modules, 31 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 19 modules, 65 connections
+Info: merlin_domain_transform: After transform: 38 modules, 175 connections
+Info: merlin_router_transform: After transform: 48 modules, 209 connections
+Info: merlin_traffic_limiter_transform: After transform: 50 modules, 219 connections
+Info: merlin_burst_transform: After transform: 51 modules, 222 connections
+Info: reset_adaptation_transform: After transform: 53 modules, 205 connections
+Info: merlin_network_to_switch_transform: After transform: 72 modules, 245 connections
+Info: merlin_width_transform: After transform: 74 modules, 251 connections
+Info: limiter_update_transform: After transform: 74 modules, 253 connections
+Info: merlin_interrupt_mapper_transform: After transform: 75 modules, 256 connections
+Info: cpu_0: Starting RTL generation for module 'experiment1b_cpu_0'
+Info: cpu_0:   Generation command is [exec /tools/altera/12.0/quartus/../ip/altera/nios2_ip/altera_nios2/eperl -I /tools/altera/12.0/quartus/common/ip/altera/common/perl/5.8.3 -I /tools/altera/12.0/quartus/sopc_builder/bin/europa -I /tools/altera/12.0/quartus/sopc_builder/bin/perl_lib -I /tools/altera/12.0/quartus/sopc_builder/bin -I /tools/altera/12.0/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I /tools/altera/12.0/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I /tools/altera/12.0/quartus/../ip/altera/nios2_ip/altera_nios2 -I /tools/altera/12.0/quartus/../ip/altera/nios2_ip/altera_nios2 -- /tools/altera/12.0/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=experiment1b_cpu_0 --dir=/tmp/alt7556_1218309906354315309.dir/0001_cpu_0_gen/ --quartus_dir=/tools/altera/12.0/quartus --verilog --config=/tmp/alt7556_1218309906354315309.dir/0001_cpu_0_gen//experiment1b_cpu_0_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info: cpu_0: # 2018.01.25 15:31:13 (*) Starting Nios II generation
+Info: cpu_0: # 2018.01.25 15:31:13 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu_0: # 2018.01.25 15:31:15 (*)   Couldn't query license setup in Quartus directory /tools/altera/12.0/quartus
+Info: cpu_0: # 2018.01.25 15:31:15 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu_0: # 2018.01.25 15:31:15 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: cpu_0: # 2018.01.25 15:31:15 (*)   Elaborating CPU configuration settings
+Info: cpu_0: # 2018.01.25 15:31:15 (*)   Creating all objects for CPU
+Info: cpu_0: # 2018.01.25 15:31:15 (*)     Testbench
+Info: cpu_0: # 2018.01.25 15:31:15 (*)     Instruction decoding
+Info: cpu_0: # 2018.01.25 15:31:15 (*)       Instruction fields
+Info: cpu_0: # 2018.01.25 15:31:15 (*)       Instruction decodes
+Info: cpu_0: # 2018.01.25 15:31:16 (*)       Signals for RTL simulation waveforms
+Info: cpu_0: # 2018.01.25 15:31:16 (*)       Instruction controls
+Info: cpu_0: # 2018.01.25 15:31:16 (*)     Pipeline frontend
+Info: cpu_0: # 2018.01.25 15:31:16 (*)     Pipeline backend
+Info: cpu_0: # 2018.01.25 15:31:19 (*)   Generating RTL from CPU objects
+Info: cpu_0: # 2018.01.25 15:31:21 (*)   Creating encrypted RTL
+Info: cpu_0: # 2018.01.25 15:31:22 (*) Done Nios II generation
+Info: cpu_0: Done RTL generation for module 'experiment1b_cpu_0'
+Info: cpu_0: "experiment1b" instantiated altera_nios2_qsys "cpu_0"
+Info: Starting classic module elaboration.
+"/tools/altera/12.0/quartus/linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus/sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus/sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus/sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0002_sopclgen  --no_splash --refresh /tmp/alt7556_1218309906354315309.dir/0002_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus" --sopc_perl="/tools/altera/12.0/quartus/linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus/../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus/../ip/altera/nios2_ip"
+Info: Finished elaborating classic module.
+Executing: /tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder --classic --generate /tmp/alt7556_1218309906354315309.dir/0002_sopclgen/yysystem.ptf
+Info: Running sopc_builder...
+"/tools/altera/12.0/quartus//linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus//sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus//sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus//sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus//sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0002_sopclgen  --generate /tmp/alt7556_1218309906354315309.dir/0002_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus/" --sopc_perl="/tools/altera/12.0/quartus//linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus//../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus//../ip/altera/nios2_ip"
+.
+# 2018.01.25 15:31:27 (*) Success: sopc_builder finished.
+Info: jtag_uart_0: "experiment1b" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: Starting classic module elaboration.
+"/tools/altera/12.0/quartus/linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus/sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus/sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus/sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0003_sopclgen  --no_splash --refresh /tmp/alt7556_1218309906354315309.dir/0003_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus" --sopc_perl="/tools/altera/12.0/quartus/linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus/../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus/../ip/altera/nios2_ip"
+Info: Finished elaborating classic module.
+Executing: /tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder --classic --generate /tmp/alt7556_1218309906354315309.dir/0003_sopclgen/yysystem.ptf
+Info: Running sopc_builder...
+"/tools/altera/12.0/quartus//linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus//sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus//sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus//sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus//sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0003_sopclgen  --generate /tmp/alt7556_1218309906354315309.dir/0003_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus/" --sopc_perl="/tools/altera/12.0/quartus//linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus//../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus//../ip/altera/nios2_ip"
+.
+# 2018.01.25 15:31:32 (*) Success: sopc_builder finished.
+Info: SWITCH_I: "experiment1b" instantiated altera_avalon_pio "SWITCH_I"
+Info: Starting classic module elaboration.
+"/tools/altera/12.0/quartus/linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus/sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus/sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus/sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0004_sopclgen  --no_splash --refresh /tmp/alt7556_1218309906354315309.dir/0004_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus" --sopc_perl="/tools/altera/12.0/quartus/linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus/../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus/../ip/altera/nios2_ip"
+Info: Finished elaborating classic module.
+Executing: /tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder --classic --generate /tmp/alt7556_1218309906354315309.dir/0004_sopclgen/yysystem.ptf
+Info: Running sopc_builder...
+"/tools/altera/12.0/quartus//linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus//sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus//sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus//sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus//sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0004_sopclgen  --generate /tmp/alt7556_1218309906354315309.dir/0004_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus/" --sopc_perl="/tools/altera/12.0/quartus//linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus//../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus//../ip/altera/nios2_ip"
+.
+# 2018.01.25 15:31:38 (*) Success: sopc_builder finished.
+Info: PUSH_BUTTON_I: "experiment1b" instantiated altera_avalon_pio "PUSH_BUTTON_I"
+Info: Starting classic module elaboration.
+"/tools/altera/12.0/quartus/linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus/sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus/sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus/sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0005_sopclgen  --no_splash --refresh /tmp/alt7556_1218309906354315309.dir/0005_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus" --sopc_perl="/tools/altera/12.0/quartus/linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus/../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus/../ip/altera/nios2_ip"
+Info: Finished elaborating classic module.
+Executing: /tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder --classic --generate /tmp/alt7556_1218309906354315309.dir/0005_sopclgen/yysystem.ptf
+Info: Running sopc_builder...
+"/tools/altera/12.0/quartus//linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus//sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus//sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus//sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus//sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0005_sopclgen  --generate /tmp/alt7556_1218309906354315309.dir/0005_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus/" --sopc_perl="/tools/altera/12.0/quartus//linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus//../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus//../ip/altera/nios2_ip"
+.
+# 2018.01.25 15:31:43 (*) Success: sopc_builder finished.
+Info: LED_RED_O: "experiment1b" instantiated altera_avalon_pio "LED_RED_O"
+Info: Starting classic module elaboration.
+"/tools/altera/12.0/quartus/linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus/sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus/sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus/sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0006_sopclgen  --no_splash --refresh /tmp/alt7556_1218309906354315309.dir/0006_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus" --sopc_perl="/tools/altera/12.0/quartus/linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus/../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus/../ip/altera/nios2_ip"
+Info: Finished elaborating classic module.
+Executing: /tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder --classic --generate /tmp/alt7556_1218309906354315309.dir/0006_sopclgen/yysystem.ptf
+Info: Running sopc_builder...
+"/tools/altera/12.0/quartus//linux/jre/bin/java" -Xmx512M -classpath "/tools/altera/12.0/quartus//sopc_builder/bin/sopc_builder.jar:/tools/altera/12.0/quartus//sopc_builder/bin/PinAssigner.jar:/tools/altera/12.0/quartus//sopc_builder/bin/sopc_wizard.jar:/tools/altera/12.0/quartus//sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"/tools/altera/12.0/quartus//sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpath/tmp/alt7556_1218309906354315309.dir/0006_sopclgen  --generate /tmp/alt7556_1218309906354315309.dir/0006_sopclgen/yysystem.v --quartus_dir="/tools/altera/12.0/quartus/" --sopc_perl="/tools/altera/12.0/quartus//linux/perl" --sopc_lib_path="++/tools/altera/12.0/quartus//../ip/altera/sopc_builder_ip+/tools/altera/12.0/quartus//../ip/altera/nios2_ip"
+.
+# 2018.01.25 15:31:48 (*) Success: sopc_builder finished.
+Info: LED_GREEN_O: "experiment1b" instantiated altera_avalon_pio "LED_GREEN_O"
+Info: custom_counter_component_0: "experiment1b" instantiated custom_counter_component "custom_counter_component_0"
+Info: sram_0: Starting Generation of SRAM or SSRAM Controller
+Info: sram_0: "experiment1b" instantiated altera_up_avalon_sram "sram_0"
+Info: cpu_0_instruction_master_translator: "experiment1b" instantiated altera_merlin_master_translator "cpu_0_instruction_master_translator"
+Info: cpu_0_jtag_debug_module_translator: "experiment1b" instantiated altera_merlin_slave_translator "cpu_0_jtag_debug_module_translator"
+Info: cpu_0_instruction_master_translator_avalon_universal_master_0_agent: "experiment1b" instantiated altera_merlin_master_agent "cpu_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info: cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "experiment1b" instantiated altera_merlin_slave_agent "cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "experiment1b" instantiated altera_avalon_sc_fifo "cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "experiment1b" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "experiment1b" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "experiment1b" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "experiment1b" instantiated altera_merlin_router "id_router_001"
+Info: id_router_002: "experiment1b" instantiated altera_merlin_router "id_router_002"
+Info: limiter: "experiment1b" instantiated altera_merlin_traffic_limiter "limiter"
+Info: burst_adapter: "experiment1b" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: rst_controller: "experiment1b" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "experiment1b" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "experiment1b" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "experiment1b" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "experiment1b" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_002: "experiment1b" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info: rsp_xbar_mux: "experiment1b" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file /home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "experiment1b" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file /home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: width_adapter: "experiment1b" instantiated altera_merlin_width_adapter "width_adapter"
+Info: Reusing file /home/ECE/azharam/Desktop/coe4ds4_lab3_2018/experiment1b/experiment1b/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: irq_mapper: "experiment1b" instantiated altera_irq_mapper "irq_mapper"
+Info: experiment1b: Done experiment1b" with 31 modules, 103 files, 2010269 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

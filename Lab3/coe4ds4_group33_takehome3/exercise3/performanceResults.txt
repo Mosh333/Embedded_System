@@ -1,0 +1,85 @@
+
+
+Exercise 3
+
+i) part a
+
+Start computing MD5...
+Test 1 input is:  ,
+output is: d41d8cd98f0b24e980998ecf8427e
+Test 2 input is: a, 
+output is:  cc175b9c0f1b6a831c399e269772661
+Test 3 input is: abc, 
+output is:  90150983cd24fb0d6963f7d28e17f72
+Test 4 input is: message digest, 
+output is:  f96b697d7cb7938d525a2f31aaf161d0
+Test 5 input is: abcdefghijklmnopqrstuvwxyz, 
+output is:  c3fcd3d76192e407dfb496cca67e13b
+Test 6 input is: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789, 
+output is:  d174ab98d277d9f5a5611c2c9f419d9f
+Test 7 input is: 12345678901234567890123456789012345678901234567890123456789012345678901234567890, 
+output is:  57edf4a22be3c955ac49da2e217b67a
+
+Test 1 Performance Measure: 5061185
+Test 2 Performance Measure: 110090
+Test 3 Performance Measure: 109787
+Test 4 Performance Measure: 115166
+Test 5 Performance Measure: 116030
+Test 6 Performance Measure: 135954
+Test 7 Performance Measure: 435237
+Finished computing MD5...
+
+
+i) part b
+
+Start computing MD5...
+Test 1 input is:  ,
+output is: d41d8cd98f0b24e980998ecf8427e
+Test 2 input is: a, 
+output is:  cc175b9c0f1b6a831c399e269772661
+Test 3 input is: abc, 
+output is:  90150983cd24fb0d6963f7d28e17f72
+Test 4 input is: message digest, 
+output is:  f96b697d7cb7938d525a2f31aaf161d0
+Test 5 input is: abcdefghijklmnopqrstuvwxyz, 
+output is:  c3fcd3d76192e407dfb496cca67e13b
+Test 6 input is: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789, 
+output is:  d174ab98d277d9f5a5611c2c9f419d9f
+Test 7 input is: 12345678901234567890123456789012345678901234567890123456789012345678901234567890, 
+output is:  57edf4a22be3c955ac49da2e217b67a
+
+Test 1 Performance Measure: 949080
+Test 2 Performance Measure: 30045
+Test 3 Performance Measure: 29948
+Test 4 Performance Measure: 31381
+Test 5 Performance Measure: 31625
+Test 6 Performance Measure: 37575
+Test 7 Performance Measure: 39051
+Finished computing MD5...
+
+i) part c
+
+Start computing MD5...
+Test 1 input is:  ,
+output is: d41d8cd98f0b24e980998ecf8427e
+Test 2 input is: a, 
+output is:  cc175b9c0f1b6a831c399e269772661
+Test 3 input is: abc, 
+output is:  90150983cd24fb0d6963f7d28e17f72
+Test 4 input is: message digest, 
+output is:  f96b697d7cb7938d525a2f31aaf161d0
+Test 5 input is: abcdefghijklmnopqrstuvwxyz, 
+output is:  c3fcd3d76192e407dfb496cca67e13b
+Test 6 input is: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789, 
+output is:  d174ab98d277d9f5a5611c2c9f419d9f
+Test 7 input is: 12345678901234567890123456789012345678901234567890123456789012345678901234567890, 
+output is:  57edf4a22be3c955ac49da2e217b67a
+
+Test 1 Performance Measure: 824242
+Test 2 Performance Measure: 30342
+Test 3 Performance Measure: 30272
+Test 4 Performance Measure: 31668
+Test 5 Performance Measure: 31927
+Test 6 Performance Measure: 36981
+Test 7 Performance Measure: 39911
+Finished computing MD5...

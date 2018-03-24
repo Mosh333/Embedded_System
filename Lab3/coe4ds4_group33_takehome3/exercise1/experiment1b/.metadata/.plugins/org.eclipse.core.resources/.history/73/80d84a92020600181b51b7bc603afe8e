@@ -1,0 +1,103 @@
+/*
+ * elevator_sim.c
+ *
+ *  Created on: Jan 29, 2018
+ *      Author: ECE\ganesr3
+ */
+
+#include "define.h"
+
+void service_floor(){
+
+}
+
+
+void find_next_floor(){
+
+}
+
+int check_requests(){
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+void elevator_sim(){
+
+	elevator_struct elevator;
+	int i=0;
+	elevator.motion=0;//1 for in motion, 0 for still --( we need both direction and motion because we may be moving up while temp stoppping
+	elevator.direction=0;
+	elevator.current_floor=0;
+	elevator.next_floor=0;
+	//elevator.request_queue=[0,0,0,0,0,0,0,0,0,0,0,0];
+	elevator.door_close_ready=0;
+
+	for(i=0;i<=11;i++){
+		elevator.request_queue[i]=0;
+	}
+
+	elevator.keep_door_open=0;
+
+	elevator.door_open_time=0;
+	elevator.floor_travel_time=0;
+
+//	while(1){
+//
+//		//Notes:
+//		//we need to
+//
+//
+//		if(elevator.motion==0){//we are stopped at a floor
+//
+//			//check if we need to open doors this floor
+//			if(elevator.request_queue[elevator.current_floor]==1){//this means that the floor that we are stopped at has not been serviced
+//				//we need to service it
+//				service_floor();
+//			}
+//
+//			//time to find floors that need to be serviced
+//			if(elevator.direction==1){
+//				for(i=elevator.current_floor;i<=11;i++){
+//					if(elevator.request_queue[i]==1){elevator.next_floor=i;}
+//
+//			}
+//
+//
+//
+//
+//			//check if we have any floors to travel to
+//
+//		}else{//we are in motion travelling up or down
+//
+//
+//
+//
+//
+//
+//
+//		}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//	}
+//
+//}
+}
+
+

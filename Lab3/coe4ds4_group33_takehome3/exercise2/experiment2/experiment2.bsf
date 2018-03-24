@@ -1,0 +1,181 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 576 496)
+	(text "experiment2" (rect 253 -1 330 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 480 36 492)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clock_50_i_clk_in_clk" (rect 0 0 148 12)(font "Arial" (font_size 8)))
+		(text "clock_50_i_clk_in_clk" (rect 4 61 130 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 256 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "clock_50_i_clk_in_reset_reset_n" (rect 0 0 219 12)(font "Arial" (font_size 8)))
+		(text "clock_50_i_clk_in_reset_reset_n" (rect 4 101 190 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 256 112)(line_width 1))
+	)
+	(port
+		(pt 0 368)
+		(input)
+		(text "switch_i_external_connection_export[16..0]" (rect 0 0 297 12)(font "Arial" (font_size 8)))
+		(text "switch_i_external_connection_export[16..0]" (rect 4 357 256 368)(font "Arial" (font_size 8)))
+		(line (pt 0 368)(pt 256 368)(line_width 3))
+	)
+	(port
+		(pt 0 408)
+		(input)
+		(text "push_button_i_external_connection_export[3..0]" (rect 0 0 325 12)(font "Arial" (font_size 8)))
+		(text "push_button_i_external_connection_export[3..0]" (rect 4 397 280 408)(font "Arial" (font_size 8)))
+		(line (pt 0 408)(pt 256 408)(line_width 3))
+	)
+	(port
+		(pt 0 448)
+		(input)
+		(text "ps2_controller_component_0_conduit_end_data" (rect 0 0 304 12)(font "Arial" (font_size 8)))
+		(text "ps2_controller_component_0_conduit_end_data" (rect 4 437 262 448)(font "Arial" (font_size 8)))
+		(line (pt 0 448)(pt 256 448)(line_width 1))
+	)
+	(port
+		(pt 0 464)
+		(input)
+		(text "ps2_controller_component_0_conduit_end_clock" (rect 0 0 311 12)(font "Arial" (font_size 8)))
+		(text "ps2_controller_component_0_conduit_end_clock" (rect 4 453 268 464)(font "Arial" (font_size 8)))
+		(line (pt 0 464)(pt 256 464)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(output)
+		(text "sram_0_external_interface_ADDR[17..0]" (rect 0 0 261 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_ADDR[17..0]" (rect 4 157 226 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 256 168)(line_width 3))
+	)
+	(port
+		(pt 0 184)
+		(output)
+		(text "sram_0_external_interface_LB_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_LB_N" (rect 4 173 184 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 256 184)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(output)
+		(text "sram_0_external_interface_UB_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_UB_N" (rect 4 189 184 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 256 200)(line_width 1))
+	)
+	(port
+		(pt 0 216)
+		(output)
+		(text "sram_0_external_interface_CE_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_CE_N" (rect 4 205 184 216)(font "Arial" (font_size 8)))
+		(line (pt 0 216)(pt 256 216)(line_width 1))
+	)
+	(port
+		(pt 0 232)
+		(output)
+		(text "sram_0_external_interface_OE_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_OE_N" (rect 4 221 184 232)(font "Arial" (font_size 8)))
+		(line (pt 0 232)(pt 256 232)(line_width 1))
+	)
+	(port
+		(pt 0 248)
+		(output)
+		(text "sram_0_external_interface_WE_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_WE_N" (rect 4 237 184 248)(font "Arial" (font_size 8)))
+		(line (pt 0 248)(pt 256 248)(line_width 1))
+	)
+	(port
+		(pt 0 288)
+		(output)
+		(text "led_red_o_external_connection_export[17..0]" (rect 0 0 304 12)(font "Arial" (font_size 8)))
+		(text "led_red_o_external_connection_export[17..0]" (rect 4 277 262 288)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 256 288)(line_width 3))
+	)
+	(port
+		(pt 0 328)
+		(output)
+		(text "led_green_o_external_connection_export[8..0]" (rect 0 0 311 12)(font "Arial" (font_size 8)))
+		(text "led_green_o_external_connection_export[8..0]" (rect 4 317 268 328)(font "Arial" (font_size 8)))
+		(line (pt 0 328)(pt 256 328)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(bidir)
+		(text "sram_0_external_interface_DQ[15..0]" (rect 0 0 247 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_DQ[15..0]" (rect 4 141 214 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 256 152)(line_width 3))
+	)
+	(drawing
+		(text "clock_50_i_clk_in" (rect 153 43 408 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 261 67 540 144)(font "Arial" (color 0 0 0)))
+		(text "clock_50_i_clk_in_reset" (rect 115 83 368 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 261 107 564 224)(font "Arial" (color 0 0 0)))
+		(text "sram_0_external_interface" (rect 99 123 348 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "DQ" (rect 261 147 534 304)(font "Arial" (color 0 0 0)))
+		(text "ADDR" (rect 261 163 546 336)(font "Arial" (color 0 0 0)))
+		(text "LB_N" (rect 261 179 546 368)(font "Arial" (color 0 0 0)))
+		(text "UB_N" (rect 261 195 546 400)(font "Arial" (color 0 0 0)))
+		(text "CE_N" (rect 261 211 546 432)(font "Arial" (color 0 0 0)))
+		(text "OE_N" (rect 261 227 546 464)(font "Arial" (color 0 0 0)))
+		(text "WE_N" (rect 261 243 546 496)(font "Arial" (color 0 0 0)))
+		(text "led_red_o_external_connection" (rect 75 259 324 531)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 261 283 558 576)(font "Arial" (color 0 0 0)))
+		(text "led_green_o_external_connection" (rect 61 299 308 611)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 261 323 558 656)(font "Arial" (color 0 0 0)))
+		(text "switch_i_external_connection" (rect 86 339 340 691)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 261 363 558 736)(font "Arial" (color 0 0 0)))
+		(text "push_button_i_external_connection" (rect 51 379 300 771)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 261 403 558 816)(font "Arial" (color 0 0 0)))
+		(text "ps2_controller_component_0_conduit_end" (rect 10 419 248 851)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 261 443 546 896)(font "Arial" (color 0 0 0)))
+		(text "clock" (rect 261 459 552 928)(font "Arial" (color 0 0 0)))
+		(text " experiment2 " (rect 521 480 1120 970)(font "Arial" ))
+		(line (pt 257 52)(pt 257 76)(line_width 1))
+		(line (pt 258 52)(pt 258 76)(line_width 1))
+		(line (pt 257 92)(pt 257 116)(line_width 1))
+		(line (pt 258 92)(pt 258 116)(line_width 1))
+		(line (pt 257 132)(pt 257 252)(line_width 1))
+		(line (pt 258 132)(pt 258 252)(line_width 1))
+		(line (pt 257 268)(pt 257 292)(line_width 1))
+		(line (pt 258 268)(pt 258 292)(line_width 1))
+		(line (pt 257 308)(pt 257 332)(line_width 1))
+		(line (pt 258 308)(pt 258 332)(line_width 1))
+		(line (pt 257 348)(pt 257 372)(line_width 1))
+		(line (pt 258 348)(pt 258 372)(line_width 1))
+		(line (pt 257 388)(pt 257 412)(line_width 1))
+		(line (pt 258 388)(pt 258 412)(line_width 1))
+		(line (pt 257 428)(pt 257 468)(line_width 1))
+		(line (pt 258 428)(pt 258 468)(line_width 1))
+		(line (pt 256 32)(pt 320 32)(line_width 1))
+		(line (pt 320 32)(pt 320 480)(line_width 1))
+		(line (pt 256 480)(pt 320 480)(line_width 1))
+		(line (pt 256 32)(pt 256 480)(line_width 1))
+		(line (pt 0 0)(pt 576 0)(line_width 1))
+		(line (pt 576 0)(pt 576 496)(line_width 1))
+		(line (pt 0 496)(pt 576 496)(line_width 1))
+		(line (pt 0 0)(pt 0 496)(line_width 1))
+	)
+)

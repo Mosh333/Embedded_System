@@ -1,0 +1,30 @@
+////////////////////////
+// CODE SECTION BEGIN //
+////////////////////////
+
+#include "define.h"
+
+
+
+void switch_interrupt(elevator_struct *elevator){
+	int i=0;
+	int sw= IORD(SWITCH_I_BASE, 3)& 0xFFF;
+	for(i=0;i<=11;i++){
+		if((sw>>i)&0x1)break;
+	}
+	elevator->request_queue[i]=1;
+
+}
+
+
+
+// Function for initializing the ISR of the Counter
+void init_switches_irq(elevator_struct *elevator) {
+	IOWR(SWITCH_GRPB_I_BASE, 3, 0x0); //check this, do we need it?
+	IOWR(SWITCH_I_BASE, 2, 0xFFF);//unmask the lowest 12 switches (0-11)
+	//alt_irq_register(CUSTOM_COUNTER_SWITCH_I_IRQ, (void *) elevator, (void*)switch_interrupt );
+}
+
+////////////////////////
+// CODE SECTION END   //
+////////////////////////

@@ -1,0 +1,188 @@
+/*
+ * elevator_sim.c
+ *
+ *  Created on: Jan 29, 2018
+ *      Author: ECE\ganesr3
+ */
+
+#include "define.h"
+
+alt_u16 disp_seven_seg(alt_u8 val) {
+	switch (val) {
+	case 0:
+		return 0x40;
+	case 1:
+		return 0x79;
+	case 2:
+		return 0x24;
+	case 3:
+		return 0x30;
+	case 4:
+		return 0x19;
+	case 5:
+		return 0x12;
+	case 6:
+		return 0x02;
+	case 7:
+		return 0x78;
+	case 8:
+		return 0x00;
+	case 9:
+		return 0x18;
+	case 10:
+		return 0x08;
+	case 11:
+		return 0x03;
+	case 12:
+		return 0x46;
+	case 13:
+		return 0x21;
+	case 14:
+		return 0x06;
+	case 15:
+		return 0x0e;
+	default:
+		return 0x7f;
+	}
+}
+
+void service_floor(elevator_struct *elevator) {
+
+	//this function will use counter 0 to keep door open
+	reset_counter_0();
+	//keep door open until
+	//printf("starting while loop\n");
+	//printf("ONE if we need to keep door open:%d", elevator->keep_door_open);
+	printf("<-[]->   Doors OPEN on floor %d\n", elevator->current_floor);
+	while (1) {
+
+		if (elevator->keep_door_open == 0) {
+			if (elevator->door_close_ready == 1) {
+
+				elevator->request_queue[elevator->current_floor] = 0;//this floor has been serviced
+				printf("->[]<-   Doors CLOSED on floor %d\n\n\n",
+						elevator->current_floor);
+				//printf("the %d 'th floor has been serviced\n",
+				//	elevator->current_floor);
+				break;
+			}
+		}
+	}
+}
+
+void travel_to_next_requested_floor(elevator_struct* elevator) {
+
+	count_X_many_times(elevator);
+	while (~elevator->arrived_at_floor) {
+		IOWR(SEVEN_SEGMENT_N_O_0_BASE, 0, disp_seven_seg(
+				elevator->current_floor));
+		if (elevator->arrived_at_floor) {
+			break;
+		}
+	}
+//	printf("I have arrived at floor %d\n", elevator->current_floor);
+	elevator->motion = 0;
+	return;
+
+}
+//check case to see if elevator will go to new requested floor between already calculated next floor during travel
+/*
+ void update_7Seg_Disp(elevator_struct *elevator) {
+ alt_u16 dispFloor;
+ //dispFloor = disp_seven_seg(elevator->current_floor);
+ IOWR(SEVEN_SEGMENT_N_O_0_BASE, 0, disp_seven_seg(elevator->current_floor));
+ }*/
+
+void elevator_sim(elevator_struct* elevator) {
+
+	int i = 0;
+	int rleds = 0;
+
+	while (1) {
+		//		for(i=11;i>=0;i--){
+		//			printf("%d",elevator->request_queue[i]);
+		//		}
+		//		printf("\n");
+
+		//Notes:
+		//we need to
+		//rleds=0;
+		IOWR(SEVEN_SEGMENT_N_O_0_BASE, 0, disp_seven_seg(
+				elevator->current_floor));
+		rleds = 0;
+		for (i = 0; i <= 11; i++) {
+			if (elevator->request_queue[i] == 1) {
+				rleds = rleds | (0x1 << i);
+			}
+		}//figure out the floors that have requests
+		IOWR(LED_RED_O_BASE, 0, rleds);
+
+		if (elevator->motion == 0) {//we are stopped at a floor
+			//printf("The elevator is not in motion\n");
+			//check if we need to open doors this floor
+			if (elevator->request_queue[elevator->current_floor] == 1) {//this means that the floor that we are stopped at has not been serviced
+				//we need to service it
+				//	printf("We need to service floor %d\n", elevator->current_floor);
+				service_floor(elevator);
+				//	printf("the floor has been serviced\n");
+				elevator->request_queue[elevator->current_floor] = 0;
+
+			}
+
+			//time to find floors that need to be serviced
+			if (elevator->direction == 1) {
+				for (i = elevator->current_floor + 1; i <= 11; i++) {
+					if (elevator->request_queue[i] == 1) {
+						elevator->next_floor = i;
+						elevator->motion = 1;
+						//	printf("\ncurrent_floor is %d", elevator->current_floor);
+						//	printf("\nWe figured out that the next floor is %d\n",
+						//elevator->next_floor);
+						break;
+						//break at next higher requested floor
+					}
+					// && elevator->next_floor!=0
+
+				}//if no floors requested above, change direction
+
+				//	printf("i value equals: %d", i);
+				if (i == 12) {
+					elevator->direction = -1;
+					//printf("changing direction to go down");
+				}
+			}
+			if (elevator->direction == -1) {
+				for (i = elevator->current_floor - 1; i >= 0; i--) {
+					if (elevator->request_queue[i] == 1) {
+						elevator->next_floor = i;
+						elevator->motion = 1;
+						//	printf("\ncurrent_floor is %d", elevator->current_floor);
+						//printf("\nWe figured out that the next floor is %d\n",
+						//	elevator->next_floor);
+						break;
+						//break at next higher requested floor
+					}
+				}//if no floors requested above, change direction
+			}
+			if (i == -1) {
+				elevator->direction = 1;
+			}
+
+		}
+
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+		else if (elevator->motion == 1) {//if elevator motion==1 means we are in motion
+			//printf("We are travelling to floor: %d\n", elevator->next_floor);
+			travel_to_next_requested_floor(elevator);
+
+		}//else{//if elevator motion==1 means we are in motion
+
+
+	}
+
+}
+

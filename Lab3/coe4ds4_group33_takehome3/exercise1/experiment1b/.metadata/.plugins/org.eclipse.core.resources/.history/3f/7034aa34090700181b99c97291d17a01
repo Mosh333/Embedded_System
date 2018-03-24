@@ -1,0 +1,80 @@
+////////////////////////
+// CODE SECTION BEGIN //
+////////////////////////
+//custom counter 1 is for inter-floor travelling
+#include "define.h"
+void count_X_many_times(elevator_struct *elevator){
+	//run the counter X many times where x is the amount of floors between your current and next floors
+
+	int x=abs(elevator->current_floor-elevator->next_floor);
+	int iterations=0;
+
+	while(iterations<x){
+		reset_counter_1(elevator);
+		while(elevator->counter_1_running==1);//WAIT
+		iterations++;
+		if(elevator->direction==1){
+			elevator->current_floor++;
+		}
+		if(elevator->direction==-1){
+					elevator->current_floor--;
+				}
+
+
+		IOWR(SEVEN_SEGMENT_N_O_0_BASE, 0, disp_seven_seg(
+				elevator->current_floor));
+
+	}
+	elevator->arrived_at_floor=1;
+	elevator->motion=0;
+
+}
+// ISR when the counter is expired
+void handle_counter_1_expire_interrupts(elevator_struct *elevator)
+{
+	printf("Counter 1 expires\n");
+	elevator->counter_1_running=0;
+	printf("\ncurrent_floor is %d", elevator->current_floor);
+
+
+
+	IOWR(CUSTOM_COUNTER_COMPONENT_1_BASE, 2, 0);
+}
+
+void reset_counter_1(elevator_struct *elevator) {
+	printf("Resetting counter 1 value\n");
+
+	elevator->counter_1_running=1;
+
+
+
+	IOWR(CUSTOM_COUNTER_COMPONENT_1_BASE, 1, 1);
+	IOWR(CUSTOM_COUNTER_COMPONENT_1_BASE, 1, 0);
+
+	IOWR(CUSTOM_COUNTER_COMPONENT_1_BASE, 2, 0);
+}
+
+int read_counter_1(){
+	return IORD(CUSTOM_COUNTER_COMPONENT_1_BASE, 0);
+}
+
+int read_counter_1_interrupt() {
+	return IORD(CUSTOM_COUNTER_COMPONENT_1_BASE, 2);
+}
+
+void load_counter_1_config(int config) {
+	printf("Loading counter 1 config %d\n", config);
+
+	IOWR(CUSTOM_COUNTER_COMPONENT_1_BASE, 3, config);
+}
+
+// Function for initializing the ISR of the Counter
+void init_counter_1_irq(elevator_struct *elevator) {
+	IOWR(CUSTOM_COUNTER_COMPONENT_1_BASE, 2, 0);
+
+	alt_irq_register(CUSTOM_COUNTER_COMPONENT_1_IRQ, (void*)elevator, (void*)handle_counter_1_expire_interrupts );
+}
+
+////////////////////////
+// CODE SECTION END   //
+////////////////////////

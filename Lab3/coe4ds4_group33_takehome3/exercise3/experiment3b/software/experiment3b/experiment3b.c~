@@ -1,0 +1,441 @@
+// Copyright by Adam Kinsman, Henry Ko and Nicola Nicolici
+// Developed for the Embedded Systems course (COE4DS4)
+// Department of Electrical and Computer Engineering
+// McMaster University
+// Ontario, Canada
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include "sys/alt_alarm.h"
+#include "alt_types.h"
+#include "system.h"
+#include "altera_avalon_performance_counter.h"
+
+#define ARRAY_SIZE 500
+
+//Use unsigned data types to implement MD5
+#define uchar unsigned char
+#define uint unsigned int
+#define DBL_INT_ADD(a,b,c) if (a > 0xffffffff - c) ++b; a += c;
+#define ROTLEFT(a,b) ((a << b) | (a >> (32-b)))
+#define F(x,y,z) ((x & y) | (~x & z))
+#define G(x,y,z) ((x & z) | (y & ~z))
+#define H(x,y,z) (x ^ y ^ z)
+#define I(x,y,z) (y ^ (x | ~z))
+#define FF(a,b,c,d,m,s,t) { a += F(b,c,d) + m + t; \
+                            a = b + ROTLEFT(a,s); }
+#define GG(a,b,c,d,m,s,t) { a += G(b,c,d) + m + t; \
+                            a = b + ROTLEFT(a,s); }
+#define HH(a,b,c,d,m,s,t) { a += H(b,c,d) + m + t; \
+                            a = b + ROTLEFT(a,s); }
+#define II(a,b,c,d,m,s,t) { a += I(b,c,d) + m + t; \
+                            a = b + ROTLEFT(a,s); }
+
+typedef struct {
+	uchar data[64];
+	uint datalen;
+	uint bitlen[2];
+	uint state[4];
+} MD5_CTX;
+
+// For performance counter
+void *performance_name = PERFORMANCE_COUNTER_0_BASE;
+
+//We used http://bradconte.com/md5_c as reference for MD5 Algorithm
+void md5_transform(MD5_CTX *ctx, uchar data[])
+{
+   uint a,b,c,d,m[16],i,j;
+
+   // MD5 specifies big endian byte order, but this implementation assumes a little
+   // endian byte order CPU. Reverse all the bytes upon input, and re-reverse them
+   // on output (in md5_final()).
+   for (i=0,j=0; i < 16; ++i, j += 4)
+      m[i] = (data[j]) + (data[j+1] << 8) + (data[j+2] << 16) + (data[j+3] << 24);
+
+   a = ctx->state[0];
+   b = ctx->state[1];
+   c = ctx->state[2];
+   d = ctx->state[3];
+
+   FF(a,b,c,d,m[0],  7,0xd76aa478);
+   FF(d,a,b,c,m[1], 12,0xe8c7b756);
+   FF(c,d,a,b,m[2], 17,0x242070db);
+   FF(b,c,d,a,m[3], 22,0xc1bdceee);
+   FF(a,b,c,d,m[4],  7,0xf57c0faf);
+   FF(d,a,b,c,m[5], 12,0x4787c62a);
+   FF(c,d,a,b,m[6], 17,0xa8304613);
+   FF(b,c,d,a,m[7], 22,0xfd469501);
+   FF(a,b,c,d,m[8],  7,0x698098d8);
+   FF(d,a,b,c,m[9], 12,0x8b44f7af);
+   FF(c,d,a,b,m[10],17,0xffff5bb1);
+   FF(b,c,d,a,m[11],22,0x895cd7be);
+   FF(a,b,c,d,m[12], 7,0x6b901122);
+   FF(d,a,b,c,m[13],12,0xfd987193);
+   FF(c,d,a,b,m[14],17,0xa679438e);
+   FF(b,c,d,a,m[15],22,0x49b40821);
+
+   GG(a,b,c,d,m[1],  5,0xf61e2562);
+   GG(d,a,b,c,m[6],  9,0xc040b340);
+   GG(c,d,a,b,m[11],14,0x265e5a51);
+   GG(b,c,d,a,m[0], 20,0xe9b6c7aa);
+   GG(a,b,c,d,m[5],  5,0xd62f105d);
+   GG(d,a,b,c,m[10], 9,0x02441453);
+   GG(c,d,a,b,m[15],14,0xd8a1e681);
+   GG(b,c,d,a,m[4], 20,0xe7d3fbc8);
+   GG(a,b,c,d,m[9],  5,0x21e1cde6);
+   GG(d,a,b,c,m[14], 9,0xc33707d6);
+   GG(c,d,a,b,m[3], 14,0xf4d50d87);
+   GG(b,c,d,a,m[8], 20,0x455a14ed);
+   GG(a,b,c,d,m[13], 5,0xa9e3e905);
+   GG(d,a,b,c,m[2],  9,0xfcefa3f8);
+   GG(c,d,a,b,m[7], 14,0x676f02d9);
+   GG(b,c,d,a,m[12],20,0x8d2a4c8a);
+
+   HH(a,b,c,d,m[5],  4,0xfffa3942);
+   HH(d,a,b,c,m[8], 11,0x8771f681);
+   HH(c,d,a,b,m[11],16,0x6d9d6122);
+   HH(b,c,d,a,m[14],23,0xfde5380c);
+   HH(a,b,c,d,m[1],  4,0xa4beea44);
+   HH(d,a,b,c,m[4], 11,0x4bdecfa9);
+   HH(c,d,a,b,m[7], 16,0xf6bb4b60);
+   HH(b,c,d,a,m[10],23,0xbebfbc70);
+   HH(a,b,c,d,m[13], 4,0x289b7ec6);
+   HH(d,a,b,c,m[0], 11,0xeaa127fa);
+   HH(c,d,a,b,m[3], 16,0xd4ef3085);
+   HH(b,c,d,a,m[6], 23,0x04881d05);
+   HH(a,b,c,d,m[9],  4,0xd9d4d039);
+   HH(d,a,b,c,m[12],11,0xe6db99e5);
+   HH(c,d,a,b,m[15],16,0x1fa27cf8);
+   HH(b,c,d,a,m[2], 23,0xc4ac5665);
+
+   II(a,b,c,d,m[0],  6,0xf4292244);
+   II(d,a,b,c,m[7], 10,0x432aff97);
+   II(c,d,a,b,m[14],15,0xab9423a7);
+   II(b,c,d,a,m[5], 21,0xfc93a039);
+   II(a,b,c,d,m[12], 6,0x655b59c3);
+   II(d,a,b,c,m[3], 10,0x8f0ccc92);
+   II(c,d,a,b,m[10],15,0xffeff47d);
+   II(b,c,d,a,m[1], 21,0x85845dd1);
+   II(a,b,c,d,m[8],  6,0x6fa87e4f);
+   II(d,a,b,c,m[15],10,0xfe2ce6e0);
+   II(c,d,a,b,m[6], 15,0xa3014314);
+   II(b,c,d,a,m[13],21,0x4e0811a1);
+   II(a,b,c,d,m[4],  6,0xf7537e82);
+   II(d,a,b,c,m[11],10,0xbd3af235);
+   II(c,d,a,b,m[2], 15,0x2ad7d2bb);
+   II(b,c,d,a,m[9], 21,0xeb86d391);
+
+   ctx->state[0] += a;
+   ctx->state[1] += b;
+   ctx->state[2] += c;
+   ctx->state[3] += d;
+}
+
+void md5_init(MD5_CTX *ctx)
+{
+   ctx->datalen = 0;
+   ctx->bitlen[0] = 0;
+   ctx->bitlen[1] = 0;
+   ctx->state[0] = 0x67452301;
+   ctx->state[1] = 0xEFCDAB89;
+   ctx->state[2] = 0x98BADCFE;
+   ctx->state[3] = 0x10325476;
+}
+
+void md5_update(MD5_CTX *ctx, uchar data[], uint len)
+{
+   uint t,i;
+
+   for (i=0; i < len; ++i) {
+      ctx->data[ctx->datalen] = data[i];
+      ctx->datalen++;
+      if (ctx->datalen == 64) {
+         md5_transform(ctx,ctx->data);
+         DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],512);
+         ctx->datalen = 0;
+      }
+   }
+}
+
+void md5_final(MD5_CTX *ctx, uchar hash[])
+{
+   uint i;
+
+   i = ctx->datalen;
+
+   // Pad whatever data is left in the buffer.
+   if (ctx->datalen < 56) {
+      ctx->data[i++] = 0x80;
+      while (i < 56)
+         ctx->data[i++] = 0x00;
+   }
+   else if (ctx->datalen >= 56) {
+      ctx->data[i++] = 0x80;
+      while (i < 64)
+         ctx->data[i++] = 0x00;
+      md5_transform(ctx,ctx->data);
+      memset(ctx->data,0,56);
+   }
+
+   // Append to the padding the total message's length in bits and transform.
+   DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],8 * ctx->datalen);
+   ctx->data[56] = ctx->bitlen[0];
+   ctx->data[57] = ctx->bitlen[0] >> 8;
+   ctx->data[58] = ctx->bitlen[0] >> 16;
+   ctx->data[59] = ctx->bitlen[0] >> 24;
+   ctx->data[60] = ctx->bitlen[1];
+   ctx->data[61] = ctx->bitlen[1] >> 8;
+   ctx->data[62] = ctx->bitlen[1] >> 16;
+   ctx->data[63] = ctx->bitlen[1] >> 24;
+   md5_transform(ctx,ctx->data);
+
+   // Since this implementation uses little endian byte ordering and MD uses big endian,
+   // reverse all the bytes when copying the final state to the output hash.
+   for (i=0; i < 4; ++i) {
+      hash[i]    = (ctx->state[0] >> (i*8)) & 0x000000ff;
+      hash[i+4]  = (ctx->state[1] >> (i*8)) & 0x000000ff;
+      hash[i+8]  = (ctx->state[2] >> (i*8)) & 0x000000ff;
+      hash[i+12] = (ctx->state[3] >> (i*8)) & 0x000000ff;
+   }
+}
+
+void print_hash(uchar hash[]) {
+	int idx;
+	for (idx = 0; idx < 16; idx++)
+		if(hash[idx]<16){
+			printf("0%x",hash[idx]); //values less than 16 needs to be
+									 //adjusted to two digits
+		}else{
+			printf("%x", hash[idx]);//else already 2 digits
+		}
+	printf("\n");
+}
+
+void findStringEqual33(){ //MD5_CTX *myMD5_obj
+	//check if begin char and last char equals hex 21 or decimal 33
+	//try every combination for the given input which produces 21 ..... 21
+	//findStringEqual33(&testObj, hash, &testObj.datalen);
+	int idx, i;
+	int groupNum = 33;
+	int count = 0;
+	MD5_CTX testObj;
+	uchar testInput[4];
+	uchar hash[16];
+	for(idx=0;idx<4;idx++){
+		testInput[idx] = '0';
+	}
+	printf("The four digits input which produces first and last byte of the 16 bit output to be dec 33 or hex 21 are: \n");
+
+
+
+	//check for 0000
+
+	md5_init(&testObj);
+	md5_update(&testObj, testInput, strlen(testInput));
+	md5_final(&testObj, hash);
+
+	if((hash[15] == groupNum) && (hash[0] == groupNum)){
+		printf("The 4 digits input is: %c%c%c%c \n", testInput[3], testInput[2], testInput[1], testInput[0]);
+		printf("MD5 Digest is: ");
+		print_hash(hash);
+		printf("------------------------ \n");
+	}
+
+	//check for 0001 and beyond
+	while((testInput[3] !='{') && (testInput[2] !='{') && (testInput[1] !='{') && (testInput[0] !='{')){
+		//check output of MD5 digest and see if first and last char equals hex 21 or dec 33
+		testInput[0] += 1;
+		if(testInput[0] == 58){
+			testInput[0] = 97;
+		}else if(testInput[0] == 123){
+			testInput[0] = 48;
+			testInput[1] += 1;
+			if(testInput[1] == 58){
+				testInput[1] = 97;
+			}else if(testInput[1] == 123){
+				testInput[1] = 48;
+				testInput[2] += 1;
+
+				if(testInput[2] == 58){
+					testInput[2] = 97;
+				}else if(testInput[2] == 123){
+					testInput[2] = 48;
+					testInput[3] += 1;
+					if(testInput[3] == 58){
+						testInput[3] = 97;
+					}
+				}
+
+			}
+		}
+
+
+		md5_init(&testObj);
+		md5_update(&testObj, testInput, strlen(testInput));
+		md5_final(&testObj, hash);
+
+		if((hash[15] == groupNum) && (hash[0] == groupNum)){
+			printf("The 4 digits input is: %c %c %c %c \n", testInput[3], testInput[2], testInput[1], testInput[0]);
+			printf("MD5 Digest is: ");
+			print_hash(hash);
+			printf("------------------------ \n");
+			count+=1;
+		}
+		if(testInput[3] =='z' && testInput[2] =='z' && testInput[1] =='z' && testInput[0] =='z'){
+			printf("Done!\n");
+			break;
+		}
+	}
+	printf("\n");
+	
+	return count;
+}
+
+int main() {
+
+	//Initialize Test Inputs
+	uchar
+			hash[16],
+			test1[] = { "" },
+			test2[] = { "a" },
+			test3[] = { "abc" },
+			test4[] = { "message digest" },
+			test5[] = { "abcdefghijklmnopqrstuvwxyz" },
+			test6[] = { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"},
+			test7[] = {"12345678901234567890123456789012345678901234567890123456789012345678901234567890"},
+			test8[] = {"021j"};
+
+	//Initialize a MD5_CTX object or struct
+	MD5_CTX testObj;
+
+	// Reset the performance counter
+	PERF_RESET(PERFORMANCE_COUNTER_0_BASE);
+
+	// Start the performance counter
+	PERF_START_MEASURING(performance_name);
+
+	printf("Starting exercise3b...\n");
+
+	// Start measuring code section
+	PERF_BEGIN(performance_name, 1);
+
+	//MD5 ("") = d41d8cd98f00b204e9800998ecf8427e
+	printf("Test 1 input is:  ,\n");
+	printf("output is: ");
+	md5_init(&testObj);
+	md5_update(&testObj, test1, strlen(test1));
+	md5_final(&testObj, hash);
+	print_hash(hash);
+	printf("output in decimal is: ");
+
+
+	// Stop measuring code section
+	PERF_END(performance_name, 1);
+
+	// Start measuring code section
+	PERF_BEGIN(performance_name, 2);
+	//MD5 ("a") = 0cc175b9c0f1b6a831c399e269772661
+	printf("Test 2 input is: a, \n");
+	printf("output is:  ");
+	md5_init(&testObj);
+	md5_update(&testObj, test2, strlen(test2));
+	md5_final(&testObj, hash);
+	print_hash(hash);
+
+	// Stop measuring code section
+	PERF_END(performance_name, 2);
+
+	// Start measuring code section
+	PERF_BEGIN(performance_name, 3);
+	//MD5 ("abc") = 900150983cd24fb0d6963f7d28e17f72
+	printf("Test 3 input is: abc, \n");
+	printf("output is:  ");
+	md5_init(&testObj);
+	md5_update(&testObj, test3, strlen(test3));
+	md5_final(&testObj, hash);
+	print_hash(hash);
+
+	// Stop measuring code section
+	PERF_END(performance_name, 3);
+
+	// Start measuring code section
+	PERF_BEGIN(performance_name, 4);
+	//MD5 ("message digest") = f96b697d7cb7938d525a2f31aaf161d0
+	printf("Test 4 input is: message digest, \n");
+	printf("output is:  ");
+	md5_init(&testObj);
+	md5_update(&testObj, test4, strlen(test4));
+	md5_final(&testObj, hash);
+	print_hash(hash);
+
+	// Stop measuring code section
+	PERF_END(performance_name, 4);
+
+	// Start measuring code section
+	PERF_BEGIN(performance_name, 5);
+	//MD5 ("abcdefghijklmnopqrstuvwxyz") = c3fcd3d76192e4007dfb496cca67e13b
+	printf("Test 5 input is: abcdefghijklmnopqrstuvwxyz, \n");
+	printf("output is:  ");
+	md5_init(&testObj);
+	md5_update(&testObj, test5, strlen(test5));
+	md5_final(&testObj, hash);
+	print_hash(hash);
+
+	// Stop measuring code section
+	PERF_END(performance_name, 5);
+
+	// Start measuring code section
+	PERF_BEGIN(performance_name, 6);
+	//MD5 ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789") = d174ab98d277d9f5a5611c2c9f419d9f
+	printf("Test 6 input is: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789, \n");
+	printf("output is:  ");
+	md5_init(&testObj);
+	md5_update(&testObj, test6, strlen(test6));
+	md5_final(&testObj, hash);
+	print_hash(hash);
+
+	// Stop measuring code section
+	PERF_END(performance_name, 6);
+
+	// Start measuring code section
+	PERF_BEGIN(performance_name, 7);
+	//MD5 ("12345678901234567890123456789012345678901234567890123456789012345678901234567890") = 57edf4a22be3c955ac49da2e2107b67a
+	printf("Test 7 input is: 12345678901234567890123456789012345678901234567890123456789012345678901234567890, \n");
+	printf("output is:  ");
+	md5_init(&testObj);
+	md5_update(&testObj, test7, strlen(test7));
+	md5_final(&testObj, hash);
+	print_hash(hash);
+
+	// Stop measuring code section
+	PERF_END(performance_name, 7);
+
+	// Stop the performance counter
+	PERF_STOP_MEASURING(performance_name);
+	printf("\n");
+	printf("Test 1 Performance Measure: %d\n", perf_get_section_time(performance_name, 1));
+	printf("Test 2 Performance Measure: %d\n", perf_get_section_time(performance_name, 2));
+	printf("Test 3 Performance Measure: %d\n", perf_get_section_time(performance_name, 3));
+	printf("Test 4 Performance Measure: %d\n", perf_get_section_time(performance_name, 4));
+	printf("Test 5 Performance Measure: %d\n", perf_get_section_time(performance_name, 5));
+	printf("Test 6 Performance Measure: %d\n", perf_get_section_time(performance_name, 6));
+	printf("Test 7 Performance Measure: %d\n", perf_get_section_time(performance_name, 7));
+	printf("Finished computing MD5...\n");
+
+	printf("Test 8, \n");
+	printf("output is:  ");
+	md5_init(&testObj);
+	md5_update(&testObj, test8, strlen(test8));
+	md5_final(&testObj, hash);
+	print_hash(hash);
+
+
+	printf("The number of inputs that satisfy property is %d", findStringEqual33());
+
+	/* Event loop never exits. */
+	while (1)
+		;
+
+	return 0;
+}

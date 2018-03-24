@@ -1,0 +1,57 @@
+
+**** Build of configuration Nios II for project experiment3a ****
+
+make all 
+Info: Building ../experiment3a_bsp/
+make --no-print-directory -C ../experiment3a_bsp/
+[BSP build complete]
+Info: Compiling experiment3a.c to obj/default/experiment3a.o
+nios2-elf-gcc -xc -MP -MMD -c -I../experiment3a_bsp//HAL/inc -I../experiment3a_bsp/ -I../experiment3a_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/experiment3a.o experiment3a.c
+experiment3a.c:17: warning: 'hitCount' initialized and declared 'extern'
+Info: Linking experiment3a.elf
+experiment3a.c:45: warning: initialization makes pointer from integer without a cast
+nios2-elf-g++  -T'../experiment3a_bsp//linker.x' -msys-crt0='../experiment3a_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../experiment3a_bsp/  -Wl,--defsym,exit=_exit -msmallc  -Wl,-Map=experiment3a.map   -Os -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o experiment3a.elf obj/default/experiment3a.o -lm 
+experiment3a.c: In function 'md5_update':
+nios2-elf-insert experiment3a.elf --thread_model hal --cpu_name cpu_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name experiment3a --quartus_project_dir "/home/ECE/howlam/Desktop/exercise3/experiment3a" --sopcinfo /home/ECE/howlam/Desktop/exercise3/experiment3a/software/experiment3a_bsp/../../experiment3a.sopcinfo
+experiment3a.c:148: warning: unused variable 't'
+Info: (experiment3a.elf) 10 KBytes program size (code + initialized data).
+experiment3a.c: In function 'md5_final':
+Info:                    5524 Bytes free for stack + heap.
+experiment3a.c:176: warning: implicit declaration of function 'memset'
+Info: Creating experiment3a.objdump
+experiment3a.c:176: warning: incompatible implicit declaration of built-in function 'memset'
+nios2-elf-objdump --disassemble --syms --all-header --source experiment3a.elf >experiment3a.objdump
+experiment3a.c: In function 'findStringEqual33':
+[experiment3a build complete]
+experiment3a.c:226: warning: implicit declaration of function 'strlen'
+experiment3a.c:226: warning: incompatible implicit declaration of built-in function 'strlen'
+experiment3a.c:226: warning: pointer targets in passing argument 2 of 'md5_update' differ in signedness
+experiment3a.c:251: warning: incompatible implicit declaration of built-in function 'strlen'
+experiment3a.c:251: warning: pointer targets in passing argument 2 of 'md5_update' differ in signedness
+experiment3a.c:217: warning: unused variable 'j'
+experiment3a.c: In function 'main':
+experiment3a.c:279: warning: incompatible implicit declaration of built-in function 'memset'
+experiment3a.c:321: warning: incompatible implicit declaration of built-in function 'strlen'
+experiment3a.c:321: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+experiment3a.c:335: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+experiment3a.c:348: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+experiment3a.c:361: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+experiment3a.c:374: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+experiment3a.c:388: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+experiment3a.c:402: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+experiment3a.c:411: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:411: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:412: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:412: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:413: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:413: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:414: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:414: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:415: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:415: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:416: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:416: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:417: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:417: warning: format '%d' expects type 'int', but argument 2 has type 'alt_u64'
+experiment3a.c:424: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+experiment3a.c:303: warning: unused variable 'accumulator'

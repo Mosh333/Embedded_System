@@ -1,0 +1,19 @@
+!SESSION 2018-01-28 21:53:22.450 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 21:54:05.949
+!MESSAGE Indexed 'experiment1b' (3 sources, 62 headers) in 0.98 sec: 2,598 declarations; 2,455 references; 5 unresolved inclusions; 0 syntax errors; 23 unresolved names (0.45%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 21:54:07.398
+!MESSAGE Indexed 'experiment1b_bsp' (77 sources, 114 headers) in 1.39 sec: 3,895 declarations; 5,195 references; 0 unresolved inclusions; 1 syntax errors; 14 unresolved names (0.15%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-28 21:54:20.755
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-28 21:54:22.522
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/exercise3_coe4ds4_lab3_2018/experiment1b/software/experiment1b/experiment1b.elf]

@@ -1,0 +1,28 @@
+!SESSION 2018-01-28 09:33:49.191 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 09:36:14.740
+!MESSAGE Indexed 'experiment3a_bsp' (82 sources, 118 headers) in 1.93 sec: 3,954 declarations; 5,374 references; 0 unresolved inclusions; 1 syntax errors; 23 unresolved names (0.25%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-01-28 09:36:15.169
+!MESSAGE Indexed 'experiment3a' (1 sources, 59 headers) in 0.42 sec: 2,620 declarations; 3,572 references; 4 unresolved inclusions; 0 syntax errors; 4 unresolved names (0.06%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-28 09:41:17.524
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-28 09:41:19.294
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab3_2018_working_directory/exercise3/experiment3a/software/experiment3a/experiment3a.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-28 09:41:49.087
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-28 09:42:10.352
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-2]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-01-28 09:42:12.268
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-2]' --device=1 --instance=0 --go /home/ECE/howlam/Desktop/coe4ds4_lab3_2018_working_directory/exercise3/experiment3a/software/experiment3a/experiment3a.elf]

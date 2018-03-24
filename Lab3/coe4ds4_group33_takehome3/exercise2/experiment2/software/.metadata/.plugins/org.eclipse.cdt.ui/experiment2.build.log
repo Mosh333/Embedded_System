@@ -1,0 +1,19 @@
+
+**** Build of configuration Nios II for project experiment2 ****
+
+make all 
+Info: Building ../experiment2_bsp/
+make --no-print-directory -C ../experiment2_bsp/
+[BSP build complete]
+Info: Compiling PS2_controller.c to obj/default/PS2_controller.o
+nios2-elf-gcc -xc -MP -MMD -c -I../experiment2_bsp//HAL/inc -I../experiment2_bsp/ -I../experiment2_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/PS2_controller.o PS2_controller.c
+PS2_controller.c: In function 'init_PS2_irq':
+PS2_controller.c:299: warning: implicit declaration of function 'alt_irq_register'
+Info: Linking experiment2.elf
+nios2-elf-g++  -T'../experiment2_bsp//linker.x' -msys-crt0='../experiment2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../experiment2_bsp/   -Wl,-Map=experiment2.map   -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o experiment2.elf obj/default/PS2_controller.o obj/default/experiment2.o -lm 
+nios2-elf-insert experiment2.elf --thread_model hal --cpu_name cpu_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name experiment2 --quartus_project_dir "/home/ECE/ganesr3/Desktop/coe4ds4_lab3_2018_working_directory/experiment2" --sopcinfo /home/ECE/ganesr3/Desktop/coe4ds4_lab3_2018_working_directory/experiment2/software/experiment2_bsp/../../experiment2.sopcinfo
+Info: (experiment2.elf) 66 KBytes program size (code + initialized data).
+Info:                   438 KBytes free for stack + heap.
+Info: Creating experiment2.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source experiment2.elf >experiment2.objdump
+[experiment2 build complete]

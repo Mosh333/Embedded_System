@@ -1,0 +1,84 @@
+// Copyright by Adam Kinsman, Henry Ko and Nicola Nicolici
+// Developed for the Embedded Systems course (COE4DS4)
+// Department of Electrical and Computer Engineering
+// McMaster University
+// Ontario, Canada
+
+#include "define.h"
+
+//not using KEY_0
+
+void KEY1_Pressed(elevator_struct *elevator) {//when PB 1 pressed, load switches 16&& 15 for door open time
+	//int sw1516=IORD(SWITCH_I_BASE, 0)&0x18000;
+
+	switch(IORD(SWITCH_I_BASE, 0)&0x18000){
+		case 0:elevator->door_open_time=500; //all in milliseconds
+		case 1:elevator->door_open_time=1000;
+		case 2:elevator->door_open_time=1500;
+		case 3:elevator->door_open_time=2000;
+		//printf("PB 1 pressed");
+
+	}
+
+	printf("PB 1 pressed");
+
+
+}
+
+void KEY2_Pressed(elevator_struct *elevator) {//when PB 2 pressed, load switches 16 && 15 for time b/w floors
+	switch(IORD(SWITCH_I_BASE, 0)&0x18000){
+		case 0:elevator->floor_travel_time=500; //all in milliseconds
+		case 1:elevator->floor_travel_time=1000;
+		case 2:elevator->floor_travel_time=1500;
+		case 3:elevator->floor_travel_time=2000;
+
+
+	}
+
+	printf("PB 2 pressed");
+}
+
+void KEY3_Pressed(elevator_struct *elevator) {//when PB 3 pressed, KEEP DOOR OPEN, IF RELEASED, CAN CLOSE DOOR
+	// GET DATA BIT FOR BUTTON[3]
+	int button=((IORD(PUSH_BUTTON_I_BASE, 0))>>3)&0x1;
+	printf("The button 3 bit is %d", button);
+
+//		if(~button){
+//			elevator->keep_door_open=1;
+//			printf("KEEP THE DOOR OPEN\n");
+//			//break;
+//		}else {
+//			elevator->keep_door_open=0;
+//			printf("THE DOOR MAY BE CLOSED\n");
+//			//break;
+//		}
+		//PB 3
+}
+
+// ISR when any PB is pressed
+void handle_button_interrupts(elevator_struct *elevator)
+{
+	IOWR(LED_GREEN_O_BASE, 0, IORD(PUSH_BUTTON_I_BASE, 3)*IORD(PUSH_BUTTON_I_BASE, 3));
+	
+	switch(IORD(PUSH_BUTTON_I_BASE, 3)) {
+	//case 1: KEY0_Pressed(); break;
+	case 2: KEY1_Pressed(elevator); break;
+	case 4: KEY2_Pressed(elevator); break;
+	case 8: KEY3_Pressed(elevator); break;
+	}
+	IOWR(PUSH_BUTTON_I_BASE, 3, 0x0);
+}
+
+// Function for initializing the ISR of the PBs
+// The PBs are setup to generate interrupt on falling edge,
+// and the interrupt is captured when the edge comes
+void init_button_irq(elevator_struct *elevator) {
+  // Enable all 4 button interrupts
+  IOWR(PUSH_BUTTON_I_BASE, 2, BUTTON_INT_MASK);
+
+  // Reset the edge capture register
+  IOWR(PUSH_BUTTON_I_BASE, 3, 0x0);
+
+  // Register the interrupt handler
+  alt_irq_register(PUSH_BUTTON_I_IRQ, (void *)elevator, (void*)handle_button_interrupts );
+}
