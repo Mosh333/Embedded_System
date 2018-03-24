@@ -1,0 +1,43 @@
+!SESSION 2018-03-07 23:00:44.813 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-07 23:01:37.713
+!MESSAGE Indexed 'experiment3_bsp' (93 sources, 124 headers) in 2.74 sec: 5,253 declarations; 13,219 references; 0 unresolved inclusions; 1 syntax errors; 17 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-07 23:01:38.133
+!MESSAGE Indexed 'experiment3' (4 sources, 64 headers) in 0.42 sec: 2,663 declarations; 2,901 references; 8 unresolved inclusions; 0 syntax errors; 105 unresolved names (1.85%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:01:55.557
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:01:57.441
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go /home/ECE/ganesr3/Desktop/coe4ds4_group_33_takehom6/exercise3/experiment3/software/experiment3/experiment3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:02:25.945
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:02:26.802
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:02:28.699
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go /home/ECE/ganesr3/Desktop/coe4ds4_group_33_takehom6/exercise3/experiment3/software/experiment3/experiment3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:03:12.057
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:03:12.803
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:03:14.642
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_group_33_takehom6/exercise3/experiment3/software/experiment3/experiment3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:03:47.222
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 23:03:49.126
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_group_33_takehom6/exercise3/experiment3/software/experiment3/experiment3.elf]

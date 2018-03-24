@@ -1,0 +1,110 @@
+!SESSION 2018-03-07 20:00:49.379 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-07 20:01:04.540
+!MESSAGE Indexed 'experiment2' (4 sources, 64 headers) in 0.93 sec: 2,687 declarations; 3,177 references; 9 unresolved inclusions; 0 syntax errors; 74 unresolved names (1.25%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-07 20:01:06.317
+!MESSAGE Indexed 'experiment2_bsp' (95 sources, 125 headers) in 1.77 sec: 5,295 declarations; 13,341 references; 0 unresolved inclusions; 1 syntax errors; 23 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.debug.core 4 102 2018-03-07 20:43:59.534
+!MESSAGE A project was not specified in the launch configuration.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:44:18.741
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:44:20.613
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go /home/ECE/ganesr3/Desktop/coe4ds4_lab6_2018/experiment2/software/experiment2/experiment2.elf]
+!SESSION 2018-03-07 20:45:07.827 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-03-07 20:45:10.885
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 20:45:25.071
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 20:46:25.754
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:46:53.509
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 20:46:54.604
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:46:54.746
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab6_2018/experiment2/software/experiment2/experiment2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:52:18.228
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 20:52:19.322
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:52:19.493
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab6_2018/experiment2/software/experiment2/experiment2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:57:03.279
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 20:57:04.427
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:57:04.599
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab6_2018/experiment2/software/experiment2/experiment2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:58:22.052
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 20:58:23.139
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:58:23.306
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab6_2018/experiment2/software/experiment2/experiment2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:59:22.022
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:59:42.928
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 20:59:44.034
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 20:59:44.277
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab6_2018/experiment2/software/experiment2/experiment2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 21:00:46.053
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 21:01:07.016
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 21:01:08.174
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 21:01:08.386
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab6_2018/experiment2/software/experiment2/experiment2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 21:02:03.583
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 21:02:24.487
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-03-07 21:02:25.603
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 21:02:25.800
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_lab6_2018/experiment2/software/experiment2/experiment2.elf]

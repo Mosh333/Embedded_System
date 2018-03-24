@@ -1,0 +1,28 @@
+!SESSION 2018-03-07 22:51:32.821 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-07 22:51:53.241
+!MESSAGE Indexed 'experiment2' (4 sources, 64 headers) in 0.97 sec: 2,656 declarations; 2,752 references; 9 unresolved inclusions; 0 syntax errors; 71 unresolved names (1.30%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-07 22:51:55.021
+!MESSAGE Indexed 'experiment2_bsp' (95 sources, 125 headers) in 1.75 sec: 5,295 declarations; 13,341 references; 0 unresolved inclusions; 1 syntax errors; 23 unresolved names (0.12%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 22:53:07.108
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 22:53:08.959
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_group_33_takehom6/exercise1/experiment2/software/experiment2/experiment2.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 22:53:50.724
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB 4-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 22:54:11.876
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-03-07 22:54:13.787
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [USB 4-5]' --device=1 --instance=0 --go --accept-bad-sysid /home/ECE/ganesr3/Desktop/coe4ds4_group_33_takehom6/exercise1/experiment2/software/experiment2/experiment2.elf]

@@ -1,0 +1,177 @@
+// Copyright by Adam Kinsman, Henry Ko and Nicola Nicolici
+// Developed for the Embedded Systems course (COE4DS4)
+// Department of Electrical and Computer Engineering
+// McMaster University
+// Ontario, Canada
+
+#include "define.h"
+
+// For the performance counter
+void *performance_name = PERFORMANCE_COUNTER_0_BASE;
+
+// Definition of semaphore for PBs
+OS_EVENT *PBSemaphore[4];
+
+// Definition of task stacks
+OS_STK	  initialize_task_stk[TASK_STACKSIZE];
+OS_STK	  custom_scheduler_stk[TASK_STACKSIZE];
+OS_TCB	  custom_scheduler_tcb;
+
+OS_STK	  periodic_task_stk[NUM_TASK][TASK_STACKSIZE];
+OS_TCB	  periodic_task_tcb[NUM_TASK];
+
+// Struct for storing information about each custom task
+typedef struct task_info_struct {
+	int priority;
+	int execution_time;
+	int os_delay;
+} task_info_struct;
+
+// Struct for storing information about tasks during dynamic scheduling using the custom_scheduler
+typedef struct scheduler_info_struct {
+	int valid;
+	int id;
+	int period;
+} scheduler_info_struct;
+
+// Local function prototypes
+void custom_delay(int);
+//int custom_task_del(int, scheduler_info_struct [], task_info_struct []);
+//int custom_task_create(int [], int, scheduler_info_struct [], task_info_struct []);
+
+// Periodic task 0
+// It periodically uses a custom delay to occupy the CPU
+// Then it suspends itself for a specified period of time
+void periodic_task0(void* pdata) {
+	task_info_struct *task_info_ptr;
+
+	task_info_ptr = (task_info_struct *)pdata;
+	while (1) {
+		#if MY_NON_PREEMPTIVE_SCH == 1
+			OSSchedLock();
+		#endif
+		printf("Start periodic_task0 (%4d ms) (%1d s) (%d priority)\n", task_info_ptr->execution_time, task_info_ptr->os_delay, task_info_ptr->priority);
+		custom_delay(task_info_ptr->execution_time);
+		printf("End	  periodic_task0 (%4d ms) (%1d s) (%d priority)\n", task_info_ptr->execution_time, task_info_ptr->os_delay, task_info_ptr->priority);
+		#if MY_NON_PREEMPTIVE_SCH == 1
+				OSSchedUnlock();
+		#endif
+		OSTimeDly(task_info_ptr->os_delay);
+	}
+}
+
+// Periodic task 1
+// It periodically uses a custom delay to occupy the CPU
+// Then it suspends itself for a specified period of time
+void periodic_task1(void* pdata) {
+	task_info_struct *task_info_ptr;
+
+	task_info_ptr = (task_info_struct *)pdata;
+	while (1) {
+		#if MY_NON_PREEMPTIVE_SCH == 1
+			OSSchedLock();
+		#endif
+		printf("Start periodic_task1 (%4d ms) (%1d s) (%d priority)\n", task_info_ptr->execution_time, task_info_ptr->os_delay, task_info_ptr->priority);
+		custom_delay(task_info_ptr->execution_time);
+		printf("End	  periodic_task1 (%4d ms) (%1d s) (%d priority)\n", task_info_ptr->execution_time, task_info_ptr->os_delay, task_info_ptr->priority);
+		OSTimeDlyHMSM(0, 0, task_info_ptr->os_delay, 0);
+		#if MY_NON_PREEMPTIVE_SCH == 1
+				OSSchedUnlock();
+		#endif
+	}
+}
+
+
+// The custom_scheduler
+// It has the highest priority
+// It checks the PBs every 500ms
+// It a button has been pressed, it creates/deletes the corresponding task in the OS
+// When creating a task, it will assign the new task with the lowest priority among the running tasks
+void custom_scheduler(void *pdata) {
+	INT8U return_code = OS_NO_ERR;
+	int i;
+	/* Do not use these i guess
+	int PB_pressed[NUM_PB_BUTTON];
+	int sem_value;
+	int new_pressed;
+	int num_active_task;
+	*/
+	int busy_moshiurTime = 7*200;
+	int idle_ryanTime = 4*700;
+	int busy_howladerTime = 8*200;
+	int idle_ganeshanTime = 8*700;
+	
+	// Array of task_info
+	task_info_struct task_info[2]; //create two tasks
+	task_info[0].priority = PERIODIC_TASK0_PRIORITY;
+	task_info[0].execution_time = busy_moshiurTime;
+	task_info[0].os_delay = idle_ryanTime;
+
+	task_info_struct task_info[2]; //create two tasks
+	task_info[1].priority = PERIODIC_TASK1_PRIORITY;
+	task_info[1].execution_time = busy_howladerTime;
+	task_info[1].os_delay = idle_ganeshanTime;
+
+	//scheduler_info_struct scheduler_info[NUM_TASK];
+
+	printf("Starting custom scheduler...\n");
+
+	num_active_task = 0;
+		return_code = OSTaskCreateExt(periodic_task0,
+						 &task_info[0],
+						 (void *)&periodic_task_stk[0][TASK_STACKSIZE-1],
+						 PERIODIC_TASK0_PRIORITY,
+						 PERIODIC_TASK0_PRIORITY,
+						 &periodic_task_stk[0][0],
+						 TASK_STACKSIZE,
+						 &periodic_task_tcb[0],
+						 0);
+		alt_ucosii_check_return_code(return_code);
+		return_code = OSTaskCreateExt(periodic_task1,
+						 &task_info[1],
+						 (void *)&periodic_task_stk[1][TASK_STACKSIZE-1],
+						 PERIODIC_TASK1_PRIORITY,
+						 PERIODIC_TASK1_PRIORITY,
+						 &periodic_task_stk[1][0],
+						 TASK_STACKSIZE,
+						 &periodic_task_tcb[1],
+						 0);
+		alt_ucosii_check_return_code(return_code);
+
+
+
+
+
+	// Scheduler never returns
+	while (1) {
+		new_pressed = 0;
+		// Check for PBs
+		for (i = 0; i < NUM_PB_BUTTON; i++) {
+			PB_pressed[i] = 0;
+			sem_value = OSSemAccept(PBSemaphore[i]);
+			if (sem_value != 0) {
+				PB_pressed[i] = 1;
+				new_pressed = 1;
+			}
+		}
+	}
+	OSTimeDly(1000);
+}
+
+
+
+
+
+// Function for occupying the processor for the specified number of clock ticks
+// to simulate custom delay while keeping the task in the processor
+void custom_delay(int ticks) {
+    INT32U cur_tick;
+    ticks--;
+    cur_tick = OSTimeGet();
+    while (ticks > 0) {
+         if (OSTimeGet() > cur_tick) {
+            ticks--;
+            cur_tick = OSTimeGet();
+         }  
+    }
+}
