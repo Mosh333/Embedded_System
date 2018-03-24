@@ -1,0 +1,23 @@
+
+State Machine - |experiment3|Nios_LCD_Camera_Component:nios_lcd_camera_component_0|Touch_Panel_Controller:Touch_Panel_unit|TP_state
+Name TP_state.S_TP_DEBOUNCE TP_state.S_TP_BACKOFF TP_state.S_TP_ZF_Y TP_state.S_TP_RECV_Y TP_state.S_TP_SEND_Y TP_state.S_TP_ZF_X TP_state.S_TP_RECV_X TP_state.S_TP_SEND_X TP_state.S_TP_SYNC_1K TP_state.S_TP_ENABLE TP_state.S_TP_IDLE 
+TP_state.S_TP_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+TP_state.S_TP_ENABLE 0 0 0 0 0 0 0 0 0 1 1 
+TP_state.S_TP_SYNC_1K 0 0 0 0 0 0 0 0 1 0 1 
+TP_state.S_TP_SEND_X 0 0 0 0 0 0 0 1 0 0 1 
+TP_state.S_TP_RECV_X 0 0 0 0 0 0 1 0 0 0 1 
+TP_state.S_TP_ZF_X 0 0 0 0 0 1 0 0 0 0 1 
+TP_state.S_TP_SEND_Y 0 0 0 0 1 0 0 0 0 0 1 
+TP_state.S_TP_RECV_Y 0 0 0 1 0 0 0 0 0 0 1 
+TP_state.S_TP_ZF_Y 0 0 1 0 0 0 0 0 0 0 1 
+TP_state.S_TP_BACKOFF 0 1 0 0 0 0 0 0 0 0 1 
+TP_state.S_TP_DEBOUNCE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |experiment3|experiment3_cpu_0:cpu_0|experiment3_cpu_0_nios2_oci:the_experiment3_cpu_0_nios2_oci|experiment3_cpu_0_jtag_debug_module_wrapper:the_experiment3_cpu_0_jtag_debug_module_wrapper|experiment3_cpu_0_jtag_debug_module_tck:the_experiment3_cpu_0_jtag_debug_module_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

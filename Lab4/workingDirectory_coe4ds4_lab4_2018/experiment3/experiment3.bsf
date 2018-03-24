@@ -1,0 +1,222 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 864 488)
+	(text "experiment3" (rect 397 -1 474 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 472 36 484)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clock_50_i_clk_in_clk" (rect 0 0 148 12)(font "Arial" (font_size 8)))
+		(text "clock_50_i_clk_in_clk" (rect 4 61 130 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 384 72)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_ADDR[11..0]" (rect 0 0 467 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_ADDR[11..0]" (rect 4 117 400 128)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 384 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_LDQM" (rect 0 0 417 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_LDQM" (rect 4 133 358 144)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 384 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_UDQM" (rect 0 0 417 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_UDQM" (rect 4 149 358 160)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 384 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_WE_N" (rect 0 0 417 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_WE_N" (rect 4 165 358 176)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 384 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_CAS_N" (rect 0 0 424 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_CAS_N" (rect 4 181 364 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 384 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_RAS_N" (rect 0 0 424 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_RAS_N" (rect 4 197 364 208)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 384 208)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_CS_N" (rect 0 0 417 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_CS_N" (rect 4 213 358 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 384 224)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_BA_0" (rect 0 0 417 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_BA_0" (rect 4 229 358 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 384 240)(line_width 1))
+	)
+	(port
+		(pt 0 256)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_BA_1" (rect 0 0 417 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_BA_1" (rect 4 245 358 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 384 256)(line_width 1))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_CLK" (rect 0 0 410 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_CLK" (rect 4 261 352 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 384 272)(line_width 1))
+	)
+	(port
+		(pt 0 288)
+		(output)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_CKE" (rect 0 0 410 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_CKE" (rect 4 277 352 288)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 384 288)(line_width 1))
+	)
+	(port
+		(pt 0 376)
+		(output)
+		(text "sram_0_external_interface_ADDR[17..0]" (rect 0 0 261 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_ADDR[17..0]" (rect 4 365 226 376)(font "Arial" (font_size 8)))
+		(line (pt 0 376)(pt 384 376)(line_width 3))
+	)
+	(port
+		(pt 0 392)
+		(output)
+		(text "sram_0_external_interface_LB_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_LB_N" (rect 4 381 184 392)(font "Arial" (font_size 8)))
+		(line (pt 0 392)(pt 384 392)(line_width 1))
+	)
+	(port
+		(pt 0 408)
+		(output)
+		(text "sram_0_external_interface_UB_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_UB_N" (rect 4 397 184 408)(font "Arial" (font_size 8)))
+		(line (pt 0 408)(pt 384 408)(line_width 1))
+	)
+	(port
+		(pt 0 424)
+		(output)
+		(text "sram_0_external_interface_CE_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_CE_N" (rect 4 413 184 424)(font "Arial" (font_size 8)))
+		(line (pt 0 424)(pt 384 424)(line_width 1))
+	)
+	(port
+		(pt 0 440)
+		(output)
+		(text "sram_0_external_interface_OE_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_OE_N" (rect 4 429 184 440)(font "Arial" (font_size 8)))
+		(line (pt 0 440)(pt 384 440)(line_width 1))
+	)
+	(port
+		(pt 0 456)
+		(output)
+		(text "sram_0_external_interface_WE_N" (rect 0 0 212 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_WE_N" (rect 4 445 184 456)(font "Arial" (font_size 8)))
+		(line (pt 0 456)(pt 384 456)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(bidir)
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_DQ[15..0]" (rect 0 0 453 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_DRAM_DQ[15..0]" (rect 4 101 388 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 384 112)(line_width 3))
+	)
+	(port
+		(pt 0 304)
+		(bidir)
+		(text "nios_lcd_camera_component_0_global_signals_export_GPIO_0[35..0]" (rect 0 0 446 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_GPIO_0[35..0]" (rect 4 293 382 304)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 384 304)(line_width 3))
+	)
+	(port
+		(pt 0 320)
+		(bidir)
+		(text "nios_lcd_camera_component_0_global_signals_export_GPIO_1[35..0]" (rect 0 0 446 12)(font "Arial" (font_size 8)))
+		(text "nios_lcd_camera_component_0_global_signals_export_GPIO_1[35..0]" (rect 4 309 382 320)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 384 320)(line_width 3))
+	)
+	(port
+		(pt 0 360)
+		(bidir)
+		(text "sram_0_external_interface_DQ[15..0]" (rect 0 0 247 12)(font "Arial" (font_size 8)))
+		(text "sram_0_external_interface_DQ[15..0]" (rect 4 349 214 360)(font "Arial" (font_size 8)))
+		(line (pt 0 360)(pt 384 360)(line_width 3))
+	)
+	(drawing
+		(text "clock_50_i_clk_in" (rect 281 43 664 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 389 67 796 144)(font "Arial" (color 0 0 0)))
+		(text "nios_lcd_camera_component_0_global_signals_export" (rect 65 83 424 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "DRAM_DQ" (rect 389 107 820 224)(font "Arial" (color 0 0 0)))
+		(text "DRAM_ADDR" (rect 389 123 832 256)(font "Arial" (color 0 0 0)))
+		(text "DRAM_LDQM" (rect 389 139 832 288)(font "Arial" (color 0 0 0)))
+		(text "DRAM_UDQM" (rect 389 155 832 320)(font "Arial" (color 0 0 0)))
+		(text "DRAM_WE_N" (rect 389 171 832 352)(font "Arial" (color 0 0 0)))
+		(text "DRAM_CAS_N" (rect 389 187 838 384)(font "Arial" (color 0 0 0)))
+		(text "DRAM_RAS_N" (rect 389 203 838 416)(font "Arial" (color 0 0 0)))
+		(text "DRAM_CS_N" (rect 389 219 832 448)(font "Arial" (color 0 0 0)))
+		(text "DRAM_BA_0" (rect 389 235 832 480)(font "Arial" (color 0 0 0)))
+		(text "DRAM_BA_1" (rect 389 251 832 512)(font "Arial" (color 0 0 0)))
+		(text "DRAM_CLK" (rect 389 267 826 544)(font "Arial" (color 0 0 0)))
+		(text "DRAM_CKE" (rect 389 283 826 576)(font "Arial" (color 0 0 0)))
+		(text "GPIO_0" (rect 389 299 814 608)(font "Arial" (color 0 0 0)))
+		(text "GPIO_1" (rect 389 315 814 640)(font "Arial" (color 0 0 0)))
+		(text "sram_0_external_interface" (rect 227 331 604 675)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "DQ" (rect 389 355 790 720)(font "Arial" (color 0 0 0)))
+		(text "ADDR" (rect 389 371 802 752)(font "Arial" (color 0 0 0)))
+		(text "LB_N" (rect 389 387 802 784)(font "Arial" (color 0 0 0)))
+		(text "UB_N" (rect 389 403 802 816)(font "Arial" (color 0 0 0)))
+		(text "CE_N" (rect 389 419 802 848)(font "Arial" (color 0 0 0)))
+		(text "OE_N" (rect 389 435 802 880)(font "Arial" (color 0 0 0)))
+		(text "WE_N" (rect 389 451 802 912)(font "Arial" (color 0 0 0)))
+		(text " experiment3 " (rect 809 472 1696 954)(font "Arial" ))
+		(line (pt 385 52)(pt 385 76)(line_width 1))
+		(line (pt 386 52)(pt 386 76)(line_width 1))
+		(line (pt 385 92)(pt 385 324)(line_width 1))
+		(line (pt 386 92)(pt 386 324)(line_width 1))
+		(line (pt 385 340)(pt 385 460)(line_width 1))
+		(line (pt 386 340)(pt 386 460)(line_width 1))
+		(line (pt 384 32)(pt 480 32)(line_width 1))
+		(line (pt 480 32)(pt 480 472)(line_width 1))
+		(line (pt 384 472)(pt 480 472)(line_width 1))
+		(line (pt 384 32)(pt 384 472)(line_width 1))
+		(line (pt 0 0)(pt 864 0)(line_width 1))
+		(line (pt 864 0)(pt 864 488)(line_width 1))
+		(line (pt 0 488)(pt 864 488)(line_width 1))
+		(line (pt 0 0)(pt 0 488)(line_width 1))
+	)
+)
