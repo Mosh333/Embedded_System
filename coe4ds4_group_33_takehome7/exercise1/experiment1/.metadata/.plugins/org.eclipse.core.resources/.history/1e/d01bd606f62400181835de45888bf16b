@@ -1,0 +1,759 @@
+// Copyright by Adam Kinsman, Henry Ko and Nicola Nicolici
+// Developed for the Embedded Systems course (COE4DS4)
+// Department of Electrical and Computer Engineering
+// McMaster University
+// Ontario, Canada
+
+#include "define.h"
+
+// For the performance counter
+void *performance_name = PERFORMANCE_COUNTER_0_BASE;
+
+// Definition of semaphore for PBs
+OS_EVENT *PBSemaphore[4];
+
+// Definition of mailboxes
+OS_EVENT *MboxBubbleSortStart[4];
+OS_EVENT *MboxBubbleSortDone[4];
+
+OS_EVENT *MboxGenArrayStart[4];
+
+OS_EVENT *MboxMergeSortDone;
+
+OS_MEM *MemoryPartition;
+
+// memory partition
+OS_MEM *MemoryPartition;
+
+// Definition of task stacks
+OS_STK initialize_task_stk[TASK_STACKSIZE];
+OS_STK task_launcher_stk[TASK_STACKSIZE];
+
+OS_STK sorting_stk[TASK_STACKSIZE];
+OS_TCB sorting_tcb;
+
+OS_STK gen_array_stk[4][TASK_STACKSIZE];
+OS_TCB gen_array_tcb[4];
+
+OS_STK bubble_sort_stk[4][TASK_STACKSIZE];
+OS_TCB bubble_sort_tcb[4];
+
+OS_STK merge_sort_stk[TASK_STACKSIZE];
+OS_TCB merge_sort_tcb;
+
+// The sorting task
+// It has the highest priority
+// But it initiates other tasks by posting a message in the corresponding mailboxes
+// Then it wait for the result to be computed by monitoring other mailboxes
+// In the mean time, it'll suspend itself to free up the processor
+void sorting(void* pdata) {
+	INT16U *sortedArray, *max_value;
+	INT8U return_code = OS_NO_ERR;
+	int i;
+	INT16U * data_array[4];
+
+	while (1) {
+		// Delay for 2 secs so that the message from this task will be displayed last
+		// If not delay, since it has highest priority, the wait message for PB0 will be displayed first
+		OSTimeDlyHMSM(0, 0, 2, 0);
+
+		printf(
+				"Waiting for PB0 to determine min/max 2 arrays each with %d entries\n",
+				ARRAY_SIZE);
+		OSSemPend(PBSemaphore[0], 0, &return_code);
+		alt_ucosii_check_return_code(return_code);
+
+		printf("Sorting started\n");
+
+		// Get the memory block from memory partition, and pass that memory block to other task through mailboxes
+		// to start data generation
+		for (i = 0; i < 4; i++) {
+			data_array[i] = OSMemGet(MemoryPartition, &return_code);
+			alt_ucosii_check_return_code(return_code);
+
+			return_code = OSMboxPost(MboxGenArrayStart[i],
+					(void *) (data_array[i]));
+			alt_ucosii_check_return_code(return_code);
+		}
+
+		// Start the performance counter
+		PERF_START_MEASURING(performance_name);
+
+		printf("-waiting for find_min_max...\n");
+
+		// Now wait for sorted array
+		sortedArray = (INT16U *) OSMboxPend(MboxMergeSortDone, 0, &return_code);
+		alt_ucosii_check_return_code(return_code);
+
+		printf("We will now print the final sorted Array:\n");
+
+
+		for(i=0;i<4000;i++){
+			printf("%d, ",sortedArray[i]);
+
+			if((i%500)==0){
+				OSTimeDly(2000);
+			}
+
+		}
+
+		printf("\nFinished printing sorted Array!\n");
+
+		//		// Now wait for max value
+		//		max_value = (INT16U *)OSMboxPend(MboxFindMinMax, 0, &return_code);
+		//		alt_ucosii_check_return_code(return_code);
+
+		// Stop the performance counter
+		PERF_STOP_MEASURING(performance_name);
+
+		//printf("Done: Min: %d, Max: %d\n", *min_value, *max_value);
+
+		printf("Array 0 PC: %d\n", perf_get_section_time(performance_name, 1));
+		printf("Array 1 PC: %d\n", perf_get_section_time(performance_name, 2));
+		printf("Merge	PC: %d\n", perf_get_section_time(performance_name, 3));
+
+		for (i = 0; i < 4; i++) {
+			return_code = OSMemPut(MemoryPartition, (void *) data_array[i]);
+			alt_ucosii_check_return_code(return_code);
+		}
+	}
+}
+
+// gen_array_0 task
+// It randomly generates numbers in the range of 0-65535 (16 bits)
+// And stores them in the data array obtained from the mailbox
+void gen_array_0(void* pdata) {
+	INT16U * data_array;
+	INT8U return_code = OS_NO_ERR;
+	int i;
+	INT16U min_value, max_value;
+	int switches;
+
+	while (1) {
+		printf("gen_array_0 wait for start\n");
+		data_array = (INT16U *) OSMboxPend(MboxGenArrayStart[0], 0,
+				&return_code);
+		alt_ucosii_check_return_code(return_code);
+
+		printf("gen_array_0 started (%p)\n", data_array);
+
+		max_value = 0;
+		min_value = 65535;
+
+		// Get the seed from the switches
+		switches = IORD(SWITCH_I_BASE, 0);
+
+		srand(switches);
+
+		// Start generation
+		for (i = 0; i < ARRAY_SIZE; i++) {
+			data_array[i] = rand() % 65536;
+
+			// For verification
+			if (data_array[i] > max_value)
+				max_value = data_array[i];
+			if (data_array[i] < min_value)
+				min_value = data_array[i];
+		}
+
+		printf("gen_array_0 done (min: %d)(max: %d)\n", min_value, max_value);
+
+		// When data generation is finished, the data array is posted to
+		// two different mailboxes, so that the two tasks for finding
+		// the min and max values in the array will be initiated
+		return_code = OSMboxPost(MboxBubbleSortStart[0], (void *) (data_array));
+		alt_ucosii_check_return_code(return_code);
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+// gen_array_1 task
+// It randomly generates numbers in the range of 0-65535 (16 bits)
+// And stores them in the data array obtained from the mailbox
+void gen_array_1(void* pdata) {
+	INT16U * data_array;
+	INT8U return_code = OS_NO_ERR;
+	int i;
+	INT16U min_value, max_value;
+	int switches;
+
+	while (1) {
+		printf("gen_array_1 wait for start\n");
+		data_array = (INT16U *) OSMboxPend(MboxGenArrayStart[1], 0,
+				&return_code);
+		alt_ucosii_check_return_code(return_code);
+
+		printf("gen_array_1 started (%p)\n", data_array);
+
+		max_value = 0;
+		min_value = 65535;
+
+		// Get the seed from the switches
+		switches = IORD(SWITCH_I_BASE, 0);
+
+		srand(~switches);
+
+		// Start generation
+		for (i = 0; i < ARRAY_SIZE; i++) {
+			data_array[i] = rand() % 65536;
+
+			// For verification
+			if (data_array[i] > max_value)
+				max_value = data_array[i];
+			if (data_array[i] < min_value)
+				min_value = data_array[i];
+		}
+
+		printf("gen_array_1 done (min: %d)(max: %d)\n", min_value, max_value);
+
+		// When data generation is finished, the data array is posted to
+		// two different mailboxes, so that the two tasks for finding
+		// the min and max values in the array will be initiated
+		return_code = OSMboxPost(MboxBubbleSortStart[1], (void *) (data_array));
+		alt_ucosii_check_return_code(return_code);
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+// gen_array_1 task
+// It randomly generates numbers in the range of 0-65535 (16 bits)
+// And stores them in the data array obtained from the mailbox
+void gen_array_2(void* pdata) {
+	INT16U * data_array;
+	INT8U return_code = OS_NO_ERR;
+	int i;
+	INT16U min_value, max_value;
+	int switches;
+
+	while (1) {
+		printf("gen_array_2 wait for start\n");
+		data_array = (INT16U *) OSMboxPend(MboxGenArrayStart[2], 0,
+				&return_code);
+		alt_ucosii_check_return_code(return_code);
+
+		printf("gen_array_2 started (%p)\n", data_array);
+
+		max_value = 0;
+		min_value = 65535;
+
+		// Get the seed from the switches
+		switches = IORD(SWITCH_I_BASE, 0);
+
+		srand(switches + 123);
+
+		// Start generation
+		for (i = 0; i < ARRAY_SIZE; i++) {
+			data_array[i] = rand() % 65536;
+
+			// For verification
+			if (data_array[i] > max_value)
+				max_value = data_array[i];
+			if (data_array[i] < min_value)
+				min_value = data_array[i];
+		}
+
+		printf("gen_array_2 done (min: %d)(max: %d)\n", min_value, max_value);
+
+		// When data generation is finished, the data array is posted to
+		// two different mailboxes, so that the two tasks for finding
+		// the min and max values in the array will be initiated
+		return_code = OSMboxPost(MboxBubbleSortStart[2], (void *) (data_array));
+		alt_ucosii_check_return_code(return_code);
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+// gen_array_1 task
+// It randomly generates numbers in the range of 0-65535 (16 bits)
+// And stores them in the data array obtained from the mailbox
+void gen_array_3(void* pdata) {
+	INT16U * data_array;
+	INT8U return_code = OS_NO_ERR;
+	int i;
+	INT16U min_value, max_value;
+	int switches;
+
+	while (1) {
+		printf("gen_array_3 wait for start\n");
+		data_array = (INT16U *) OSMboxPend(MboxGenArrayStart[3], 0,
+				&return_code);
+		alt_ucosii_check_return_code(return_code);
+
+		printf("gen_array_3 started (%p)\n", data_array);
+
+		max_value = 0;
+		min_value = 65535;
+
+		// Get the seed from the switches
+		switches = IORD(SWITCH_I_BASE, 0);
+
+		srand(~switches + 1234);
+
+		// Start generation
+		for (i = 0; i < ARRAY_SIZE; i++) {
+			data_array[i] = rand() % 65536;
+
+			// For verification
+			if (data_array[i] > max_value)
+				max_value = data_array[i];
+			if (data_array[i] < min_value)
+				min_value = data_array[i];
+		}
+
+		printf("gen_array_3 done (min: %d)(max: %d)\n", min_value, max_value);
+
+		// When data generation is finished, the data array is posted to
+		// two different mailboxes, so that the two tasks for finding
+		// the min and max values in the array will be initiated
+		return_code = OSMboxPost(MboxBubbleSortStart[3], (void *) (data_array));
+		alt_ucosii_check_return_code(return_code);
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+// find_min_0 task
+// It obtains the data array from the mailbox
+// and then find the min value in the array
+void bubble_sort_0(void* pdata) {
+	INT16U min_value;
+	INT16U max_value;
+	INT16U * data_array;
+	INT8U return_code = OS_NO_ERR;
+	int size = 1000;
+	int i_did_work = 0;
+	INT16U hold;
+	int i;
+	int j;
+
+	while (1) {
+		printf("bubble_sort_0 wait for start\n");
+		data_array = (INT16U *) OSMboxPend(MboxBubbleSortStart[0], 0,
+				&return_code);
+		alt_ucosii_check_return_code(return_code);
+		printf("bubble_sort_0 started (%p)\n", data_array);
+
+		// Start performance counter
+		PERF_BEGIN(performance_name, 1);
+
+		for (i = 0; i < size; i++) {
+			//printf("   Items compared: [ %d, %d ] ", data_array[i], data_array[i+1]);
+			i_did_work = 0;
+
+			for (j = 0; j < size - 1; j++) {
+				//check if num is GREATER than current num, if yes, then swap them (BUBBLE UP)
+				if (data_array[j] > data_array[j + 1]) {
+					hold = data_array[j];
+					data_array[j] = data_array[j + 1];
+					data_array[j + 1] = hold;
+
+					i_did_work = 1;
+					//printf(" --> swapped [%d, %d]\n", data_array[j],data_array[j+1]);
+				} else {
+					//printf("--> No Swaps!\n");
+				}
+
+				//printf("Iteration %d: ",(i+1));
+			}
+			if (i_did_work == 0) {
+				break;
+			}
+		}
+
+		//printf("The bubble sort function is complete\n");
+		// Stop performance counter
+		PERF_END(performance_name, 1);
+
+		min_value = data_array[0];
+		max_value = data_array[999];
+
+		printf("bubble_sort_0  done (min: %d, max: %d)\n", min_value, max_value);
+
+		// Post the min value to the mailbox for other task
+		return_code = OSMboxPost(MboxBubbleSortDone[0], (void *) (data_array));
+		alt_ucosii_check_return_code(return_code);
+
+		//		return_code = OSMboxPost(MboxFindMaxDone[0], (void *)(&max_value));
+		//		alt_ucosii_check_return_code(return_code);
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+void bubble_sort_1(void* pdata) {
+	INT16U min_value;
+	INT16U max_value;
+	INT16U * data_array;
+	INT8U return_code = OS_NO_ERR;
+	int size = 1000;
+	int i_did_work = 0;
+	INT16U hold;
+	int i;
+	int j;
+
+	while (1) {
+		printf("bubble_sort_1 wait for start\n");
+		data_array = (INT16U *) OSMboxPend(MboxBubbleSortStart[1], 0,
+				&return_code);
+		alt_ucosii_check_return_code(return_code);
+		printf("bubble_sort_1 started (%p)\n", data_array);
+
+		// Start performance counter
+		PERF_BEGIN(performance_name, 1);
+
+		for (i = 0; i < size; i++) {
+			//printf("   Items compared: [ %d, %d ] ", data_array[i], data_array[i+1]);
+			i_did_work = 0;
+
+			for (j = 0; j < size - 1; j++) {
+				//check if num is GREATER than current num, if yes, then swap them (BUBBLE UP)
+				if (data_array[j] > data_array[j + 1]) {
+					hold = data_array[j];
+					data_array[j] = data_array[j + 1];
+					data_array[j + 1] = hold;
+
+					i_did_work = 1;
+					//printf(" --> swapped [%d, %d]\n", data_array[j],data_array[j+1]);
+				} else {
+					//printf("--> No Swaps!\n");
+				}
+
+				//				if(i_did_work==0){
+				//					break;
+				//				}
+
+				//printf("Iteration %d: ",(i+1));
+			}
+			if (i_did_work == 0) {
+				break;
+			}
+		}
+
+		//printf("The bubble sort function is complete\n");
+		// Stop performance counter
+		PERF_END(performance_name, 1);
+
+		min_value = data_array[0];
+		max_value = data_array[999];
+
+		printf("bubble_sort_1  done (min: %d, max: %d)\n", min_value, max_value);
+
+		// Post the min value to the mailbox for other task
+		return_code = OSMboxPost(MboxBubbleSortDone[1], (void *) (data_array));
+		alt_ucosii_check_return_code(return_code);
+
+		//		return_code = OSMboxPost(MboxFindMaxDone[0], (void *)(&max_value));
+		//		alt_ucosii_check_return_code(return_code);
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+void bubble_sort_2(void* pdata) {
+	INT16U min_value;
+	INT16U max_value;
+	INT16U * data_array;
+	INT8U return_code = OS_NO_ERR;
+	int size = 1000;
+	int i_did_work = 0;
+	INT16U hold;
+	int i;
+	int j;
+
+	while (1) {
+		printf("bubble_sort_2 wait for start\n");
+		data_array = (INT16U *) OSMboxPend(MboxBubbleSortStart[2], 0,
+				&return_code);
+		alt_ucosii_check_return_code(return_code);
+		printf("bubble_sort_2 started (%p)\n", data_array);
+
+		// Start performance counter
+		PERF_BEGIN(performance_name, 1);
+
+		for (i = 0; i < size; i++) {
+			//printf("   Items compared: [ %d, %d ] ", data_array[i], data_array[i+1]);
+			i_did_work = 0;
+
+			for (j = 0; j < size - 1; j++) {
+				//check if num is GREATER than current num, if yes, then swap them (BUBBLE UP)
+				if (data_array[j] > data_array[j + 1]) {
+					hold = data_array[j];
+					data_array[j] = data_array[j + 1];
+					data_array[j + 1] = hold;
+
+					i_did_work = 1;
+					//printf(" --> swapped [%d, %d]\n", data_array[j],data_array[j+1]);
+				} else {
+					//printf("--> No Swaps!\n");
+				}
+				//
+				//				if(i_did_work==0){
+				//					break;
+				//				}
+
+				//printf("Iteration %d: ",(i+1));
+			}
+			if (i_did_work == 0) {
+				break;
+			}
+		}
+
+		//printf("The bubble sort function is complete\n");
+		// Stop performance counter
+		PERF_END(performance_name, 1);
+
+		min_value = data_array[0];
+		max_value = data_array[999];
+
+		printf("bubble_sort_2  done (min: %d, max: %d)\n", min_value, max_value);
+
+		// Post the min value to the mailbox for other task
+		return_code = OSMboxPost(MboxBubbleSortDone[2], (void *) (data_array));
+		alt_ucosii_check_return_code(return_code);
+
+		//		return_code = OSMboxPost(MboxFindMaxDone[0], (void *)(&max_value));
+		//		alt_ucosii_check_return_code(return_code);
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+void bubble_sort_3(void* pdata) {
+	INT16U min_value;
+	INT16U max_value;
+	INT16U * data_array;
+	INT8U return_code = OS_NO_ERR;
+	int size = 1000;
+	int i_did_work = 0;
+	INT16U hold;
+	int i;
+	int j;
+
+	while (1) {
+		printf("bubble_sort_3 wait for start\n");
+		data_array = (INT16U *) OSMboxPend(MboxBubbleSortStart[3], 0,
+				&return_code);
+		alt_ucosii_check_return_code(return_code);
+		printf("bubble_sort_3 started (%p)\n", data_array);
+
+		// Start performance counter
+		PERF_BEGIN(performance_name, 1);
+
+		for (i = 0; i < size; i++) {
+			//printf("   Items compared: [ %d, %d ] ", data_array[i], data_array[i+1]);
+			i_did_work = 0;
+
+			for (j = 0; j < size - 1; j++) {
+				//check if num is GREATER than current num, if yes, then swap them (BUBBLE UP)
+				if (data_array[j] > data_array[j + 1]) {
+					hold = data_array[j];
+					data_array[j] = data_array[j + 1];
+					data_array[j + 1] = hold;
+
+					i_did_work = 1;
+					//printf(" --> swapped [%d, %d]\n", data_array[j],data_array[j+1]);
+				} else {
+					//printf("--> No Swaps!\n");
+				}
+
+				//				if(!i_did_work){
+				//					break;
+				//				}
+
+				//printf("Iteration %d: ",(i+1));
+			}
+			if (i_did_work == 0) {
+				break;
+			}
+		}
+
+		//printf("The bubble sort function is complete\n");
+		// Stop performance counter
+		PERF_END(performance_name, 1);
+
+		min_value = data_array[0];
+		max_value = data_array[999];
+
+		printf("bubble_sort_3  done (min: %d, max: %d)\n", min_value, max_value);
+
+		// Post the min value to the mailbox for other task
+		return_code = OSMboxPost(MboxBubbleSortDone[3], (void *) (data_array));
+		alt_ucosii_check_return_code(return_code);
+
+		//		return_code = OSMboxPost(MboxFindMaxDone[0], (void *)(&max_value));
+		//		alt_ucosii_check_return_code(return_code);
+
+		OSTimeDlyHMSM(0, 0, 1, 0);
+	}
+}
+
+void merge_sort(void* pdata) {
+	//just a bubble sort
+	int i = 0, j = 0;
+	INT8U return_code = OS_NO_ERR;
+	INT16U *arr0, *arr1, *arr2, *arr3;
+	INT16U *finalarr;
+	int arr0_size = 1000, arr1_size = 1000, finalarr_size = 4000;
+	int i_did_work = 0;
+	INT16U hold;
+	INT16U min_value, max_value;
+
+	//for (i = 0; i < 3; i++) {
+	arr0 = (INT16U *) OSMboxPend(MboxBubbleSortDone[0], 0, &return_code);
+	alt_ucosii_check_return_code(return_code);
+
+	arr1 = (INT16U *) OSMboxPend(MboxBubbleSortDone[1], 0, &return_code);
+	alt_ucosii_check_return_code(return_code);
+
+	arr2 = (INT16U *) OSMboxPend(MboxBubbleSortDone[2], 0, &return_code);
+	alt_ucosii_check_return_code(return_code);
+
+	arr3 = (INT16U *) OSMboxPend(MboxBubbleSortDone[3], 0, &return_code);
+	alt_ucosii_check_return_code(return_code);
+
+	//}
+
+	finalarr = arr0;
+
+	printf("\nTHE MERGE HAS BEGUN!\n");
+
+	for (i = 0; i < finalarr_size; i++) {
+		//printf("   Items compared: [ %d, %d ] ", data_array[i], data_array[i+1]);
+		i_did_work = 0;
+
+		for (j = 0; j < finalarr_size - 1; j++) {
+			//check if num is GREATER than current num, if yes, then swap them (BUBBLE UP)
+			if (finalarr[j] > finalarr[j + 1]) {
+				hold = finalarr[j];
+				finalarr[j] = finalarr[j + 1];
+				finalarr[j + 1] = hold;
+
+				i_did_work = 1;
+				//printf(" --> swapped [%d, %d]\n", data_array[j],data_array[j+1]);
+			}
+
+			//printf("Iteration %d: ",(i+1));
+		}
+
+		if (i_did_work == 0) {
+			break;
+		}
+
+	}
+
+	min_value = finalarr[0];
+	max_value = finalarr[3999];
+
+	printf(
+			"MERGE SORT DONE(lol jk its just a big bubble sort) (min: %d, max: %d)\n",
+			min_value, max_value);
+
+	// Post the min value to the mailbox for other task
+	return_code = OSMboxPost(MboxMergeSortDone[3], (void *) (finalarr));
+	alt_ucosii_check_return_code(return_code);
+
+	//		return_code = OSMboxPost(MboxFindMaxDone[0], (void *)(&max_value));
+	//		alt_ucosii_check_return_code(return_code);
+
+	OSTimeDlyHMSM(0, 0, 1, 0);
+
+}
+
+// Task launcher
+// It creates all the custom tasks
+// And then it deletes itself
+void task_launcher(void *pdata) {
+	INT8U return_code = OS_NO_ERR;
+
+#if OS_CRITICAL_METHOD == 3
+	OS_CPU_SR cpu_sr;
+#endif
+
+	printf("Starting task launcher...\n");
+	while (1) {
+		OS_ENTER_CRITICAL();
+		printf("Creating tasks...\n");
+
+		return_code
+				= OSTaskCreateExt(sorting, NULL,
+						(void *) &sorting_stk[TASK_STACKSIZE - 1],
+						SORTING_PRIORITY, SORTING_PRIORITY, &sorting_stk,
+						TASK_STACKSIZE, &sorting_tcb, 0);
+		alt_ucosii_check_return_code(return_code);
+
+		///CREATE ARRAY GENERATION TASKS
+
+		return_code = OSTaskCreateExt(gen_array_0, NULL,
+				(void *) &gen_array_stk[0][TASK_STACKSIZE - 1],
+				GEN_ARRAY_0_PRIORITY, GEN_ARRAY_0_PRIORITY,
+				&gen_array_stk[0][0], TASK_STACKSIZE, &gen_array_tcb[0], 0);
+		alt_ucosii_check_return_code(return_code);
+
+		return_code = OSTaskCreateExt(gen_array_1, NULL,
+				(void *) &gen_array_stk[1][TASK_STACKSIZE - 1],
+				GEN_ARRAY_1_PRIORITY, GEN_ARRAY_1_PRIORITY,
+				&gen_array_stk[1][0], TASK_STACKSIZE, &gen_array_tcb[1], 0);
+		alt_ucosii_check_return_code(return_code);
+
+		//GEN_ARRAY_2_PRIORITY
+
+
+		return_code = OSTaskCreateExt(gen_array_2, NULL,
+				(void *) &gen_array_stk[2][TASK_STACKSIZE - 1],
+				GEN_ARRAY_2_PRIORITY, GEN_ARRAY_2_PRIORITY,
+				&gen_array_stk[2][0], TASK_STACKSIZE, &gen_array_tcb[2], 0);
+		alt_ucosii_check_return_code(return_code);
+
+		return_code = OSTaskCreateExt(gen_array_3, NULL,
+				(void *) &gen_array_stk[3][TASK_STACKSIZE - 1],
+				GEN_ARRAY_3_PRIORITY, GEN_ARRAY_3_PRIORITY,
+				&gen_array_stk[3][0], TASK_STACKSIZE, &gen_array_tcb[3], 0);
+		alt_ucosii_check_return_code(return_code);
+
+		//CREATE BUBBLE SORT TASKS
+		return_code = OSTaskCreateExt(bubble_sort_0, NULL,
+				(void *) &bubble_sort_stk[0][TASK_STACKSIZE - 1],
+				BUBBLE_SORT_0_PRIORITY, BUBBLE_SORT_0_PRIORITY,
+				&bubble_sort_stk[0][0], TASK_STACKSIZE, &bubble_sort_tcb[0], 0);
+		alt_ucosii_check_return_code(return_code);
+
+		return_code = OSTaskCreateExt(bubble_sort_1, NULL,
+				(void *) &bubble_sort_stk[1][TASK_STACKSIZE - 1],
+				BUBBLE_SORT_1_PRIORITY, BUBBLE_SORT_1_PRIORITY,
+				&bubble_sort_stk[1][0], TASK_STACKSIZE, &bubble_sort_tcb[1], 0);
+		alt_ucosii_check_return_code(return_code);
+
+		return_code = OSTaskCreateExt(bubble_sort_2, NULL,
+				(void *) &bubble_sort_stk[2][TASK_STACKSIZE - 1],
+				BUBBLE_SORT_2_PRIORITY, BUBBLE_SORT_2_PRIORITY,
+				&bubble_sort_stk[2][0], TASK_STACKSIZE, &bubble_sort_tcb[2], 0);
+		alt_ucosii_check_return_code(return_code);
+
+		return_code = OSTaskCreateExt(bubble_sort_3, NULL,
+				(void *) &bubble_sort_stk[3][TASK_STACKSIZE - 1],
+				BUBBLE_SORT_3_PRIORITY, BUBBLE_SORT_3_PRIORITY,
+				&bubble_sort_stk[3][0], TASK_STACKSIZE, &bubble_sort_tcb[3], 0);
+		alt_ucosii_check_return_code(return_code);
+
+		//CREATE MERGE SORT TASK -- remember 2 stages, 1st one takes 2 arrays each, next one takes two arrays (both results from previous stage)
+
+		return_code = OSTaskCreateExt(merge_sort, NULL,
+				(void *) &merge_sort_stk[TASK_STACKSIZE - 1],
+				MERGE_SORT_PRIORITY, MERGE_SORT_PRIORITY, &merge_sort_stk,
+				TASK_STACKSIZE, &merge_sort_tcb, 0);
+		alt_ucosii_check_return_code(return_code);
+
+		printf("Finish creating tasks...\n");
+
+		printf("\n");
+		OSTimeDlyHMSM(0, 0, 1, 0);
+
+		return_code = OSTaskDel(OS_PRIO_SELF);
+		alt_ucosii_check_return_code(return_code);
+
+		OS_EXIT_CRITICAL();
+	}
+}

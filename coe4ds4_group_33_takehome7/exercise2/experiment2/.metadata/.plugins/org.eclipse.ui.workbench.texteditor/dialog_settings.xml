@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="315" key="DIALOG_WIDTH"/>
+		<item value="567" key="DIALOG_Y_ORIGIN"/>
+		<item value="1261" key="DIALOG_X_ORIGIN"/>
+		<item value="423" key="DIALOG_HEIGHT"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="my image_size before if statement is:" key="selection"/>
+		<list key="findhistory">
+			<item value="my image_size before if statement is:"/>
+			<item value="&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;case 0: B_val[j] = (char)(data &amp; 0xFF); break;&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;case 1: G_val[j] = (char)(data &amp; 0xFF); break;&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;case 2: R_val[j] = (char)(data &amp; 0xFF); break;"/>
+			<item value="!="/>
+			<item value="hahaha2"/>
+			<item value="SDWriteQueue"/>
+			<item value="OSFlagPost"/>
+			<item value="SD_WRITE_DATA_READY"/>
+			<item value="SDCardFlag"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+</section>

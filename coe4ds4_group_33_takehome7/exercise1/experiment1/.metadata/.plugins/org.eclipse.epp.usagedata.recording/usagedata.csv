@@ -1,0 +1,237 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521072690023
+activated,view,com.altera.sbtgui.launch,12.0.0.178,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1521072693241
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521072724524
+activated,view,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.ProjectExplorer",1521072731232
+opened,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521072740205
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521072740269
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521072740949
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521072741540
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521073629255
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1521073638747
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521073663589
+started,bundle,org.eclipse.cdt.mylyn.ui,1.1.3.v20100909-0100-e3x,"org.eclipse.cdt.mylyn.ui",1521073705202
+error,log,,,"Unable to get CElement for Macro",1521073705257
+error,log,,,"Unable to get CElement for Macro",1521073705258
+error,log,,,"Unable to get CElement for Macro",1521073705259
+error,log,,,"Unable to get CElement for Macro",1521073705259
+error,log,,,"Unable to get CElement for Macro",1521073705260
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073705302
+error,log,,,"Unable to get CElement for Macro",1521073711325
+error,log,,,"Unable to get CElement for Macro",1521073711325
+error,log,,,"Unable to get CElement for Macro",1521073711326
+error,log,,,"Unable to get CElement for Macro",1521073711326
+error,log,,,"Unable to get CElement for Macro",1521073711327
+error,log,,,"Unable to get CElement for Macro",1521073711327
+error,log,,,"Unable to get CElement for Macro",1521073711328
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073711362
+error,log,,,"Unable to get CElement for Macro",1521073724908
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073724918
+error,log,,,"Unable to get CElement for Macro",1521073727783
+error,log,,,"Unable to get CElement for Macro",1521073727783
+error,log,,,"Unable to get CElement for Macro",1521073727784
+error,log,,,"Unable to get CElement for Macro",1521073727784
+error,log,,,"Unable to get CElement for Macro",1521073727785
+error,log,,,"Unable to get CElement for Macro",1521073727785
+error,log,,,"Unable to get CElement for Macro",1521073727786
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073727797
+error,log,,,"Unable to get CElement for Macro",1521073733189
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073733199
+error,log,,,"Unable to get CElement for Macro",1521073741122
+error,log,,,"Unable to get CElement for Macro",1521073741124
+error,log,,,"Unable to get CElement for Macro",1521073741126
+error,log,,,"Unable to get CElement for Macro",1521073741128
+error,log,,,"Unable to get CElement for Macro",1521073741129
+error,log,,,"Unable to get CElement for Macro",1521073741129
+error,log,,,"Unable to get CElement for Macro",1521073741130
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073741148
+error,log,,,"Unable to get CElement for Macro",1521073754699
+error,log,,,"Unable to get CElement for Macro",1521073754699
+error,log,,,"Unable to get CElement for Macro",1521073754700
+error,log,,,"Unable to get CElement for Macro",1521073754700
+error,log,,,"Unable to get CElement for Macro",1521073754701
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073754714
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073758039
+error,log,,,"Unable to get CElement for Macro",1521073759797
+error,log,,,"Unable to get CElement for Macro",1521073759798
+error,log,,,"Unable to get CElement for Macro",1521073759798
+error,log,,,"Unable to get CElement for Macro",1521073759799
+error,log,,,"Unable to get CElement for Macro",1521073759799
+error,log,,,"Unable to get CElement for Macro",1521073759799
+error,log,,,"Unable to get CElement for Macro",1521073759800
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073759818
+error,log,,,"Unable to get CElement for Macro",1521073767774
+error,log,,,"Unable to get CElement for Macro",1521073767775
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073767791
+error,log,,,"Unable to get CElement for Macro",1521073771222
+error,log,,,"Unable to get CElement for Macro",1521073771222
+error,log,,,"Unable to get CElement for Macro",1521073771223
+error,log,,,"Unable to get CElement for Macro",1521073771223
+error,log,,,"Unable to get CElement for Macro",1521073771224
+error,log,,,"Unable to get CElement for Macro",1521073771224
+error,log,,,"Unable to get CElement for Macro",1521073771225
+error,log,,,"Unable to get CElement for Macro",1521073771225
+error,log,,,"Unable to get CElement for Macro",1521073771226
+error,log,,,"Unable to get CElement for Macro",1521073771226
+error,log,,,"Unable to get CElement for Macro",1521073771226
+error,log,,,"Unable to get CElement for Macro",1521073771227
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073771242
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1521073879110
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521073884437
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1521073886052
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073888874
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073889229
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073889716
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073892076
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073892383
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073892644
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073892832
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073893011
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073893204
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073893395
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073893716
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073893982
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073894251
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073894532
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073894860
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1521073895194
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.cut",1521073900139
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1521073907156
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521073911688
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1521073926486
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.shiftLeft",1521073929707
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.shiftLeft",1521073930328
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.cut",1521073944680
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073947063
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073947205
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073947369
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073947516
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1521073950450
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521073952582
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1521073952891
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.shiftLeft",1521073954211
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073975897
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073976213
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073976388
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073976556
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521073976724
+error,log,,,"Unable to get CElement for Macro",1521073986220
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073986229
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073989262
+error,log,,,"Unable to get CElement for Macro",1521073990806
+error,log,,,"Unable to get CElement for Macro",1521073990807
+error,log,,,"Unable to get CElement for Macro",1521073990807
+error,log,,,"Unable to get CElement for Macro",1521073990807
+error,log,,,"Unable to get CElement for Macro",1521073990808
+error,log,,,"Unable to get CElement for Macro",1521073990808
+error,log,,,"Unable to get CElement for Macro",1521073990809
+error,log,,,"Unable to get CElement for Macro",1521073990809
+error,log,,,"Unable to get CElement for Macro",1521073990810
+error,log,,,"Unable to get CElement for Macro",1521073990810
+error,log,,,"Unable to get CElement for Macro",1521073990811
+error,log,,,"Unable to get CElement for Macro",1521073990811
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521073990835
+error,log,,,"Unable to get CElement for Macro",1521074002389
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521074002398
+error,log,,,"Unable to get CElement for Macro",1521074004669
+error,log,,,"Unable to get CElement for Macro",1521074004669
+error,log,,,"Unable to get CElement for Macro",1521074004669
+error,log,,,"Unable to get CElement for Macro",1521074004670
+error,log,,,"Unable to get CElement for Macro",1521074004670
+error,log,,,"Unable to get CElement for Macro",1521074004671
+error,log,,,"Unable to get CElement for Macro",1521074004671
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521074004689
+error,log,,,"Unable to get CElement for Macro",1521074159459
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521074159469
+error,log,,,"Unable to get CElement for Macro",1521074162914
+error,log,,,"Unable to get CElement for Macro",1521074162915
+error,log,,,"Unable to get CElement for Macro",1521074162915
+error,log,,,"Unable to get CElement for Macro",1521074162916
+error,log,,,"Unable to get CElement for Macro",1521074162916
+error,log,,,"Unable to get CElement for Macro",1521074162917
+error,log,,,"Unable to get CElement for Macro",1521074162917
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521074162935
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1521074222038
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521074226659
+activated,view,org.eclipse.ui.views,3.5.0.I20100527-0800,"org.eclipse.ui.views.ContentOutline",1521074253526
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521074272137
+error,log,,,"Unable to get CElement for Macro",1521074280204
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521074280213
+error,log,,,"Unable to get CElement for Macro",1521074283329
+error,log,,,"Unable to get CElement for Macro",1521074283330
+error,log,,,"Unable to get CElement for Macro",1521074283330
+error,log,,,"Unable to get CElement for Macro",1521074283331
+error,log,,,"Unable to get CElement for Macro",1521074283331
+error,log,,,"Unable to get CElement for Macro",1521074283332
+error,log,,,"Unable to get CElement for Macro",1521074283332
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.text.contentAssist.proposals",1521074283350
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521074339159
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521074339429
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1521074345150
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521074349607
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521074351010
+activated,view,com.altera.sbtgui.launch,12.0.0.178,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1521074352229
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1521074373119
+error,log,,,"Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8",1521074374040
+activated,view,com.altera.sbtgui.launch,12.0.0.178,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1521074380886
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1521074551215
+opened,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1521074551828
+activated,view,com.altera.sbtgui.launch,12.0.0.178,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1521074572020
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521074579978
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521074581079
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1521074603150
+error,log,,,"Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB 4-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8",1521074604060
+activated,view,com.altera.sbtgui.launch,12.0.0.178,"com.altera.sbtgui.launch.hardware.ByteStreamConsoleView",1521074610901
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1521074808646
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521074809988
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521074965883
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521074971484
+closed,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1521074972682
+started,bundle,org.eclipse.compare,3.5.100.I20100526-0800,"org.eclipse.compare",1521074972894
+stopped,bundle,org.eclipse.cdt.debug.mi.ui,6.1.0.201009141542,"org.eclipse.cdt.debug.mi.ui",1521074972983
+stopped,bundle,com.altera.debug.cdi.gdb.plugin,12.0.0.178,"com.altera.debug.cdi.gdb.plugin",1521074972983
+stopped,bundle,com.altera.sbtgui.launch,12.0.0.178,"com.altera.sbtgui.launch",1521074973984
+stopped,bundle,org.eclipse.cdt.debug.mi.core,7.0.1.201009141542,"org.eclipse.cdt.debug.mi.core",1521074973984
+stopped,bundle,org.eclipse.cdt.debug.ui.memory.memorybrowser,1.2.0.201009141542,"org.eclipse.cdt.debug.ui.memory.memorybrowser",1521074973986
+stopped,bundle,org.eclipse.cdt.debug.ui.memory.search,1.2.0.201009141542,"org.eclipse.cdt.debug.ui.memory.search",1521074973988
+stopped,bundle,org.eclipse.cdt.dsf.gdb.ui,2.1.0.201009141542,"org.eclipse.cdt.dsf.gdb.ui",1521074973988
+stopped,bundle,org.eclipse.cdt.dsf.ui,2.1.1.201009141542,"org.eclipse.cdt.dsf.ui",1521074973991
+stopped,bundle,org.eclipse.cdt.gdb.ui,7.0.0.201009141542,"org.eclipse.cdt.gdb.ui",1521074973992
+stopped,bundle,org.eclipse.cdt.dsf.gdb,3.0.0.201009141542,"org.eclipse.cdt.dsf.gdb",1521074973992
+stopped,bundle,com.altera.sbtgui.ui,12.0.0.178,"com.altera.sbtgui.ui",1521074973995
+stopped,bundle,com.altera.sbtgui.project,12.0.0.178,"com.altera.sbtgui.project",1521074973995
+stopped,bundle,org.eclipse.cdt.launch,6.1.0.201009141542,"org.eclipse.cdt.launch",1521074973996
+stopped,bundle,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui",1521074973996
+stopped,bundle,org.eclipse.cdt.debug.ui.memory.traditional,1.2.0.201009141542,"org.eclipse.cdt.debug.ui.memory.traditional",1521074973997
+stopped,bundle,org.eclipse.cdt.dsf,2.1.0.201009141542,"org.eclipse.cdt.dsf",1521074973997
+stopped,bundle,org.eclipse.cdt.debug.core,7.0.0.201009141542,"org.eclipse.cdt.debug.core",1521074973997
+stopped,bundle,org.eclipse.cdt.managedbuilder.ui,7.0.0.201009141542,"org.eclipse.cdt.managedbuilder.ui",1521074974000
+stopped,bundle,org.eclipse.cdt.make.ui,7.0.0.201009141542,"org.eclipse.cdt.make.ui",1521074974000
+stopped,bundle,org.eclipse.cdt.managedbuilder.gnu.ui,7.0.0.201009141542,"org.eclipse.cdt.managedbuilder.gnu.ui",1521074974002
+stopped,bundle,org.eclipse.cdt.managedbuilder.core,7.0.1.201009141542,"org.eclipse.cdt.managedbuilder.core",1521074974002
+stopped,bundle,org.eclipse.cdt.make.core,7.0.0.201009141542,"org.eclipse.cdt.make.core",1521074974002
+stopped,bundle,org.eclipse.cdt.mylyn.ui,1.1.3.v20100909-0100-e3x,"org.eclipse.cdt.mylyn.ui",1521074974002
+stopped,bundle,com.altera.sbtgui.flash.plugin,12.0.0.178,"com.altera.sbtgui.flash.plugin",1521074974003
+stopped,bundle,com.altera.sbtgui.gprof,12.0.0.178,"com.altera.sbtgui.gprof",1521074974005
+stopped,bundle,com.altera.sbtgui.core,12.0.0.178,"com.altera.sbtgui.core",1521074974005
+stopped,bundle,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui",1521074974005
+stopped,bundle,org.eclipse.cdt.core,5.2.1.201009141542,"org.eclipse.cdt.core",1521074974005
+stopped,bundle,org.eclipse.equinox.p2.ui.sdk,1.0.100.v20100513,"org.eclipse.equinox.p2.ui.sdk",1521074974007
+stopped,bundle,org.eclipse.search,3.6.0.v20100520-0800,"org.eclipse.search",1521074974020
+stopped,bundle,org.eclipse.mylyn.team.ui,3.4.2.v20100909-0100-e3x,"org.eclipse.mylyn.team.ui",1521074974020
+stopped,bundle,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.resources",1521074974021
+stopped,bundle,org.eclipse.ltk.ui.refactoring,3.5.0.v20100526-0800,"org.eclipse.ltk.ui.refactoring",1521074974021
+stopped,bundle,org.eclipse.mylyn.bugzilla.ui,3.4.2.v20100909-0100-e3x,"org.eclipse.mylyn.bugzilla.ui",1521074974021
+stopped,bundle,org.eclipse.mylyn.ide.ui,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.ide.ui",1521074974023
+stopped,bundle,org.eclipse.mylyn.resources.ui,3.4.1.v20100909-0100-e3x,"org.eclipse.mylyn.resources.ui",1521074974024
+stopped,bundle,org.eclipse.mylyn.wikitext.tasks.ui,1.3.1.v20100823-0100-e3x,"org.eclipse.mylyn.wikitext.tasks.ui",1521074974026
+stopped,bundle,org.eclipse.mylyn.context.ui,3.4.1.v20100909-0100-e3x,"org.eclipse.mylyn.context.ui",1521074974026
+stopped,bundle,org.eclipse.mylyn.help.ui,3.4.1.v20100823-0100-e3x,"org.eclipse.mylyn.help.ui",1521074974029
+stopped,bundle,org.eclipse.mylyn.tasks.bugs,3.4.1.v20100823-0100-e3x,"org.eclipse.mylyn.tasks.bugs",1521074974032
+stopped,bundle,org.eclipse.mylyn.tasks.ui,3.4.2.v20100902-0100-e3x,"org.eclipse.mylyn.tasks.ui",1521074974032
+stopped,bundle,org.eclipse.team.cvs.ui,3.3.301.R36x_v20100825-0800,"org.eclipse.team.cvs.ui",1521074974032
+stopped,bundle,org.eclipse.team.ui,3.5.101.R36x_v20100825-0800,"org.eclipse.team.ui",1521074974032
+stopped,bundle,org.eclipse.compare,3.5.100.I20100526-0800,"org.eclipse.compare",1521074974032
+stopped,bundle,org.eclipse.cdt.debug.ui.memory.transport,2.1.0.201009141542,"org.eclipse.cdt.debug.ui.memory.transport",1521074974034
+stopped,bundle,org.eclipse.ui.externaltools,3.2.0.v20100427,"org.eclipse.ui.externaltools",1521074974035
+stopped,bundle,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui",1521074974037

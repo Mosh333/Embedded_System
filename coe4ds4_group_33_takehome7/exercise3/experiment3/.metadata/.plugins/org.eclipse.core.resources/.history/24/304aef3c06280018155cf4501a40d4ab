@@ -1,0 +1,496 @@
+// Copyright by Adam Kinsman, Henry Ko and Nicola Nicolici
+// Developed for the Embedded Systems course (COE4DS4)
+// Department of Electrical and Computer Engineering
+// McMaster University
+// Ontario, Canada
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "sys/alt_alarm.h"
+#include "alt_types.h"
+#include "sys/alt_irq.h"
+#include "system.h"
+#include "nios2.h"
+#include "io.h"
+#include "altera_avalon_mutex.h"
+#include "altera_avalon_performance_counter.h"
+#include <unistd.h>
+
+#define READY 1
+#define NOT_READY 2
+
+#define CALCULATE_THIS 3
+#define DONE 4
+
+#define NO_MESSAGE 0
+
+#define LOCK_SUCCESS 0
+#define LOCK_FAIL 1
+
+#define MESSAGE_BUFFER_BASE MESSAGE_BUFFER_RAM_BASE
+
+#define MS_DELAY 1000
+
+#define MAX_SIZE_A 70000
+#define MAX_SIZE_X 1000
+#define MAX_SIZE_Y 1000
+
+// Message buffer structure
+typedef struct {
+
+	// the buffer can hold up to 4KBytes data
+
+	short int state_flag;
+	short int PB2_flag;
+
+	short int values[5][70];
+	short int columns[5][70];
+
+	short int row_num_start;
+	short int row_nz_count[5];
+
+	short int input_vector_X[1000];
+
+	alt_32 five_values_result_Y[5];
+
+} message_buffer_struct;
+
+int PB0_press;
+
+// For performance counter
+void *performance_name = CPU1_PERFORMANCE_COUNTER_BASE;
+
+// Global functions
+void handle_cpu1_button_interrupts() {
+	switch (IORD(CPU1_PB_BUTTON_I_BASE, 3)) {
+	case 1:
+		printf("CPU1 PB0 pressed\n");
+		PB0_press++;
+		break;
+	case 2:
+		printf("CPU1 PB1 pressed\n");
+		break;
+	}
+	IOWR(CPU1_PB_BUTTON_I_BASE, 3, 0x0);
+}
+
+void gen_sparse_matrix(short int *cols, short int * row_NZ_count_A,
+		short int *values, long int * values_count) {
+	short int i = 0;
+	short int k = 0;
+	//how many non/zero values we are going to have
+	short int rowRandomness;
+
+	//we will randomly generate and store the column indices that we will generate random non zero values at (amount == row randomness )
+	short int *chosen_columns;
+	//the row that
+	short int target_col;
+	//long int col_i;
+	short int row_i = 0;
+	////------------------
+	short int current_index = 0;
+	//int *random_rows;
+
+	int check_indices_flag = 0;
+	short int h;
+
+	values_count=0;
+	printf("Now generating the Sparse Matrix\n");
+	for (i = 0; i < MAX_SIZE_X; i++) {
+		//generate this many columns with random column numbers
+		rowRandomness = rand() % (70 - 30 + 1) + 30;
+		row_NZ_count_A[row_i++] = rowRandomness;
+		//printf("Adding %d nz values to row %d\n", rowRandomness, row_i - 1);
+		//generate the indexes, first alloc the mem for them
+		chosen_columns = calloc(rowRandomness, sizeof(short int));
+		for (k = 0; k < rowRandomness; k++) {
+			//printf("Generating element %d of %d\n", k, rowRandomness);
+
+			//assign random indices  (totaling above) to be nonzero
+			//while loop to make sure the index hasnt already been generated
+			while (1) {
+				//printf("Generating an index to insert a non-zero value.\n");
+				target_col = rand() % 1000;
+				check_indices_flag = 0;
+
+				for (h = 0; h < k; h++) {
+					if (target_col == chosen_columns[h]) {
+						check_indices_flag = 1;
+//						printf(
+//								"THIS VALUE HAS BEEN USED!! GENERATE A DIFF ONE YOU LAZY DONKEY!\n");
+					}
+				}//this is inefficent, shouldve made an array and picked vals, then "killed" them
+				if (check_indices_flag != 1) {
+					// printf("This index has not been used yet!");
+					//random_rows[current_index]=target_row;
+					break;
+				}
+			}
+			//printf("3\n");
+			cols[*values_count] = target_col;
+			values[*values_count] = rand() % (1000 + 1 - (-1000)) + (-1000);
+			//printf("4\n");
+			//if((i%100)==0){printf("t_col(%d),rand val(%d),row(%d)\n", target_col,values[*values_count],i);}
+			printf("Generated %d value\n",*current_index );
+
+			current_index++;
+			(*values_count)++;
+			printf("Generated %d value\n",*current_index );
+		}
+		//printf("5\n");
+		free(chosen_columns);
+		//usleep(20);
+
+	}
+
+
+	printf("Creation of Sparse Array is complete!\n");
+
+}
+
+void gen_input_vector_x(short int* values) {
+	short int i;
+	printf("Starting creation of Input Vector X!\n");
+
+	for (i = 0; i < MAX_SIZE_X; i++) {
+
+		(values[i]) = rand() % (1000 + 1 - (-1000)) + (-1000);
+		//printf("Generated %d of %d value to be: %d\n",i, MAX_SIZE_X, values[i]);
+	}
+
+	printf("Creation of Input Vector X is complete!\n");
+}
+
+void calc_output_Y_CPU1(short int *cols_A, short int * row_NZ_count_A,
+		short int *values_A, long int *num_values_A, short int * vector_X,
+		alt_32 * Y_result) {
+	//indexers for vectors, sparse matrix
+	short int column=0;
+	short int this_row_NZ_count=0;
+	short int row_i=0;
+	short int value=0;
+	short int iter_cols=0;
+	long int col_i=0;
+	long int val_i=0;
+	alt_32 vector_Y_i=0;
+	printf("Beginning calculation on CPU1\n");
+	for (row_i = 0; row_i < MAX_SIZE_X; row_i++) {//we are going to iterate through the matrix and multiply with input vector
+		this_row_NZ_count = row_NZ_count_A[row_i];
+		for (iter_cols = 0; iter_cols < this_row_NZ_count; iter_cols++) {
+			//haha
+			column = cols_A[col_i++];
+			value = values_A[val_i++];
+
+			Y_result[vector_Y_i] = value * vector_X[column];
+		}
+		vector_Y_i++;
+	}
+
+	printf("Complete calculation on CPU1\n");
+}
+
+void calc_output_Y_BOTH_CPUS(short int *cols_A, short int * row_NZ_count_A,
+		short int *values_A, long int *num_values_A, short int * vector_X,
+		alt_32 * Y_result,message_buffer_struct *message) {
+	//indexers for vectors, sparse matrix
+	short int this_row_NZ_count;
+	short int row_i;
+	long int val_i;
+
+
+	short int column;
+	short int value;
+	long int col_i;
+
+	int i = 0;
+	int j = 0;
+
+	printf("Beginning calculation on BOTH CPU's\n");
+
+
+	printf("store things in struct to send to CPU2\n");
+	for (row_i = 0; row_i < MAX_SIZE_X; row_i = row_i + 10) {
+		printf("Calculating Rows %d to %d\n", row_i, row_i+10);
+
+		//we are going to take care of 10 rows at a time (max out the buffer)
+
+		//		short int values[5][70];
+		//		short int columns[5][70];
+		//		short int row_num_start;
+		//		short int row_nz_count[5];
+
+		//CPU 2 WORK SETUP
+		//load what is necessary into the shared memory
+		for (i = 0; i < 5; i++) {
+
+			this_row_NZ_count = row_NZ_count_A[row_i + i];
+			message->row_nz_count[i] = this_row_NZ_count;
+			for (j = 0; j < this_row_NZ_count; j++) {
+				message->values[i][j] = values_A[val_i++];
+				message->columns[i][j] = cols_A[col_i++];
+			}
+		}
+		message->state_flag=CALCULATE_THIS;
+
+		///CPU1 WORK
+		for (i = 5; i < 10; i++) {
+
+			this_row_NZ_count = row_NZ_count_A[row_i + i];
+
+			for (j = 0; j < this_row_NZ_count; j++) {
+				column = cols_A[col_i++];
+				value = values_A[val_i++];
+
+				Y_result[row_i + i] += vector_X[column] * value;
+			}
+
+
+		}
+
+		//wait for cpu2 to finish and store the calculated data in the thing
+		printf("Waiting for CPU2\n");
+		printf("The message->state_flag value is: %d\n", message->state_flag);
+		while(1){
+
+			if(message->state_flag==DONE)break;
+		}
+
+		//STORE THE data from the shared memory to CPU1 memory
+		for (i = 0; i < 5; i++) {
+
+			Y_result[row_i + i] = message->five_values_result_Y[i];
+		}
+
+
+
+
+
+	}
+
+	printf("Complete calculation on CPU1\n");
+}
+
+void print_sparse_rep_matrix_A(short int *cols, short int * row_NZ_count_A,
+		short int *values, long int *num_values) {
+
+	short int this_row_col_i=0;
+	short int row_i=0;
+	long int val_i=0;
+	long int col_i=0;
+	printf(
+			"\n\n----------\n----------\n----------\nPrinting Sparse Matrix Representation\n----------\n----------\n----------\n(column, value)\n");
+	printf("There are %ld non-zero values in this sparse matrix.\n",
+			*num_values);
+
+	for (row_i = 0; row_i < MAX_SIZE_X; row_i++) {
+		printf(
+				"Printing row %d non zero values.There are %d non-zero values in this row.\n",
+				row_i, row_NZ_count_A[row_i]);
+		for (this_row_col_i = 0; this_row_col_i < (row_NZ_count_A[row_i]); this_row_col_i++) {
+			printf("  Col(%d), Value(%d)\n", cols[col_i++], values[val_i++]);
+		}
+		usleep(1000);
+	}
+
+	printf(
+			"\n----------\n----------\n----------\n End Printing Sparse Matrix Representation\n----------\n----------\n----------\n");
+}
+//can i graduate yet
+void print_input_vector_X(short int* values) {
+	short int i;
+	printf(
+			"\n\n----------\n----------\n----------\n Beginning Print of Input Vector X\n----------\n----------\n----------\n");
+	for (i = 0; i < MAX_SIZE_X; i++) {
+		printf("%d of %d value is: %d\n", i, MAX_SIZE_X, values[i]);
+	}
+
+	printf(
+			"\n----------\n----------\n----------\n End Printing Input Vector X\n----------\n----------\n----------\n");
+}
+
+void print_result_vector_Y(alt_32* values) {
+	short int i;
+	printf(
+			"\n\n----------\n----------\n----------\n Beginning Print of Result Vector Y\n----------\n----------\n----------\n");
+	for (i = 0; i < MAX_SIZE_X; i++) {
+		printf("%d of %d value is: %d\n", i, MAX_SIZE_X, values[i]);
+	}
+
+	printf(
+			"\n----------\n----------\n----------\n End Printing of Result Vector Y\n----------\n----------\n----------\n");
+}
+
+void compare_Y_result_vectors(alt_32* CPU1_Y_values, alt_32* both_CPU_Y_values) {
+	short int i=0;
+	printf(
+			"\n\n----------\n----------\n----------\n COMPARING RESULT VECTORS \n----------\n----------\n----------\n");
+	for (i = 0; i < MAX_SIZE_X; i++) {
+		printf("%d of %d Results: [%d, %d,", i, MAX_SIZE_X, CPU1_Y_values[i],both_CPU_Y_values[i]);
+		if(CPU1_Y_values[i]==both_CPU_Y_values[i]){printf(" MATCH]\n");}
+		else{printf(" MISMATCH**]\n");}
+	}
+
+	printf(
+			"\n----------\n----------\n----------\n END COMPARISON OF RESULT VECTORS\n----------\n----------\n----------\n");
+}
+
+
+
+
+
+// The main function
+int main() {
+	// Pointer to our mutex device
+	alt_mutex_dev* mutex = NULL;
+
+	// Local variables
+	unsigned int id;
+	unsigned int value;
+	unsigned int count = 0;
+	unsigned int ticks_at_last_message;
+	int switches;
+
+	message_buffer_struct *message;
+
+	// For performance counter
+	PERF_RESET(CPU1_PERFORMANCE_COUNTER_BASE);
+
+	// Reading switches 15-8 for CPU1
+	switches = IORD(CPU1_SWITCH_I_BASE, 0);
+
+	// Enable all button interrupts
+	IOWR(CPU1_PB_BUTTON_I_BASE, 2, 0x3);
+	IOWR(CPU1_PB_BUTTON_I_BASE, 3, 0x0);
+	alt_irq_register(CPU1_PB_BUTTON_I_IRQ, NULL,
+			(void*) handle_cpu1_button_interrupts);
+
+	// Get our processor ID (add 1 so it matches the cpu name in SOPC Builder)
+	NIOS2_READ_CPUID(id);
+
+	printf("COE4DS4 Winter18\n");
+	printf("Lab7     exp.  3\n\n");
+
+	// Value can be any non-zero value
+	value = 1;
+
+	// Initialize the message buffer location
+	message = (message_buffer_struct*) MESSAGE_BUFFER_BASE;
+
+	// Okay, now we'll open the real mutex
+	// It's not actually a mutex to share the jtag_uart, but to share a message
+	// buffer which CPU1 is responsible for reading and printing to the jtag_uart.
+	mutex = altera_avalon_mutex_open(MESSAGE_BUFFER_MUTEX_NAME);
+
+	// We'll use the system clock to keep track of our delay time.
+	// Here we initialize delay tracking variable.
+	ticks_at_last_message = alt_nticks();
+
+	//sparse representation
+	short int *columns_A;
+	short int *row_NZ_count_A;
+	short int *values_A;
+
+	//input vector
+	short int *vector_X;
+	alt_32 * vector_Y_CPU1;
+	alt_32 * vector_Y_BOTH;
+	long int values_count_A = 0;
+	long int *values_count_A_ptr;
+	values_count_A_ptr = &values_count_A;
+
+	if (mutex) {
+	//	message->flag = NO_MESSAGE;
+
+		while (1) {
+
+			while (1) {
+
+				if (PB0_press >= 1) {
+					printf("BOOM!\n");
+					PB0_press--;
+					//values_count=0;
+
+					break;
+				}
+
+			}
+
+			//set up memory locations for columns, rows, and values
+			//we will have a maximum of 70*1000    values each of rows, columns, and values
+			printf("The sizeof int is: %d, the sizeof shortint is %d, the size of longint is %d\n",sizeof(int), sizeof(short int), sizeof(long int));
+			columns_A = calloc(MAX_SIZE_A, sizeof(short int));
+			printf("column_A memory allocation complete!\n");
+			row_NZ_count_A = calloc(MAX_SIZE_X, sizeof(short int));//the amount of non zeroes at every row
+			printf("row_NZ_count_A memory allocation complete!\n");
+			values_A = calloc(MAX_SIZE_A, sizeof(short int));
+			printf("matrix_A memory allocation complete!\n");
+			vector_X = calloc(MAX_SIZE_X, sizeof(short int));
+			printf("vector_X memory allocation complete!\n");
+			//vector_Y = calloc(MAX_SIZE_Y, sizeof(alt_32));
+			//printf("vector_Y memory allocation complete!\n");
+
+			vector_Y_CPU1 = calloc(MAX_SIZE_Y, sizeof(alt_32));
+			vector_Y_BOTH = calloc(MAX_SIZE_Y, sizeof(alt_32));
+			printf(
+					"vector_Y for (CPU1 calc and BOTH calc) memory allocation complete!\n");
+
+			gen_sparse_matrix(columns_A, row_NZ_count_A, values_A,values_count_A_ptr);
+			gen_input_vector_x(vector_X);
+			calc_output_Y_CPU1(columns_A, row_NZ_count_A, values_A,values_count_A_ptr, vector_X, vector_Y_CPU1);
+
+			print_sparse_rep_matrix_A(columns_A, row_NZ_count_A, values_A,values_count_A_ptr);
+
+			printf("Waiting for PB2 from CPU2 to be pressed...\n");
+			printf("The value of the PB2_flag is: %d\n",message->PB2_flag );
+			while(1){
+				//printf(".");
+				if(message->PB2_flag==READY)break;
+				//usleep(1000);
+			}
+			calc_output_Y_BOTH_CPUS(columns_A, row_NZ_count_A,values_A,values_count_A_ptr,vector_X,vector_Y_BOTH,message);
+
+			print_input_vector_X(vector_X);
+			//print_result_vector_Y(vector_Y_CPU1);
+
+			compare_Y_result_vectors(vector_Y_CPU1, vector_Y_BOTH);
+
+			// See if it's time to send a message yet
+//			if (alt_nticks() >= (ticks_at_last_message
+//					+ ((alt_ticks_per_second() * (MS_DELAY)) / 1000))) {
+//				ticks_at_last_message = alt_nticks();
+
+				// Try and aquire the mutex (non-blocking).
+//				if (altera_avalon_mutex_trylock(mutex, value) == LOCK_SUCCESS) {
+					// Check if the message buffer is empty
+//					if (message->flag == NO_MESSAGE) {
+//						count++;
+
+						// Send the message to the buffer
+						//						sprintf(message->buf,
+						//								"Mesg from CPU %d.Number sent: %d  ", id, count);
+
+						// Set the flag that a message has been put in the buffer
+						// And this message should be displayed on LCD connected to CPU2
+//						switches = IORD(CPU1_SWITCH_I_BASE, 0);
+//						if (switches == 1) {
+//							message->flag = MESSAGE_WAITING_UART;
+//						} else {
+//							message->flag = MESSAGE_WAITING_LCD;
+//						}
+
+					}
+					// Release the mutex
+					altera_avalon_mutex_unlock(mutex);
+				}
+			return (0);
+			}
+
+			// Check the message buffer
+			// and if there's a message waiting with the correct flag, print it to stdout.
+			//			if (message->flag == MESSAGE_WAITING_UART) {
+			//				printf("%s", message->buf);
+			//
+			//				// Clear the flag
+			//				message->flag = NO_MESSAGE;
+			//			}
